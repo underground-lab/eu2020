@@ -1,6 +1,7 @@
 import data.texts as texts
 import data.data as data
 from common.name import Name
+from common.period import Period
 
 
 def main():
@@ -14,6 +15,9 @@ def main():
 
     print(texts.intro % (name.get_name5p(), name.translate("stal"), len(data.member_countries)))
     proceed()
+
+    period = Period()
+    print(texts.period % (period.get_month(), period.get_year()))
 
 
 def input_with_options(question, options):

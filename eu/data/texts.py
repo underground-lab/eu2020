@@ -5,6 +5,8 @@ what_is_your_gender = "Jakého seš pohlaví? "
 
 proceed = "Pokračovat..."
 
+period = "Období: %s %s"
+
 intro = """
 Ahoj %s,
 gratuluji - právě si se %s šéfem Evropské komise. Tvá síla a možnosti jsou prakticky neomezené.

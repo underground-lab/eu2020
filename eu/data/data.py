@@ -1,5 +1,7 @@
 gender = {"m":"muž", "f":"žena", "n":"nebinární"}
 
+months = ["Leden", "Únor", "Březen", "Duben", "Květen", "Červen", "Červenec", "Srpen", "Září", "Říjen", "Listopad", "Prosinec"]
+
 member_countries = {
     "BE": {
         "name":"Belgie",
