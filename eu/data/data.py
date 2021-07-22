@@ -1,5 +1,3 @@
-version = "0.0.1-SNAPSHOT"
-
 gender = {"m":"muž", "f":"žena", "n":"nebinární"}
 
 member_countries = {
