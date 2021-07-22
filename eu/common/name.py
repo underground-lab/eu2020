@@ -1,4 +1,5 @@
 import re
+import data.texts as texts
 
 ch5p = [
         (r"(.*)da$", "do"),
@@ -10,15 +11,24 @@ ch5p = [
 
 class Name:
 
-    def __init__(self, name):
+    def __init__(self, name, gender):
         self.name = name
+        self.gender = gender
 
     def get_name1p(self):
         return self.name
 
     def get_name5p(self):
-        for ch in ch5p:
-            pattern = re.compile(ch[0])
-            if pattern.match(self.name) != None:
-                return pattern.sub(r"\1" + ch[1], self.name)
+        if self.gender != "n":
+            for ch in ch5p:
+                pattern = re.compile(ch[0])
+                if pattern.match(self.name) != None:
+                    return pattern.sub(r"\1" + ch[1], self.name)
         return self.name
+
+    def translate(self, word):
+        t = texts.gender_dict[word]
+        if (t != None):
+            return t[self.gender]
+        return word
+
