@@ -12,11 +12,11 @@ names = {
     
 }
 
-class TestName5p(unittest.TestCase):
+class TestName(unittest.TestCase):
 
-    def testFilter(self):
+    def testName5p(self):
         for key in names.keys():
-            name = Name(key)
+            name = Name(key, "m")
             self.assertEqual(names[key], name.get_name5p())
 
 

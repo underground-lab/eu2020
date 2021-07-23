@@ -1,10 +1,10 @@
-import data.data as data
+import eu.data.data as data
 
 class Period:
 
-    def __init__(self):
-        self.year = 2020
-        self.month = 0
+    def __init__(self, year, month):
+        self.year = year
+        self.month = month
 
     def next(self):
         self.month = self.month + 1

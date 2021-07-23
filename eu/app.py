@@ -1,7 +1,7 @@
-import data.texts as texts
-import data.data as data
-from common.name import Name
-from common.period import Period
+import eu.data.texts as texts
+import eu.data.data as data
+from eu.common.name import Name
+from eu.common.period import Period
 
 
 def main():
@@ -16,7 +16,7 @@ def main():
     print(texts.intro % (name.get_name5p(), name.translate("stal"), len(data.member_countries)))
     proceed()
 
-    period = Period()
+    period = Period(2020, 0)
     print(texts.period % (period.get_month(), period.get_year()))
 
 
