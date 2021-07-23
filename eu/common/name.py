@@ -9,6 +9,7 @@ ch5p = [
         (r"(.*)š$", "ši"),
        ]
 
+
 class Name:
 
     def __init__(self, name, gender):
@@ -22,13 +23,12 @@ class Name:
         if self.gender != "n":
             for ch in ch5p:
                 pattern = re.compile(ch[0])
-                if pattern.match(self.name) != None:
+                if pattern.match(self.name) is not None:
                     return pattern.sub(r"\1" + ch[1], self.name)
         return self.name
 
     def translate(self, word):
         t = texts.gender_dict[word]
-        if (t != None):
+        if (t is not None):
             return t[self.gender]
         return word
-

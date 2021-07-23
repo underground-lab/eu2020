@@ -16,8 +16,8 @@ Vládneš {} členským zemím a tvým úkolem je udržet je co nejdéle v EU.
 
 gender_dict = {
     "stal": {
-        "m":"stal",
-        "f":"stala",
-        "n":"stalo"
+        "m": "stal",
+        "f": "stala",
+        "n": "stalo"
     }
 }

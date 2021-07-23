@@ -30,9 +30,11 @@ def input_with_options(question, options):
         a = input("> ")
     return a
 
+
 def proceed():
     input(texts.proceed)
     print()
+
 
 if __name__ == "__main__":
     main()

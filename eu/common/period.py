@@ -1,5 +1,6 @@
 import eu.data.data as data
 
+
 class Period:
 
     def __init__(self, year, month):
@@ -17,4 +18,3 @@ class Period:
 
     def get_month(self):
         return data.months[self.month]
-    

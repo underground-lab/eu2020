@@ -9,8 +9,8 @@ names = {
     "Petr": "Petře",
     "Petra": "Petro",
     "Tomáš": "Tomáši",
-    
 }
+
 
 class TestName(unittest.TestCase):
 
