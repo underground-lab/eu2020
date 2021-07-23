@@ -5,12 +5,13 @@ what_is_your_gender = "Jakého seš pohlaví? "
 
 proceed = "Pokračovat..."
 
-period = "Období: %s %s"
+period = "Období: {} {}"
+budget = "Rozpočet: {:,} EUR"
 
 intro = """
-Ahoj %s,
-gratuluji - právě si se %s šéfem Evropské komise. Tvá síla a možnosti jsou prakticky neomezené.
-Vládneš %s členským zemím a tvým úkolem je udržet je co nejdéle v EU.
+Ahoj {},
+gratuluji - právě si se {} šéfem Evropské komise. Tvá síla a možnosti jsou prakticky neomezené.
+Vládneš {} členským zemím a tvým úkolem je udržet je co nejdéle v EU.
 """
 
 gender_dict = {

@@ -13,11 +13,12 @@ def main():
     print()
     name = Name(n, g)
 
-    print(texts.intro % (name.get_name5p(), name.translate("stal"), len(data.member_countries)))
+    print(texts.intro.format(name.get_name5p(), name.translate("stal"), len(data.member_countries)))
     proceed()
 
     period = Period(2020, 0)
-    print(texts.period % (period.get_month(), period.get_year()))
+    print(texts.period.format(period.get_month(), period.get_year()))
+    print(texts.budget.format(data.budget))
 
 
 def input_with_options(question, options):
