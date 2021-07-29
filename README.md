@@ -1,11 +1,19 @@
 # Textová hra Evropská Unie
 
-## Run application
+## Install package from github
+
+Using https
 ```
-python -m eu
+pip install git+https://github.com/berk76/eu.git
 ```
 
-## Run tests
+Using ssh
 ```
-pytest eu
+eval $(ssh-agent)
+ssh-add
+pip install git+ssh://git@github.com/berk76/eu.git
+```
+## Run application
+```
+eu
 ```
