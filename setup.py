@@ -1,4 +1,4 @@
-import setuptools
+from setuptools import setup, find_namespace_packages
 
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
@@ -6,7 +6,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 with open("requirements.txt", "r") as fh:
   requirements = fh.readlines()
 
-setuptools.setup(
+setup(
     name='eu',
     version='0.0.1',
     author='Jaroslav Beran',
@@ -24,6 +24,6 @@ setuptools.setup(
     ],
   },
     license='GPL-3.0',
-    packages=['eu'],
+    packages=find_namespace_packages(include=['eu', 'eu.*']),
     install_requires=requirements,
 )
