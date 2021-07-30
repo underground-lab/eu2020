@@ -21,7 +21,7 @@ def main():
     print(texts.period.format(period.get_month(), period.get_year()))
     print(texts.budget.format(data.budget))
     proceed()
-    
+
     for ev in events.events:
         print(ev["description"])
         dopt = {}
