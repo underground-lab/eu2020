@@ -21,3 +21,5 @@ gender_dict = {
         "n": "stalo"
     }
 }
+
+options = "Možnosti:"

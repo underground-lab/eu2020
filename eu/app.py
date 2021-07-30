@@ -1,5 +1,6 @@
 import eu.data.texts as texts
 import eu.data.data as data
+import eu.data.events as events
 from eu.common.name import Name
 from eu.common.period import Period
 
@@ -19,6 +20,14 @@ def main():
     period = Period(2020, 0)
     print(texts.period.format(period.get_month(), period.get_year()))
     print(texts.budget.format(data.budget))
+    proceed()
+    
+    for ev in events.events:
+        print(ev["description"])
+        dopt = {}
+        for opt in ev["options"]:
+            dopt[opt["key"]] = opt["description"]
+        g = input_with_options(texts.options, dopt)
 
 
 def input_with_options(question, options):
@@ -34,7 +43,3 @@ def input_with_options(question, options):
 def proceed():
     input(texts.proceed)
     print()
-
-
-if __name__ == "__main__":
-    main()
