@@ -20,7 +20,7 @@ def main():
 
     period = Period(2020, 0)
     print(texts.period.format(period.get_month(), period.get_year()))
-    print(texts.budget.format(data.budget_income, data.budget_outcome))
+    print(texts.budget.format(data.budget["income"], data.budget["outcome"]))
     proceed()
 
     for i in range(2):
@@ -37,19 +37,16 @@ def make_decision(ev):
     g = input_with_options(texts.options, dopt)
     options = list(filter(lambda o: o["key"] == g, ev["options"]))
     
-    #Satisfaction
+    # Satisfaction
     s = options[0]["impact"]["satisfaction"]
     for c in s.keys():
         data.member_countries[c]["membership_satisfaction_pct"] += s[c]
         if data.member_countries[c]["membership_satisfaction_pct"] < 0:
             data.member_countries[c]["membership_satisfaction_pct"] = 0
 
-    #Budget
+    # Budget
     b = options[0]["impact"]["budget"]
-    if b > 0:
-        data.budget_income += b
-    else:
-        data.budget_outcome -= b
+    data.budget["balance"] += b
 
     ev["wait"] = 1
 
