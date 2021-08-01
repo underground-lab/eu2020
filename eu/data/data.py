@@ -2,7 +2,8 @@ gender = {"m": "muž", "f": "žena", "n": "nebinární"}
 
 months = ["Leden", "Únor", "Březen", "Duben", "Květen", "Červen", "Červenec", "Srpen", "Září", "Říjen", "Listopad", "Prosinec"]
 
-budget = 160000000000
+budget_income = 160000000000
+budget_outcome = 160000000000
 
 member_countries = {
     "BE": {

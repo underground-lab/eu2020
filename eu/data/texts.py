@@ -6,7 +6,7 @@ what_is_your_gender = "Jakého seš pohlaví? "
 proceed = "Pokračovat..."
 
 period = "Období: {} {}"
-budget = "Rozpočet: {:,} EUR"
+budget = "Rozpočet: příjmy: {:,} EUR výdaje: {:,} EUR"
 
 intro = """
 Ahoj {},

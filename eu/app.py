@@ -1,3 +1,4 @@
+import random
 import eu.data.texts as texts
 import eu.data.data as data
 import eu.data.events as events
@@ -19,15 +20,38 @@ def main():
 
     period = Period(2020, 0)
     print(texts.period.format(period.get_month(), period.get_year()))
-    print(texts.budget.format(data.budget))
+    print(texts.budget.format(data.budget_income, data.budget_outcome))
     proceed()
 
-    for ev in events.events:
-        print(ev["description"])
-        dopt = {}
-        for opt in ev["options"]:
-            dopt[opt["key"]] = opt["description"]
-        g = input_with_options(texts.options, dopt)
+    for i in range(2):
+        filtered = list(filter(lambda ev: ev["wait"] == 0, events.events))
+        n = random.randint(0, len(filtered) - 1)
+        make_decision(filtered[n])
+
+
+def make_decision(ev):
+    print(ev["description"])
+    dopt = {}
+    for opt in ev["options"]:
+        dopt[opt["key"]] = opt["description"]
+    g = input_with_options(texts.options, dopt)
+    options = list(filter(lambda o: o["key"] == g, ev["options"]))
+    
+    #Satisfaction
+    s = options[0]["impact"]["satisfaction"]
+    for c in s.keys():
+        data.member_countries[c]["membership_satisfaction_pct"] += s[c]
+        if data.member_countries[c]["membership_satisfaction_pct"] < 0:
+            data.member_countries[c]["membership_satisfaction_pct"] = 0
+
+    #Budget
+    b = options[0]["impact"]["budget"]
+    if b > 0:
+        data.budget_income += b
+    else:
+        data.budget_outcome -= b
+
+    ev["wait"] = 1
 
 
 def input_with_options(question, options):
