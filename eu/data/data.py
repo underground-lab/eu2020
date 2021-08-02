@@ -2,17 +2,20 @@ gender = {"m": "muž", "f": "žena", "n": "nebinární"}
 
 months = ["Leden", "Únor", "Březen", "Duben", "Květen", "Červen", "Červenec", "Srpen", "Září", "Říjen", "Listopad", "Prosinec"]
 
+name = None
+period = None
+
 budget = {
+    "balance": 160000000000,
     "income": 160000000000,
     "outcome": 160000000000,
-    "balance": 160000000000,
 }
 
 member_countries = {
     "BE": {
         "name": "Belgie",
-        "membership_satisfaction_pct": 0,  # https://www.pewresearch.org/global/2019/10/14/the-european-union/
-        "budget_contribution_pct": 3.54,  # https://cs.wikipedia.org/wiki/Rozpo%C4%8Det_Evropsk%C3%A9_unie
+        "membership_satisfaction_pct": 67, # https://www.pewresearch.org/global/2019/10/14/the-european-union/
+        "budget_contribution_pct": 3.54,   # https://cs.wikipedia.org/wiki/Rozpo%C4%8Det_Evropsk%C3%A9_unie
     },
     "BG": {
         "name": "Bulharsko",
@@ -26,17 +29,17 @@ member_countries = {
     },
     "DK": {
         "name": "Dánsko",
-        "membership_satisfaction_pct": 0,
+        "membership_satisfaction_pct": 67,
         "budget_contribution_pct": 1.39,
     },
     "EE": {
         "name": "Estonsko",
-        "membership_satisfaction_pct": 0,
+        "membership_satisfaction_pct": 67,
         "budget_contribution_pct": 0.14,
     },
     "FI": {
         "name": "Finsko",
-        "membership_satisfaction_pct": 0,
+        "membership_satisfaction_pct": 67,
         "budget_contribution_pct": 1.81,
     },
     "FR": {
@@ -46,12 +49,12 @@ member_countries = {
     },
     "HR": {
         "name": "Chorvatsko",
-        "membership_satisfaction_pct": 0,
+        "membership_satisfaction_pct": 67,
         "budget_contribution_pct": 0.06,
     },
     "IE": {
         "name": "Irsko",
-        "membership_satisfaction_pct": 0,
+        "membership_satisfaction_pct": 67,
         "budget_contribution_pct": 1.34,
     },
     "IT": {
@@ -61,7 +64,7 @@ member_countries = {
     },
     "CY": {
         "name": "Kypr",
-        "membership_satisfaction_pct": 0,
+        "membership_satisfaction_pct": 67,
         "budget_contribution_pct": 0.17,
     },
     "LT": {
@@ -86,7 +89,7 @@ member_countries = {
     },
     "MT": {
         "name": "Malta",
-        "membership_satisfaction_pct": 0,
+        "membership_satisfaction_pct": 67,
         "budget_contribution_pct": 0.06,
     },
     "DE": {
@@ -106,17 +109,17 @@ member_countries = {
     },
     "PT": {
         "name": "Portugalsko",
-        "membership_satisfaction_pct": 0,
+        "membership_satisfaction_pct": 67,
         "budget_contribution_pct": 1.64,
     },
     "AT": {
         "name": "Rakousko",
-        "membership_satisfaction_pct": 0,
+        "membership_satisfaction_pct": 67,
         "budget_contribution_pct": 2.65,
     },
     "RO": {
         "name": "Rumunsko",
-        "membership_satisfaction_pct": 0,
+        "membership_satisfaction_pct": 67,
         "budget_contribution_pct": 1.24,
     },
     "GR": {
@@ -131,17 +134,17 @@ member_countries = {
     },
     "SI": {
         "name": "Slovinsko",
-        "membership_satisfaction_pct": 0,
+        "membership_satisfaction_pct": 67,
         "budget_contribution_pct": 0.36,
     },
     "LV": {
         "name": "Lotyšsko",
-        "membership_satisfaction_pct": 0,
+        "membership_satisfaction_pct": 67,
         "budget_contribution_pct": 0.17,
     },
     "LU": {
         "name": "Lucembursko",
-        "membership_satisfaction_pct": 0,
+        "membership_satisfaction_pct": 67,
         "budget_contribution_pct": 0.29,
     },
 }

@@ -1,6 +1,5 @@
 events = [
     {
-        "wait": 0,
         "party": "CZ",
         "description": "Některé strany tlačí na deklaraci proti střetu zájmů českého premiéra.",
         "options": [
@@ -31,7 +30,6 @@ events = [
         ]
     },
     {
-        "wait": 0,
         "party": "HU",
         "description": "Maďarsko potlačuje práva LBQT menšin. LBQT neziskovka navrhuje odsoudit Maďarsko za porušování práv menšin",
         "options": [
