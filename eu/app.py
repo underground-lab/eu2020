@@ -24,7 +24,7 @@ def main():
         proceed()
 
         for i in range(2):
-            filtered = list(filter(lambda ev: ev["wait"] == 0, events.events))
+            filtered = list(filter(lambda ev: ev["wait"] == 0, events.member_country_events))
             n = random.randint(0, len(filtered) - 1)
             make_decision(filtered[n])
 
@@ -71,8 +71,12 @@ def count_membership_satisfaction_pct():
 
 
 def setup():
-    for ev in events.events:
+    for ev in events.member_country_events:
         ev["wait"] = 0
+
+    for ev in events.random_events:
+        ev["wait"] = 0
+
     n = input(f"{texts.what_is_your_name}\n> ")
     print()
     g = input_with_options(texts.what_is_your_gender, data.gender)
@@ -82,7 +86,12 @@ def setup():
 
 def next_period():
     data.period.next()
-    for ev in events.events:
+
+    for ev in events.member_country_events:
+        if ev["wait"] > 0:
+            ev["wait"] -= 1
+
+    for ev in events.random_events:
         if ev["wait"] > 0:
             ev["wait"] -= 1
 

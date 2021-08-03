@@ -1,4 +1,36 @@
-events = [
+
+current_random_events = []
+
+
+random_events = [
+    {
+        "key": "PAN",
+        "name": "Pandemie",
+        "start": "Propukla pandemie nové neznámé choroby.",
+        "end": "Zdá se, že pandemie ustala.",
+    },
+    {
+        "key": "POV",
+        "name": "Povodně",
+        "start": "Po celé Evropě propukly povodně.",
+        "end": "Povodně se podařilo zvládnout.",
+    },
+    {
+        "key": "INF",
+        "name": "Inflace",
+        "start": "Evropa se potýká s vysokou mírou inflace.",
+        "end": "Inflaci se podařilo zvládnout.",
+    },
+    {
+        "key": "HRE",
+        "name": "Hospodářská recese",
+        "start": "Evropou zmítá hospodářská recese, podniky propouštějí.",
+        "end": "Hospodářskou recesi se podařilo zvládnout.",
+    },
+]
+
+
+member_country_events = [
     {
         "party": "CZ",
         "description": "Některé strany tlačí na deklaraci proti střetu zájmů českého premiéra.",

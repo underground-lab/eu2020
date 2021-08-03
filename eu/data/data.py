@@ -148,3 +148,35 @@ member_countries = {
         "budget_contribution_pct": 0.29,
     },
 }
+
+
+deep_state = {
+    "GDA": {
+        "name": "Globalisti z Davosu",
+        "satisfaction_pct": 50,
+    },
+    "SOR": {
+        "name": "George Soros",
+        "satisfaction_pct": 50,
+    },
+    "NBM": {
+        "name": "Nadace Billa a Melindy Gatesových",
+        "satisfaction_pct": 50,
+    },
+    "NEZ": {
+        "name": "Neziskové organizace",
+        "satisfaction_pct": 50,
+    },
+    "WHO": {
+        "name": "Světová Zdravotnická Organizace",
+        "satisfaction_pct": 50,
+    },
+    "BIT": {
+        "name": "Big Tech Korporace",
+        "satisfaction_pct": 50,
+    },
+    "BIP": {
+        "name": "Big Pharma Korporace",
+        "satisfaction_pct": 50,
+    },
+}
