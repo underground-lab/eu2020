@@ -7,13 +7,13 @@ import eu.data.events as events
 from eu.common.name import Name
 from eu.common.period import Period
 from eu.common.higher_power_events import HigherPowerEvents
-from eu.common.members_events import MembersEvents
+from eu.common.parties_events import PartiesEvents
 from eu.common.parties import Parties
 
 
 def main():
     hp_events = HigherPowerEvents(events.higher_power_events)
-    m_events = MembersEvents(events.member_country_events)
+    m_events = PartiesEvents(events.member_country_events)
     members = Parties(data.member_countries)
     data.period = Period(2020, 0)
 

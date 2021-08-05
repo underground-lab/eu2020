@@ -1,6 +1,6 @@
 import random
 
-class MembersEvents:
+class PartiesEvents:
 
     events = []
 
