@@ -9,12 +9,14 @@ from eu.common.period import Period
 from eu.common.higher_power_events import HigherPowerEvents
 from eu.common.parties_events import PartiesEvents
 from eu.common.parties import Parties
+from eu.common.budget import Budget
 
 
 def main():
     hp_events = HigherPowerEvents(events.higher_power_events)
     m_events = PartiesEvents(events.member_country_events)
     members = Parties(data.member_countries)
+    budget = Budget(members)
     data.period = Period(2020, 0)
 
     clear()
@@ -26,7 +28,7 @@ def main():
 
     while True:
         print_text_in_box(texts.period.format(data.period.get_month(), data.period.get_year()))
-        print_budget()
+        print_budget(budget)
         print_membership_satisfaction(members)
         print_hp_events(hp_events)
         print()
@@ -36,7 +38,7 @@ def main():
             ev = m_events.get_event()
             country = data.member_countries[ev["party"]]
             print_text_in_box(country["name"])
-            make_decision(ev, members)
+            make_decision(ev, members, budget)
 
         hpev = hp_events.get_event()
         if hpev != None:
@@ -48,7 +50,7 @@ def main():
         m_events.next_period()
 
 
-def make_decision(ev, members):
+def make_decision(ev, members, budget):
     print(ev["description"])
     print()
     dopt = {}
@@ -62,11 +64,11 @@ def make_decision(ev, members):
 
     # Budget
     b = options[0]["impact"]["budget"]
-    data.budget["balance"] += b
+    budget.add_extra_income(b)
 
 
-def print_budget():
-    print(texts.budget.format(data.budget["balance"], data.budget["income"] - data.budget["outcome"]))
+def print_budget(budget):
+    print(texts.budget.format(budget.get_balance(), budget.get_income() - budget.get_outcome()))
 
 
 def print_membership_satisfaction(members):

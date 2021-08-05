@@ -21,3 +21,10 @@ class Parties:
             self.parties[c]["satisfaction_pct"] += satisfaction[c]
             if self.parties[c]["satisfaction_pct"] < 0:
                 self.parties[c]["satisfaction_pct"] = 0
+
+
+    def get_budget_contribution(self):
+        result = 0
+        for c in self.parties.keys():
+            result += self.parties[c]["budget_contribution"]
+        return result

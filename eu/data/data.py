@@ -5,147 +5,141 @@ months = ["Leden", "Únor", "Březen", "Duben", "Květen", "Červen", "Červenec
 name = None
 period = None
 
-budget = {
-    "balance": 160000000000,
-    "income": 160000000000,
-    "outcome": 160000000000,
-}
-
 member_countries = {
     "BE": {
         "name": "Belgie",
-        "satisfaction_pct": 67, # https://www.pewresearch.org/global/2019/10/14/the-european-union/
-        "budget_contribution_pct": 3.54,   # https://cs.wikipedia.org/wiki/Rozpo%C4%8Det_Evropsk%C3%A9_unie
+        "satisfaction_pct": 67,
+        "budget_contribution": 5_664_000_000,
     },
     "BG": {
         "name": "Bulharsko",
         "satisfaction_pct": 77,
-        "budget_contribution_pct": 0.35,
+        "budget_contribution": 560_000_000,
     },
     "CZ": {
         "name": "Česko",
         "satisfaction_pct": 52,
-        "budget_contribution_pct": 1.39,
+        "budget_contribution": 2_224_000_000,
     },
     "DK": {
         "name": "Dánsko",
         "satisfaction_pct": 67,
-        "budget_contribution_pct": 1.39,
+        "budget_contribution": 2_224_000_000,
     },
     "EE": {
         "name": "Estonsko",
         "satisfaction_pct": 67,
-        "budget_contribution_pct": 0.14,
+        "budget_contribution": 224_000_000,
     },
     "FI": {
         "name": "Finsko",
         "satisfaction_pct": 67,
-        "budget_contribution_pct": 1.81,
+        "budget_contribution": 2_896_000_000,
     },
     "FR": {
         "name": "Francie",
         "satisfaction_pct": 51,
-        "budget_contribution_pct": 20.18,
+        "budget_contribution": 32_288_000_000,
     },
     "HR": {
         "name": "Chorvatsko",
         "satisfaction_pct": 67,
-        "budget_contribution_pct": 0.06,
+        "budget_contribution": 96_000_000,
     },
     "IE": {
         "name": "Irsko",
         "satisfaction_pct": 67,
-        "budget_contribution_pct": 1.34,
+        "budget_contribution": 2_144_000_000,
     },
     "IT": {
         "name": "Itálie",
         "satisfaction_pct": 58,
-        "budget_contribution_pct": 15.36,
+        "budget_contribution": 24_576_000_000,
     },
     "CY": {
         "name": "Kypr",
         "satisfaction_pct": 67,
-        "budget_contribution_pct": 0.17,
+        "budget_contribution": 272_000_000,
     },
     "LT": {
         "name": "Litva",
         "satisfaction_pct": 83,
-        "budget_contribution_pct": 0.27,
+        "budget_contribution": 432_000_000,
     },
     "ES": {
         "name": "Španělsko",
         "satisfaction_pct": 66,
-        "budget_contribution_pct": 10.18,
+        "budget_contribution": 16_288_000_000,
     },
     "SE": {
         "name": "Švédsko",
         "satisfaction_pct": 72,
-        "budget_contribution_pct": 2.83,
+        "budget_contribution": 4_528_000_000,
     },
     "HU": {
         "name": "Maďarsko",
         "satisfaction_pct": 67,
-        "budget_contribution_pct": 0.98,
+        "budget_contribution": 1_568_000_000,
     },
     "MT": {
         "name": "Malta",
         "satisfaction_pct": 67,
-        "budget_contribution_pct": 0.06,
+        "budget_contribution": 96_000_000,
     },
     "DE": {
         "name": "Německo",
         "satisfaction_pct": 69,
-        "budget_contribution_pct": 22.41,
+        "budget_contribution": 35_856_000_000,
     },
     "NL": {
         "name": "Nizozemsko",
         "satisfaction_pct": 66,
-        "budget_contribution_pct": 4.51,
+        "budget_contribution": 7_216_000_000,
     },
     "PL": {
         "name": "Polsko",
         "satisfaction_pct": 84,
-        "budget_contribution_pct": 3.70,
+        "budget_contribution": 5_920_000_000,
     },
     "PT": {
         "name": "Portugalsko",
         "satisfaction_pct": 67,
-        "budget_contribution_pct": 1.64,
+        "budget_contribution": 2_624_000_000,
     },
     "AT": {
         "name": "Rakousko",
         "satisfaction_pct": 67,
-        "budget_contribution_pct": 2.65,
+        "budget_contribution": 4_240_000_000,
     },
     "RO": {
         "name": "Rumunsko",
         "satisfaction_pct": 67,
-        "budget_contribution_pct": 1.24,
+        "budget_contribution": 1_984_000_000,
     },
     "GR": {
         "name": "Řecko",
         "satisfaction_pct": 53,
-        "budget_contribution_pct": 2.31,
+        "budget_contribution": 3_696_000_000,
     },
     "SK": {
         "name": "Slovensko",
         "satisfaction_pct": 70,
-        "budget_contribution_pct": 0.67,
+        "budget_contribution": 1_072_000_000,
     },
     "SI": {
         "name": "Slovinsko",
         "satisfaction_pct": 67,
-        "budget_contribution_pct": 0.36,
+        "budget_contribution": 576_000_000,
     },
     "LV": {
         "name": "Lotyšsko",
         "satisfaction_pct": 67,
-        "budget_contribution_pct": 0.17,
+        "budget_contribution": 272_000_000,
     },
     "LU": {
         "name": "Lucembursko",
         "satisfaction_pct": 67,
-        "budget_contribution_pct": 0.29,
+        "budget_contribution": 464_000_000,
     },
 }
 
