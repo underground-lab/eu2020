@@ -24,3 +24,5 @@ gender_dict = {
 }
 
 options = "Možnosti:"
+higher_power_event = "Mimořádná událost"
+higher_power_events = "Mimořádné události: {}"

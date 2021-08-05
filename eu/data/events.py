@@ -1,8 +1,4 @@
-
-current_random_events = []
-
-
-random_events = [
+higher_power_events = [
     {
         "key": "PAN",
         "name": "Pandemie",
