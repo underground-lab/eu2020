@@ -13,7 +13,9 @@ class MembersEvents:
     def get_event(self):
         filtered = list(filter(lambda ev: ev["wait"] == 0, self.events))
         n = random.randint(0, len(filtered) - 1)
-        return filtered[n]
+        ev = filtered[n]
+        ev["wait"] = 1
+        return ev
 
     
     def next_period(self):
