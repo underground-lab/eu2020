@@ -1,3 +1,5 @@
+
+import os
 import random
 import eu.data.texts as texts
 import eu.data.data as data
@@ -5,43 +7,48 @@ import eu.data.events as events
 from eu.common.name import Name
 from eu.common.period import Period
 from eu.common.higher_power_events import HigherPowerEvents
+from eu.common.members_events import MembersEvents
 
 
 def main():
-    print_app_name()
     hp_events = HigherPowerEvents(events.higher_power_events)
-    setup()
+    m_events = MembersEvents(events.member_country_events)
+    data.period = Period(2020, 0)
 
+    clear()
+    print_app_name()
+
+    setup()
     print(texts.intro.format(data.name.get_name5p(), data.name.translate("stal"), len(data.member_countries)))
     proceed()
 
-    data.period = Period(2020, 0)
-
     while True:
-        print_app_name()
-        print(texts.period.format(data.period.get_month(), data.period.get_year()))
+        print_text_in_box(texts.period.format(data.period.get_month(), data.period.get_year()))
         print_budget()
         print_membership_satisfaction()
         print_hp_events(hp_events)
         print()
         proceed()
 
-        for i in range(2):
-            filtered = list(filter(lambda ev: ev["wait"] == 0, events.member_country_events))
-            n = random.randint(0, len(filtered) - 1)
-            make_decision(filtered[n])
+        for i in range(random.randint(1, 2)):
+            ev = m_events.get_event()
+            country = data.member_countries[ev["party"]]
+            print_text_in_box(country["name"])
+            make_decision(ev)
 
         hpev = hp_events.get_event()
-        if hpev != "":
+        if hpev != None:
             print_text_in_box(texts.higher_power_event, "!")
             print(hpev + "\n")
             proceed()
 
-        next_period()
+        data.period.next()
+        m_events.next_period()
 
 
 def make_decision(ev):
     print(ev["description"])
+    print()
     dopt = {}
     for opt in ev["options"]:
         dopt[opt["key"]] = opt["description"]
@@ -86,22 +93,11 @@ def count_membership_satisfaction_pct():
 
 
 def setup():
-    for ev in events.member_country_events:
-        ev["wait"] = 0
-
     n = input(f"{texts.what_is_your_name}\n> ")
     print()
     g = input_with_options(texts.what_is_your_gender, data.gender)
-    print()
     data.name = Name(n, g)
 
-
-def next_period():
-    data.period.next()
-
-    for ev in events.member_country_events:
-        if ev["wait"] > 0:
-            ev["wait"] -= 1
 
 def print_app_name():
     print_text_in_box(texts.app_name)
@@ -109,7 +105,6 @@ def print_app_name():
 
 def print_text_in_box(text, ch="*"):
     boxw = len(text) + 4
-    print("\n")
     for _ in range(boxw):
         print(ch, end = "")
     print("\n{} {} {}".format(ch, text, ch))
@@ -125,9 +120,16 @@ def input_with_options(question, options):
         for o in options.keys():
             print(f"{o} - {options[o]}")
         a = input("> ")
+    clear()
     return a
 
 
 def proceed():
     input(texts.proceed)
-    print()
+    clear()
+
+
+def clear():
+    clr = lambda: os.system('cls')
+    clr()
+

@@ -12,7 +12,7 @@ class HigherPowerEvents:
 
     
     def get_event(self):
-        result = ""
+        result = None
         i = random.randint(0, 2)
         if i == 0:
             i = random.randint(0, len(self.events) - 1)
