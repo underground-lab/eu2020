@@ -118,6 +118,5 @@ def proceed():
 
 
 def clear():
-    clr = lambda: os.system('cls')
-    clr()
+    os.system('cls' if os.name == 'nt' else 'clear')
 
