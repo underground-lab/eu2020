@@ -28,3 +28,10 @@ class Parties:
         for c in self.parties.keys():
             result += self.parties[c]["budget_contribution"]
         return result
+
+
+    def get_budget_consumption(self):
+        result = 0
+        for c in self.parties.keys():
+            result += self.parties[c]["budget_consumption"]
+        return result

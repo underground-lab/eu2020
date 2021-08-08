@@ -48,6 +48,8 @@ def main():
 
         data.period.next()
         m_events.next_period()
+        if data.period.month == 0:
+            budget.update_balance()
 
 
 def make_decision(ev, members, budget):
@@ -68,7 +70,7 @@ def make_decision(ev, members, budget):
 
 
 def print_budget(budget):
-    print(texts.budget.format(budget.get_balance(), budget.get_income() - budget.get_outcome()))
+    print(texts.budget.format(budget.get_income(), budget.get_balance(), budget.get_dept()))
 
 
 def print_membership_satisfaction(members):
