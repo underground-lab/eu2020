@@ -16,7 +16,12 @@ def main():
     hp_events = HigherPowerEvents(events.higher_power_events)
     m_events = PartiesEvents(events.member_country_events)
     members = Parties(data.member_countries)
-    budget = Budget(members)
+    administration = Parties(data.eu_administration)
+    deep_state = Parties(data.deep_state)
+    budget = Budget()
+    budget.add_parties(members)
+    budget.add_parties(administration)
+    budget.add_parties(deep_state)
     data.period = Period(2020, 0)
 
     clear()
@@ -70,7 +75,7 @@ def make_decision(ev, members, budget):
 
 
 def print_budget(budget):
-    print(texts.budget.format(budget.get_income(), budget.get_balance(), budget.get_dept()))
+    print(texts.budget.format(data.period.get_year(), budget.get_income(), budget.get_balance(), budget.get_dept()))
 
 
 def print_membership_satisfaction(members):

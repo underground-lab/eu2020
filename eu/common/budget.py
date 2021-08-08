@@ -1,13 +1,13 @@
 class Budget:
 
-    countries = {}
+    parties = []
     extra_income = 0
     extra_outcome = 0
     dept = 0
 
 
-    def __init__(self, countries):
-        self.countries = countries
+    def add_parties(self, parties):
+        self.parties.append(parties)
 
 
     def get_balance(self):
@@ -19,11 +19,17 @@ class Budget:
 
 
     def get_income(self):
-        return self.countries.get_budget_contribution() + self.extra_income
+        result = 0
+        for p in self.parties:
+            result += p.get_budget_contribution()
+        return result + self.extra_income
 
 
     def get_outcome(self):
-        return self.countries.get_budget_consumption() + self.extra_outcome
+        result = 0
+        for p in self.parties:
+            result += p.get_budget_consumption()
+        return result + self.extra_outcome
 
 
     def add_extra_income(self, amt):
