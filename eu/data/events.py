@@ -96,3 +96,37 @@ member_country_events = [
         ]
     },
 ]
+
+
+deep_state_events = [
+    {
+        "party": "SOR",
+        "description": "George Soros požaduje rychlejší přísun migrantů z Afriky. Nabízí příspěvek 1 000 000 000 EUR jako podporu pro lidskoprávní organizace.",
+        "options": [
+            {
+                "key": "p",
+                "description": "přijmout",
+                "impact": {
+                    "satisfaction": {"CZ": -3, "HU": -3, "PL": -3, "SK": -3, "AT": -3, "IT": -3, "FR": -2},
+                    "budget": 1_000_000_000,
+                }
+            },
+            {
+                "key": "o",
+                "description": "odmítnout",
+                "impact": {
+                    "satisfaction": {"SOR": -10, "NEZ": -5, "WHO": -2},
+                    "budget": 0,
+                }
+            },
+            {
+                "key": "n",
+                "description": "nerozhodnout teď",
+                "impact": {
+                    "satisfaction": {"SOR": -3,},
+                    "budget": 0,
+                }
+            },
+        ]
+    },
+]
