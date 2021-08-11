@@ -15,10 +15,13 @@ class PartiesEvents:
 
     def get_event(self):
         filtered = list(filter(lambda ev: ev["wait"] == 0, self.events))
-        n = random.randint(0, len(filtered) - 1)
-        ev = filtered[n]
-        ev["wait"] = 1
-        return ev
+        if (len(filtered) > 0):
+            n = random.randint(0, len(filtered) - 1)
+            ev = filtered[n]
+            ev["wait"] = 1
+            return ev
+        else:
+            return None
 
 
     def get_parties(self):

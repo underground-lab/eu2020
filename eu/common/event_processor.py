@@ -1,25 +1,31 @@
 import random
-import eu.data.data as data
 import eu.data.texts as texts
 import eu.common.utils as utils
+from eu.common.parties import Parties
 
 
 class EventProcessor:
 
     events = []
+    all_parties = Parties({})
 
 
     def add_events(self, events):
         self.events.append(events)
+        parties = events.get_parties().parties
+        for p in parties.keys():
+            if p not in self.all_parties.parties.keys():
+                self.all_parties.parties[p] = parties[p]
 
 
     def process_events(self, budget):
         for evs in self.events:
-            for _ in range(random.randint(1, 2)):
+            for _ in range(random.randint(1, 3)):
                 ev = evs.get_event()
-                country = data.member_countries[ev["party"]]
-                utils.print_text_in_box(country["name"])
-                self.make_decision(ev, evs.get_parties(), budget)
+                if ev is not None:
+                    country = evs.get_parties().parties[ev["party"]]
+                    utils.print_text_in_box(country["name"])
+                    self.make_decision(ev, self.all_parties, budget)
 
 
     def make_decision(self, ev, members, budget):

@@ -22,7 +22,7 @@ def main():
 
     event_processor = EventProcessor()
     event_processor.add_events(m_events)
-    #event_processor.add_events(deep_events)
+    event_processor.add_events(deep_events)
 
     budget = Budget()
     budget.add_parties(members)
