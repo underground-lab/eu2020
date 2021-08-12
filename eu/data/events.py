@@ -74,7 +74,7 @@ member_country_events = [
                 "description": "udělit pokutu 200 000 000 EUR",
                 "impact": {
                     "satisfaction": {"CZ": -3, "HU": -8, "PL": -3, "SK": -1},
-                    "budget": 200000000,
+                    "budget": 200_000_000,
                 }
             },
             {
@@ -124,6 +124,37 @@ deep_state_events = [
                 "description": "nerozhodnout teď",
                 "impact": {
                     "satisfaction": {"SOR": -3,},
+                    "budget": 0,
+                }
+            },
+        ]
+    },
+    {
+        "party": "WHO",
+        "description": "V souvislosti s probíhající pandemií WHO založila nadační fond COVAX, který má financovat nákup a distiribuci vakcín po celém světe. WHO žádá Evropskou unii o příspěvek 10 000 000 000 EUR",
+        "higher_power_cond": "PAN",
+        "options": [
+            {
+                "key": "p",
+                "description": "přijmout",
+                "impact": {
+                    "satisfaction": {"WHO": 20, "NEZ": 10, "NBM": 10, "SOR": 5, "GDA": 5, "BIP": 10},
+                    "budget": -10_000_000_000,
+                }
+            },
+            {
+                "key": "o",
+                "description": "odmítnout",
+                "impact": {
+                    "satisfaction": {"WHO": -10, "NEZ": -5, "NBM": -5, "SOR": -5, "GDA": -5, "BIP": -5},
+                    "budget": 0,
+                }
+            },
+            {
+                "key": "n",
+                "description": "nerozhodnout teď",
+                "impact": {
+                    "satisfaction": {"WHO": -10},
                     "budget": 0,
                 }
             },

@@ -17,8 +17,8 @@ def main():
     deep_state = Parties(data.deep_state)
 
     hp_events = HigherPowerEvents(events.higher_power_events)
-    m_events = PartiesEvents(events.member_country_events, members)
-    deep_events = PartiesEvents(events.deep_state_events, deep_state)
+    m_events = PartiesEvents(events.member_country_events, members, hp_events)
+    deep_events = PartiesEvents(events.deep_state_events, deep_state, hp_events)
 
     event_processor = EventProcessor()
     event_processor.add_events(m_events)
