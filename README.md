@@ -1,19 +1,25 @@
 # Textová hra Evropská Unie
 
-## Install package from github
+## Instalace
 
-Using https
 ```
-pip install git+https://github.com/berk76/eu2020.git
+pip install eu2020
 ```
 
-Using ssh
+nebo 
+
 ```
-eval $(ssh-agent)
-ssh-add
-pip install git+ssh://git@github.com/berk76/eu2020.git
+python setup.py install
 ```
-## Run application
+
+## Spuštění
+
 ```
 eu2020
+```
+
+nebo
+
+```
+python -m eu2020
 ```
