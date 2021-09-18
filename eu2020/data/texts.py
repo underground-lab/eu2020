@@ -1,4 +1,4 @@
-app_name = "EU Diktátor v. 0.0.1-SNAPSHOT"
+app_name = "EU Diktátor 2020"
 
 what_is_your_name = "Jak se jmenuješ? "
 what_is_your_gender = "Jakého seš pohlaví? "

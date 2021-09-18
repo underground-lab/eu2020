@@ -1,5 +1,5 @@
 import unittest
-from eu.common.name import Name
+from eu2020.common.name import Name
 
 names = {
     "Adam": "Adame",

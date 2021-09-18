@@ -1,14 +1,14 @@
-import eu.data.texts as texts
-import eu.data.data as data
-import eu.data.events as events
-import eu.common.utils as utils
-from eu.common.name import Name
-from eu.common.period import Period
-from eu.common.higher_power_events import HigherPowerEvents
-from eu.common.parties_events import PartiesEvents
-from eu.common.parties import Parties
-from eu.common.budget import Budget
-from eu.common.event_processor import EventProcessor
+import eu2020.data.texts as texts
+import eu2020.data.data as data
+import eu2020.data.events as events
+import eu2020.common.utils as utils
+from eu2020.common.name import Name
+from eu2020.common.period import Period
+from eu2020.common.higher_power_events import HigherPowerEvents
+from eu2020.common.parties_events import PartiesEvents
+from eu2020.common.parties import Parties
+from eu2020.common.budget import Budget
+from eu2020.common.event_processor import EventProcessor
 
 
 def main():

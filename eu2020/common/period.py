@@ -1,4 +1,4 @@
-import eu.data.data as data
+import eu2020.data.data as data
 
 
 class Period:

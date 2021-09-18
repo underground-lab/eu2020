@@ -1,4 +1,4 @@
-from eu.app import main
+from eu2020.app import main
 
 if __name__ == "__main__":
     main()

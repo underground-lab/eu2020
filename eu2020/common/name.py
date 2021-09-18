@@ -1,5 +1,5 @@
 import re
-import eu.data.texts as texts
+import eu2020.data.texts as texts
 
 ch5p = [
         (r"(.*)da$", "do"),

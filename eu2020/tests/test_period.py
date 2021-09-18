@@ -1,5 +1,5 @@
 import unittest
-from eu.common.period import Period
+from eu2020.common.period import Period
 
 
 class TestPeriod(unittest.TestCase):

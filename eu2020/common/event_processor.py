@@ -1,7 +1,7 @@
 import random
-import eu.data.texts as texts
-import eu.common.utils as utils
-from eu.common.parties import Parties
+import eu2020.data.texts as texts
+import eu2020.common.utils as utils
+from eu2020.common.parties import Parties
 
 
 class EventProcessor:

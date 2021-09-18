@@ -1,5 +1,5 @@
 import os
-import eu.data.texts as texts
+import eu2020.data.texts as texts
 
 
 def print_text_in_box(text, ch="*"):
