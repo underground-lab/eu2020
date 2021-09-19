@@ -12,21 +12,21 @@ from eu2020.common.event_processor import EventProcessor
 
 
 def main():
-    members = Parties(data.member_countries)
-    administration = Parties(data.eu_administration)
+    eu_members = Parties(data.member_countries)
+    eu_administration = Parties(data.eu_administration)
     deep_state = Parties(data.deep_state)
 
-    hp_events = HigherPowerEvents(events.higher_power_events)
-    m_events = PartiesEvents(events.member_country_events, members, hp_events)
-    deep_events = PartiesEvents(events.deep_state_events, deep_state, hp_events)
+    high_power_events = HigherPowerEvents(events.higher_power_events)
+    eu_members_events = PartiesEvents(events.member_country_events, eu_members, high_power_events)
+    deep_events = PartiesEvents(events.deep_state_events, deep_state, high_power_events)
 
     event_processor = EventProcessor()
-    event_processor.add_events(m_events)
+    event_processor.add_events(eu_members_events)
     event_processor.add_events(deep_events)
 
     budget = Budget()
-    budget.add_parties(members)
-    budget.add_parties(administration)
+    budget.add_parties(eu_members)
+    budget.add_parties(eu_administration)
     budget.add_parties(deep_state)
 
     data.period = Period(2020, 0)
@@ -41,17 +41,17 @@ def main():
     while True:
         utils.print_text_in_box(texts.period.format(data.period.get_month(), data.period.get_year()))
         print_budget(budget)
-        print_membership_satisfaction(members)
-        print_hp_events(hp_events)
+        print_membership_satisfaction(eu_members)
+        print_hp_events(high_power_events)
         print()
         utils.proceed()
 
         event_processor.process_events(budget)
 
-        hpev = hp_events.get_event()
-        if hpev != None:
+        hpe = high_power_events.get_event()
+        if hpe != None:
             utils.print_text_in_box(texts.higher_power_event, "!")
-            print(hpev + "\n")
+            print(hpe + "\n")
             utils.proceed()
 
         data.period.next()

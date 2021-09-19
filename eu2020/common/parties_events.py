@@ -33,7 +33,7 @@ class PartiesEvents:
         if (len(filtered) > 0):
             n = random.randint(0, len(filtered) - 1)
             ev = filtered[n]
-            ev["wait"] = 1
+            ev["wait"] = ev["period"]
             return ev
         else:
             return None

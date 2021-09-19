@@ -4,24 +4,28 @@ higher_power_events = [
         "name": "Pandemie",
         "start": "Propukla pandemie nové neznámé choroby.",
         "end": "Zdá se, že pandemie ustala.",
+        "period": 2,
     },
     {
         "key": "POV",
         "name": "Povodně",
         "start": "Po celé Evropě propukly povodně.",
         "end": "Povodně se podařilo zvládnout.",
+        "period": 2,
     },
     {
         "key": "INF",
         "name": "Inflace",
         "start": "Evropa se potýká s vysokou mírou inflace.",
         "end": "Inflaci se podařilo zvládnout.",
+        "period": 2,
     },
     {
         "key": "HRE",
         "name": "Hospodářská recese",
         "start": "Evropou zmítá hospodářská recese, podniky propouštějí.",
         "end": "Hospodářskou recesi se podařilo zvládnout.",
+        "period": 2,
     },
 ]
 
@@ -29,7 +33,8 @@ higher_power_events = [
 member_country_events = [
     {
         "party": "CZ",
-        "description": "Některé strany tlačí na deklaraci proti střetu zájmů českého premiéra.",
+        "description": "Některé české strany tlačí na deklaraci proti střetu zájmů českého premiéra.",
+        "period": 12,
         "options": [
             {
                 "key": "p",
@@ -59,11 +64,12 @@ member_country_events = [
     },
     {
         "party": "HU",
-        "description": "Maďarsko potlačuje práva LBQT menšin. LBQT neziskovka navrhuje odsoudit Maďarsko za porušování práv menšin",
+        "description": "Maďarsko zakázalo propagaci LGBT ve školách. LGBT aktivisté požadují odsoudit Maďarsko za porušování práv menšin",
+        "period": 12,
         "options": [
             {
                 "key": "p",
-                "description": "přijmout deklaraci",
+                "description": "přijmout deklaraci a odsoudit Maďarsko za porušování práv menšin LGBT",
                 "impact": {
                     "satisfaction": {"CZ": -3, "HU": -8, "PL": -3, "SK": -1},
                     "budget": 0,
@@ -95,6 +101,152 @@ member_country_events = [
             },
         ]
     },
+    {
+        "party": "PL",
+        "description": "Polsko zavádí zóny bez LGBT. Aktivisté požadují přísné potrestání Polska.",
+        "period": 12,
+        "options": [
+            {
+                "key": "p",
+                "description": "přijmout deklaraci a odsoudit Polsko",
+                "impact": {
+                    "satisfaction": {"CZ": -3, "HU": -3, "PL": -10, "SK": -1},
+                    "budget": 0,
+                }
+            },
+            {
+                "key": "k",
+                "description": "udělit pokutu 200 000 000 EUR",
+                "impact": {
+                    "satisfaction": {"CZ": -3, "HU": -3, "PL": -10, "SK": -1},
+                    "budget": 200_000_000,
+                }
+            },
+            {
+                "key": "n",
+                "description": "nerozhodnout teď",
+                "impact": {
+                    "satisfaction": {},
+                    "budget": 0,
+                }
+            },
+        ]
+    },
+    {
+        "party": "GR",
+        "description": "Řecko se potýká s náporem uprchlíků přicházejících z Turecka a požaduje příjmutí urychleného plánu na přerozdělování uprchlíků v Evropě.",
+        "period": 6,
+        "options": [
+            {
+                "key": "p",
+                "description": "přijmout urychleně plán pro spravedlivé přerozdělování uprchlíků",
+                "impact": {
+                    "satisfaction": {"CZ": -3, "HU": -3, "PL": -3, "SK": -1, "AT": -3, "GR": 5, "IT": 4, "ES": 4},
+                    "budget": 0,
+                }
+            },
+            {
+                "key": "n",
+                "description": "nerozhodnout teď",
+                "impact": {
+                    "satisfaction": {"GR": -5},
+                    "budget": 0,
+                }
+            },
+        ]
+    },
+    {
+        "party": "GR",
+        "description": "Řecko požaduje záruku za vydané státní dluhopisy ve výši 5 000 000 000 EUR",
+        "period": 3,
+        "options": [
+            {
+                "key": "p",
+                "description": "přijmout záruku",
+                "impact": {
+                    "satisfaction": {"GR": 5},
+                    "budget": 0,
+                }
+            },
+            {
+                "key": "n",
+                "description": "nepřijmout záruku",
+                "impact": {
+                    "satisfaction": {"GR": -5},
+                    "budget": 0,
+                }
+            },
+        ]
+    },
+    {
+        "party": "ES",
+        "description": "Španělsko požaduje záruku za vydané státní dluhopisy ve výši 10 000 000 000 EUR",
+        "period": 3,
+        "options": [
+            {
+                "key": "p",
+                "description": "přijmout záruku",
+                "impact": {
+                    "satisfaction": {"ES": 5},
+                    "budget": 0,
+                }
+            },
+            {
+                "key": "n",
+                "description": "nepřijmout záruku",
+                "impact": {
+                    "satisfaction": {"ES": -5},
+                    "budget": 0,
+                }
+            },
+        ]
+    },
+    {
+        "party": "IT",
+        "description": "Itálie požaduje záruku za vydané státní dluhopisy ve výši 10 000 000 000 EUR",
+        "period": 3,
+        "options": [
+            {
+                "key": "p",
+                "description": "přijmout záruku",
+                "impact": {
+                    "satisfaction": {"IT": 5},
+                    "budget": 0,
+                }
+            },
+            {
+                "key": "n",
+                "description": "nepřijmout záruku",
+                "impact": {
+                    "satisfaction": {"IT": -5},
+                    "budget": 0,
+                }
+            },
+        ]
+    },
+    {
+        "party": "FR",
+        "description": "Francie požaduje záruku za vydané státní dluhopisy ve výši 20 000 000 000 EUR",
+        "period": 6,
+        "options": [
+            {
+                "key": "p",
+                "description": "přijmout záruku",
+                "impact": {
+                    "satisfaction": {"FR": 5},
+                    "budget": 0,
+                }
+            },
+            {
+                "key": "n",
+                "description": "nepřijmout záruku",
+                "impact": {
+                    "satisfaction": {"FR": -5},
+                    "budget": 0,
+                }
+            },
+        ]
+    },
 ]
 
 
@@ -102,6 +254,7 @@ deep_state_events = [
     {
         "party": "SOR",
         "description": "George Soros požaduje rychlejší přísun migrantů z Afriky. Nabízí příspěvek 1 000 000 000 EUR jako podporu pro lidskoprávní organizace.",
+        "period": 12,
         "options": [
             {
                 "key": "p",
@@ -133,6 +286,7 @@ deep_state_events = [
         "party": "WHO",
         "description": "V souvislosti s probíhající pandemií WHO založila nadační fond COVAX, který má financovat nákup a distiribuci vakcín po celém světe. WHO žádá Evropskou unii o příspěvek 10 000 000 000 EUR",
         "higher_power_cond": "PAN",
+        "period": 12,
         "options": [
             {
                 "key": "p",
@@ -158,6 +312,29 @@ deep_state_events = [
                     "budget": 0,
                 }
             },
+        ]
+    },
+    {
+        "party": "NEZ",
+        "description": "V Bělorusku proběhly volby ve kterých opět vyhrál prezident Lukašenko. Lidskoprávní organizace poukazují na to, že volby byly zmanipulované a požadují odsouzení Běloruska.",
+        "period": 12,
+        "options": [
+            {
+                "key": "p",
+                "description": "přijmout deklaraci a odsoudit Bělorusko za zmanipulované volby",
+                "impact": {
+                    "satisfaction": {"NEZ": 5},
+                    "budget": 0,
+                }
+            },
+            {
+                "key": "n",
+                "description": "nepřijmou deklaraci odsuzující Bělorusko",
+                "impact": {
+                    "satisfaction": {"NEZ": -10},
+                    "budget": 0,
+                }
+            }
         ]
     },
 ]
