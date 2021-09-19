@@ -1,7 +1,9 @@
 import random
 import eu2020.data.texts as texts
 import eu2020.common.utils as utils
+from eu2020.common.budget import Budget
 from eu2020.common.parties import Parties
+from eu2020.common.parties_events import PartiesEvents
 
 
 class EventProcessor:
@@ -10,7 +12,7 @@ class EventProcessor:
     all_parties = Parties({})
 
 
-    def add_events(self, events):
+    def add_events(self, events: PartiesEvents) -> None:
         self.events.append(events)
         parties = events.get_parties().parties
         for p in parties.keys():
@@ -18,7 +20,7 @@ class EventProcessor:
                 self.all_parties.parties[p] = parties[p]
 
 
-    def process_events(self, budget):
+    def process_events(self, budget: Budget) -> None:
         for evs in self.events:
             for _ in range(random.randint(1, 3)):
                 ev = evs.get_event()
@@ -28,7 +30,7 @@ class EventProcessor:
                     self.make_decision(ev, self.all_parties, budget)
 
 
-    def make_decision(self, ev, members, budget):
+    def make_decision(self, ev: dict, members: Parties, budget: Budget) -> None:
         print(ev["description"])
         print()
         dopt = {}
@@ -45,6 +47,6 @@ class EventProcessor:
         budget.add_extra_income(b)
 
 
-    def next_period(self):
+    def next_period(self) -> None:
         for evs in self.events:
             evs.next_period()

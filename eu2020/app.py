@@ -54,6 +54,10 @@ def main():
             print(hpe + "\n")
             utils.proceed()
 
+        utils.print_text_in_box(texts.membership_satisfaction_header)
+        print(eu_members.get_detailed_satisfaction_pct())
+        utils.proceed()
+
         data.period.next()
         event_processor.next_period()
         if data.period.month == 0:

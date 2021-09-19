@@ -16,7 +16,7 @@ higher_power_events = [
     {
         "key": "INF",
         "name": "Inflace",
-        "start": "Evropa se potýká s vysokou mírou inflace.",
+        "start": "Evropa se potýká s vysokou mírou inflace. Lidé se bojí o své úspory.",
         "end": "Inflaci se podařilo zvládnout.",
         "period": 2,
     },
@@ -329,7 +329,7 @@ deep_state_events = [
             },
             {
                 "key": "n",
-                "description": "nepřijmou deklaraci odsuzující Bělorusko",
+                "description": "nepřijmout deklaraci odsuzující Bělorusko",
                 "impact": {
                     "satisfaction": {"NEZ": -10},
                     "budget": 0,
