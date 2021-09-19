@@ -11,7 +11,7 @@ from eu2020.common.budget import Budget
 from eu2020.common.event_processor import EventProcessor
 
 
-def main():
+def main() -> None:
     eu_members = Parties(data.member_countries)
     eu_administration = Parties(data.eu_administration)
     deep_state = Parties(data.deep_state)
@@ -68,26 +68,26 @@ def main():
             budget.update_balance()
 
 
-def print_budget(budget):
+def print_budget(budget: Budget) -> None:
     print(texts.budget.format(data.period.get_year(), budget.get_income(), budget.get_balance(), budget.get_dept()))
 
 
-def print_membership_satisfaction(members):
+def print_membership_satisfaction(members: Parties) -> None:
     print(texts.membership_satisfaction.format(members.get_satisfaction_pct()))
 
 
-def print_hp_events(hp_events):
+def print_hp_events(hp_events: PartiesEvents) -> None:
     ev = hp_events.get_current_events()
     if ev != "":
         print(texts.higher_power_events.format(hp_events.get_current_events()))
 
 
-def setup():
+def setup() -> None:
     n = input(f"{texts.what_is_your_name}\n> ")
     print()
     g = utils.input_with_options(texts.what_is_your_gender, data.gender)
     data.name = Name(n, g)
 
 
-def print_app_name():
+def print_app_name() -> None:
     utils.print_text_in_box(texts.app_name)

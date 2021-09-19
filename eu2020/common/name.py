@@ -12,14 +12,17 @@ ch5p = [
 
 class Name:
 
-    def __init__(self, name, gender):
+
+    def __init__(self, name: str, gender: str):
         self.name = name
         self.gender = gender
 
-    def get_name1p(self):
+
+    def get_name1p(self) -> str:
         return self.name
 
-    def get_name5p(self):
+
+    def get_name5p(self) -> str:
         if self.gender != "n":
             for ch in ch5p:
                 pattern = re.compile(ch[0])
@@ -27,7 +30,8 @@ class Name:
                     return pattern.sub(r"\1" + ch[1], self.name)
         return self.name
 
-    def translate(self, word):
+
+    def translate(self, word: str) -> str:
         t = texts.gender_dict[word]
         if (t is not None):
             return t[self.gender]

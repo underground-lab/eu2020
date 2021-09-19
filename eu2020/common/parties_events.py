@@ -10,7 +10,7 @@ class PartiesEvents:
     hp_events = None
 
 
-    def __init__(self, events: dict, parties: Parties, hp_events: HigherPowerEvents):
+    def __init__(self, events: list, parties: Parties, hp_events: HigherPowerEvents):
         self.events = events
         for ev in self.events:
             ev["wait"] = 0

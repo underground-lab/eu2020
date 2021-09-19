@@ -7,11 +7,11 @@ class HigherPowerEvents:
     active_events = []
 
 
-    def __init__(self, events):
+    def __init__(self, events: list):
         self.events = events
 
     
-    def get_event(self):
+    def get_event(self) -> str:
         result = None
         i = random.randint(0, 2)
         if i == 0:
@@ -26,7 +26,7 @@ class HigherPowerEvents:
         return result
 
 
-    def get_current_events(self):
+    def get_current_events(self) -> str:
         result = ""
         for ev in self.active_events:
             result += ev["name"] + ", "

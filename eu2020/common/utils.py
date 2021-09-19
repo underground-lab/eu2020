@@ -2,7 +2,7 @@ import os
 import eu2020.data.texts as texts
 
 
-def print_text_in_box(text, ch="*"):
+def print_text_in_box(text: str, ch="*") -> None:
     boxw = len(text) + 4
     for _ in range(boxw):
         print(ch, end = "")
@@ -12,7 +12,7 @@ def print_text_in_box(text, ch="*"):
     print("\n")
 
 
-def input_with_options(question, options):
+def input_with_options(question: str, options: dict) -> str:
     a = None
     while a not in options.keys():
         print(question)
@@ -23,10 +23,10 @@ def input_with_options(question, options):
     return a
 
 
-def proceed():
+def proceed() -> None:
     input(texts.proceed)
     clear()
 
 
-def clear():
+def clear() -> None:
     os.system('cls' if os.name == 'nt' else 'clear')
