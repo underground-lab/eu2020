@@ -9,6 +9,7 @@ period = "Období: {} {}"
 budget = "Rozpočet {}: {:,} EUR, rozdíl příjmů a výdajů: {:,} EUR, dluh: {:,} EUR"
 membership_satisfaction = "Spokojenost členských států: {:.2f} %"
 membership_satisfaction_header = "Spokojenost členských států"
+deep_state_satisfaction_header = "Spokojenost deep state"
 
 intro = """
 Ahoj {},

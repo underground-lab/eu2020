@@ -58,6 +58,10 @@ def main():
         print(eu_members.get_detailed_satisfaction_pct())
         utils.proceed()
 
+        utils.print_text_in_box(texts.deep_state_satisfaction_header)
+        print(deep_state.get_detailed_satisfaction_pct())
+        utils.proceed()
+
         data.period.next()
         event_processor.next_period()
         if data.period.month == 0:
