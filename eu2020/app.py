@@ -1,6 +1,5 @@
 import eu2020.data.texts as texts
 import eu2020.data.data as data
-import eu2020.data.events as events
 import eu2020.common.utils as utils
 from eu2020.common.name import Name
 from eu2020.common.period import Period
@@ -9,6 +8,9 @@ from eu2020.common.parties_events import PartiesEvents
 from eu2020.common.parties import Parties
 from eu2020.common.budget import Budget
 from eu2020.common.event_processor import EventProcessor
+from eu2020.data.ev_deep_state import ev_deep_state
+from eu2020.data.ev_higher_power import ev_higher_power
+from eu2020.data.ev_members import ev_member_country
 
 
 def main() -> None:
@@ -16,9 +18,9 @@ def main() -> None:
     eu_administration = Parties(data.eu_administration)
     deep_state = Parties(data.deep_state)
 
-    high_power_events = HigherPowerEvents(events.higher_power_events)
-    eu_members_events = PartiesEvents(events.member_country_events, eu_members, high_power_events)
-    deep_events = PartiesEvents(events.deep_state_events, deep_state, high_power_events)
+    high_power_events = HigherPowerEvents(ev_higher_power)
+    eu_members_events = PartiesEvents(ev_member_country, eu_members, high_power_events)
+    deep_events = PartiesEvents(ev_deep_state, deep_state, high_power_events)
 
     event_processor = EventProcessor()
     event_processor.add_events(eu_members_events)

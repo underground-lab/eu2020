@@ -1,39 +1,7 @@
-higher_power_events = [
-    {
-        "key": "PAN",
-        "name": "Pandemie",
-        "start": "Propukla pandemie nové neznámé choroby.",
-        "end": "Zdá se, že pandemie ustala.",
-        "period": 2,
-    },
-    {
-        "key": "POV",
-        "name": "Povodně",
-        "start": "Po celé Evropě propukly povodně.",
-        "end": "Povodně se podařilo zvládnout.",
-        "period": 2,
-    },
-    {
-        "key": "INF",
-        "name": "Inflace",
-        "start": "Evropa se potýká s vysokou mírou inflace. Lidé se bojí o své úspory.",
-        "end": "Inflaci se podařilo zvládnout.",
-        "period": 2,
-    },
-    {
-        "key": "HRE",
-        "name": "Hospodářská recese",
-        "start": "Evropou zmítá hospodářská recese, podniky propouštějí.",
-        "end": "Hospodářskou recesi se podařilo zvládnout.",
-        "period": 2,
-    },
-]
-
-
-member_country_events = [
+ev_member_country = [
     {
         "party": "CZ",
-        "description": "Některé české strany tlačí na deklaraci proti střetu zájmů českého premiéra.",
+        "description": "Některé české strany požadují deklaraci proti střetu zájmů českého premiéra.",
         "period": 12,
         "options": [
             {
@@ -247,94 +215,28 @@ member_country_events = [
             },
         ]
     },
-]
-
-
-deep_state_events = [
     {
-        "party": "SOR",
-        "description": "George Soros požaduje rychlejší přísun migrantů z Afriky. Nabízí příspěvek 1 000 000 000 EUR jako podporu pro lidskoprávní organizace.",
+        "party": "GR",
+        "description": "Řecko požaduje mimořádnou dotaci ve výši 500 000 000 EUR na zvládnutí lesních požárů",
+        "higher_power_cond": "PGR",
         "period": 12,
         "options": [
             {
                 "key": "p",
-                "description": "přijmout",
+                "description": "poskytnout dotaci",
                 "impact": {
-                    "satisfaction": {"CZ": -3, "HU": -3, "PL": -3, "SK": -3, "AT": -3, "IT": -3, "FR": -2},
-                    "budget": 1_000_000_000,
-                }
-            },
-            {
-                "key": "o",
-                "description": "odmítnout",
-                "impact": {
-                    "satisfaction": {"SOR": -10, "NEZ": -5, "WHO": -2},
-                    "budget": 0,
+                    "satisfaction": {"GR": 2},
+                    "budget": -500_000_000,
                 }
             },
             {
                 "key": "n",
-                "description": "nerozhodnout teď",
+                "description": "neposkytnout dotaci",
                 "impact": {
-                    "satisfaction": {"SOR": -3,},
+                    "satisfaction": {"GR": -5},
                     "budget": 0,
                 }
             },
-        ]
-    },
-    {
-        "party": "WHO",
-        "description": "V souvislosti s probíhající pandemií WHO založila nadační fond COVAX, který má financovat nákup a distiribuci vakcín po celém světe. WHO žádá Evropskou unii o příspěvek 10 000 000 000 EUR",
-        "higher_power_cond": "PAN",
-        "period": 12,
-        "options": [
-            {
-                "key": "p",
-                "description": "přijmout",
-                "impact": {
-                    "satisfaction": {"WHO": 20, "NEZ": 10, "NBM": 10, "SOR": 5, "GDA": 5, "BIP": 10},
-                    "budget": -10_000_000_000,
-                }
-            },
-            {
-                "key": "o",
-                "description": "odmítnout",
-                "impact": {
-                    "satisfaction": {"WHO": -10, "NEZ": -5, "NBM": -5, "SOR": -5, "GDA": -5, "BIP": -5},
-                    "budget": 0,
-                }
-            },
-            {
-                "key": "n",
-                "description": "nerozhodnout teď",
-                "impact": {
-                    "satisfaction": {"WHO": -10},
-                    "budget": 0,
-                }
-            },
-        ]
-    },
-    {
-        "party": "NEZ",
-        "description": "V Bělorusku proběhly volby ve kterých opět vyhrál prezident Lukašenko. Lidskoprávní organizace poukazují na to, že volby byly zmanipulované a požadují odsouzení Běloruska.",
-        "period": 12,
-        "options": [
-            {
-                "key": "p",
-                "description": "přijmout deklaraci a odsoudit Bělorusko za zmanipulované volby",
-                "impact": {
-                    "satisfaction": {"NEZ": 5},
-                    "budget": 0,
-                }
-            },
-            {
-                "key": "n",
-                "description": "nepřijmout deklaraci odsuzující Bělorusko",
-                "impact": {
-                    "satisfaction": {"NEZ": -10},
-                    "budget": 0,
-                }
-            }
         ]
     },
 ]
