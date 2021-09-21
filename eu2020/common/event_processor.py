@@ -38,6 +38,9 @@ class EventProcessor:
             dopt[opt["key"]] = opt["description"]
         g = utils.input_with_options(texts.options, dopt)
         options = list(filter(lambda o: o["key"] == g, ev["options"]))
+
+        # Set delay
+        ev["wait"] = options[0]["delay"]
         
         # Satisfaction
         members.update_satisfaction(options[0]["impact"]["satisfaction"])
