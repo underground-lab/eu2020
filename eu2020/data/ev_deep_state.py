@@ -8,7 +8,7 @@ ev_deep_state = [
                 "description": "přijmout",
                 "delay": 12,
                 "impact": {
-                    "satisfaction": {"CZ": -3, "HU": -3, "PL": -3, "SK": -3, "AT": -3, "IT": -3, "FR": -2},
+                    "satisfaction": {"SOR": 8, "CZ": -3, "HU": -3, "PL": -3, "SK": -3, "AT": -3, "IT": -3, "FR": -2},
                     "budget": 1_000_000_000,
                 }
             },

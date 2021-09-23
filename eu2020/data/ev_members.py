@@ -288,7 +288,7 @@ ev_member_country = [
                 }
             },
             {
-                "key": "k",
+                "key": "o",
                 "description": "odmítnou rozhodnutí o uzavření fosilních elektráren",
                 "delay": 12,
                 "impact": {
