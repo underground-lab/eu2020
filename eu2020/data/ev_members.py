@@ -9,7 +9,6 @@ ev_member_country = [
                 "delay": 12,
                 "impact": {
                     "satisfaction": {"CZ": -5, "HU": -3, "PL": -3, "SK": -1},
-                    "budget": 0,
                 }
             },
             {
@@ -18,7 +17,6 @@ ev_member_country = [
                 "delay": 6,
                 "impact": {
                     "satisfaction": {"CZ": 5, "HU": 1, "PL": 1, "SK": 1},
-                    "budget": 0,
                 }
             },
             {
@@ -26,8 +24,6 @@ ev_member_country = [
                 "description": "nerozhodnout teď",
                 "delay": 1,
                 "impact": {
-                    "satisfaction": {},
-                    "budget": 0,
                 }
             },
         ]
@@ -42,7 +38,6 @@ ev_member_country = [
                 "delay": 12,
                 "impact": {
                     "satisfaction": {"CZ": -3, "HU": -8, "PL": -3, "SK": -1},
-                    "budget": 0,
                 }
             },
             {
@@ -60,7 +55,6 @@ ev_member_country = [
                 "delay": 6,
                 "impact": {
                     "satisfaction": {"CZ": 3, "HU": 8, "PL": 3, "SK": 1},
-                    "budget": 0,
                 }
             },
             {
@@ -68,8 +62,6 @@ ev_member_country = [
                 "description": "nerozhodnout teď",
                 "delay": 1,
                 "impact": {
-                    "satisfaction": {},
-                    "budget": 0,
                 }
             },
         ]
@@ -84,7 +76,6 @@ ev_member_country = [
                 "delay": 12,
                 "impact": {
                     "satisfaction": {"CZ": -3, "HU": -3, "PL": -10, "SK": -1},
-                    "budget": 0,
                 }
             },
             {
@@ -101,8 +92,6 @@ ev_member_country = [
                 "description": "nerozhodnout teď",
                 "delay": 1,
                 "impact": {
-                    "satisfaction": {},
-                    "budget": 0,
                 }
             },
         ]
@@ -117,7 +106,6 @@ ev_member_country = [
                 "delay": 6,
                 "impact": {
                     "satisfaction": {"CZ": -3, "HU": -3, "PL": -3, "SK": -1, "AT": -3, "GR": 5, "IT": 4, "ES": 4},
-                    "budget": 0,
                 }
             },
             {
@@ -126,7 +114,6 @@ ev_member_country = [
                 "delay": 1,
                 "impact": {
                     "satisfaction": {"GR": -5},
-                    "budget": 0,
                 }
             },
         ]
@@ -138,19 +125,18 @@ ev_member_country = [
             {
                 "key": "p",
                 "description": "přijmout záruku",
-                "delay": 6,
+                "delay": 12,
                 "impact": {
                     "satisfaction": {"GR": 5},
-                    "budget": 0,
+                    "guarantee": 5_000_000_000
                 }
             },
             {
                 "key": "n",
                 "description": "nepřijmout záruku",
-                "delay": 3,
+                "delay": 2,
                 "impact": {
                     "satisfaction": {"GR": -5},
-                    "budget": 0,
                 }
             },
         ]
@@ -162,19 +148,18 @@ ev_member_country = [
             {
                 "key": "p",
                 "description": "přijmout záruku",
-                "delay": 6,
+                "delay": 12,
                 "impact": {
                     "satisfaction": {"ES": 5},
-                    "budget": 0,
+                    "guarantee": 10_000_000_000
                 }
             },
             {
                 "key": "n",
                 "description": "nepřijmout záruku",
-                "delay": 3,
+                "delay": 2,
                 "impact": {
                     "satisfaction": {"ES": -5},
-                    "budget": 0,
                 }
             },
         ]
@@ -186,10 +171,10 @@ ev_member_country = [
             {
                 "key": "p",
                 "description": "přijmout záruku",
-                "delay": 6,
+                "delay": 12,
                 "impact": {
                     "satisfaction": {"IT": 5},
-                    "budget": 0,
+                    "guarantee": 10_000_000_000
                 }
             },
             {
@@ -198,7 +183,6 @@ ev_member_country = [
                 "delay": 3,
                 "impact": {
                     "satisfaction": {"IT": -5},
-                    "budget": 0,
                 }
             },
         ]
@@ -210,10 +194,10 @@ ev_member_country = [
             {
                 "key": "p",
                 "description": "přijmout záruku",
-                "delay": 6,
+                "delay": 12,
                 "impact": {
                     "satisfaction": {"FR": 5},
-                    "budget": 0,
+                    "guarantee": 20_000_000_000
                 }
             },
             {
@@ -222,7 +206,6 @@ ev_member_country = [
                 "delay": 3,
                 "impact": {
                     "satisfaction": {"FR": -5},
-                    "budget": 0,
                 }
             },
         ]
@@ -247,7 +230,6 @@ ev_member_country = [
                 "delay": 3,
                 "impact": {
                     "satisfaction": {"GR": -5},
-                    "budget": 0,
                 }
             },
         ]
@@ -289,7 +271,6 @@ ev_member_country = [
                 "delay": 1,
                 "impact": {
                     "satisfaction": {"LU": -1},
-                    "budget": 0,
                 }
             },
         ]

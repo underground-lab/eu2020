@@ -21,7 +21,7 @@ class Parties:
         return s / i
 
 
-    def get_detailed_satisfaction_pct(self) -> str:
+    def get_detailed_satisfaction_report(self) -> str:
         result = ""
         w = 0
         for c in self.parties.keys():

@@ -57,11 +57,11 @@ def main() -> None:
             utils.proceed()
 
         utils.print_text_in_box(texts.membership_satisfaction_header)
-        print(eu_members.get_detailed_satisfaction_pct())
+        print(eu_members.get_detailed_satisfaction_report())
         utils.proceed()
 
         utils.print_text_in_box(texts.deep_state_satisfaction_header)
-        print(deep_state.get_detailed_satisfaction_pct())
+        print(deep_state.get_detailed_satisfaction_report())
         utils.proceed()
 
         data.period.next()
@@ -71,7 +71,8 @@ def main() -> None:
 
 
 def print_budget(budget: Budget) -> None:
-    print(texts.budget.format(data.period.get_year(), budget.get_income(), budget.get_balance(), budget.get_dept()))
+    #print(texts.budget.format(data.period.get_year(), budget.get_income(), budget.get_balance(), budget.get_dept()))
+    print(budget.get_budget_report())
 
 
 def print_membership_satisfaction(members: Parties) -> None:

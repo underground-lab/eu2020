@@ -43,11 +43,14 @@ class EventProcessor:
         ev["wait"] = options[0]["delay"]
         
         # Satisfaction
-        members.update_satisfaction(options[0]["impact"]["satisfaction"])
+        if "satisfaction" in options[0]["impact"]:
+            members.update_satisfaction(options[0]["impact"]["satisfaction"])
 
         # Budget
-        b = options[0]["impact"]["budget"]
-        budget.add_extra_income(b)
+        if "budget" in options[0]["impact"]:
+            budget.add_extra_income(options[0]["impact"]["budget"])
+        if "guarantee" in options[0]["impact"]:
+            budget.add_guarantee(options[0]["impact"]["guarantee"])
 
 
     def next_period(self) -> None:
