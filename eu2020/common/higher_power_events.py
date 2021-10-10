@@ -1,7 +1,7 @@
 import random
 
 
-class HigherPowerEvents: 
+class HigherPowerEvents:
 
     events = []
     active_events = []

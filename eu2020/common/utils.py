@@ -5,10 +5,10 @@ import eu2020.data.texts as texts
 def print_text_in_box(text: str, ch="*") -> None:
     boxw = len(text) + 4
     for _ in range(boxw):
-        print(ch, end = "")
+        print(ch, end="")
     print("\n{} {} {}".format(ch, text, ch))
     for _ in range(boxw):
-        print(ch, end = "")
+        print(ch, end="")
     print("\n")
 
 

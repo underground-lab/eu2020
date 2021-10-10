@@ -38,7 +38,7 @@ class EventProcessor:
 
         # Set delay
         ev["wait"] = options[0]["delay"]
-        
+
         # Satisfaction
         if "satisfaction" in options[0]["impact"]:
             members.update_satisfaction(options[0]["impact"]["satisfaction"])
