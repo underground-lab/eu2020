@@ -9,14 +9,12 @@ class PartiesEvents:
     parties = None
     hp_events = None
 
-
     def __init__(self, events: list, parties: Parties, hp_events: HigherPowerEvents):
         self.events = events
         for ev in self.events:
             ev["wait"] = 0
         self.parties = parties
         self.hp_events = hp_events
-
 
     def event_filter(self, ev: dict) -> bool:
         if "higher_power_cond" in ev:
@@ -28,7 +26,6 @@ class PartiesEvents:
 
         return ev["wait"] == 0
 
-
     def get_event(self) -> dict:
         filtered = list(filter(self.event_filter, self.events))
         if filtered:
@@ -36,10 +33,8 @@ class PartiesEvents:
         else:
             return None
 
-
     def get_parties(self) -> Parties:
         return self.parties
-
 
     def next_period(self) -> None:
         for ev in self.events:

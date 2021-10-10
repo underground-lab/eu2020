@@ -11,14 +11,12 @@ class EventProcessor:
     events = []
     all_parties = Parties({})
 
-
     def add_events(self, events: PartiesEvents) -> None:
         self.events.append(events)
         parties = events.get_parties().parties
         for p in parties.keys():
             if p not in self.all_parties.parties.keys():
                 self.all_parties.parties[p] = parties[p]
-
 
     def process_events(self, budget: Budget) -> None:
         for evs in self.events:
@@ -28,7 +26,6 @@ class EventProcessor:
                     country = evs.get_parties().parties[ev["party"]]
                     utils.print_text_in_box(country["name"])
                     self.make_decision(ev, self.all_parties, budget)
-
 
     def make_decision(self, ev: dict, members: Parties, budget: Budget) -> None:
         print(ev["description"])
@@ -51,7 +48,6 @@ class EventProcessor:
             budget.add_extra_income(options[0]["impact"]["budget"])
         if "guarantee" in options[0]["impact"]:
             budget.add_guarantee(options[0]["impact"]["guarantee"])
-
 
     def next_period(self) -> None:
         for evs in self.events:
