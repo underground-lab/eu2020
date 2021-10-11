@@ -304,4 +304,34 @@ ev_member_country = [
             },
         ]
     },
+    {
+        "party": "GR",
+        "description": "Řecko zaznamenává masivní vlny přílivu uprchlíků přes Středozemní moře. Požaduje uzavření dohody s Tureckem a zaplacení 6 mld EUR aby zadržovalo uprchlíky.",
+        "options": [
+            {
+                "key": "u",
+                "description": "uzavřít dohodu a zaplatit Turecku 6 mld EUR aby zadržovlo uprchlíky",
+                "delay": 12,
+                "impact": {
+                    "satisfaction": { "BE": -1, "BG": -1, "CZ": -2, "DK": -1, "EE": -2, "FI": -2, "FR": 2, "HR": 1, "IT": 2, "CY": -2, "LT": -2, "ES": -2, "SE": -2, "HU": -2, "MT": 1, "DE": -1, "NL": -2, "PL": -2, "PT": -1, "AT": -2, "RO": -3, "GR": -5, "SK": 1, "LV": -2, "LU": -2,},
+                    "budget": -6_000_000_000,
+                }
+            },
+            {
+                "key": "o",
+                "description": "odmítnout uzavření dohody s Tureckem",
+                "delay": 12,
+                "impact": {
+                    "satisfaction": {"GR": -5,},
+                }
+            },
+            {
+                "key": "n",
+                "description": "nerozhodnout teď",
+                "delay": 1,
+                "impact": {
+                }
+            },
+        ]
+    },
 ]
