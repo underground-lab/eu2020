@@ -9,10 +9,10 @@ class Period:
 
 
     def next(self) -> None:
-        self.month = self.month + 1
+        self.month += 1
         if self.month == len(data.months):
             self.month = 0
-            self.year = self.year + 1
+            self.year += 1
 
 
     def get_year(self) -> int:

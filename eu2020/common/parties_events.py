@@ -20,12 +20,10 @@ class PartiesEvents:
 
     def event_filter(self, ev: dict) -> bool:
         if "higher_power_cond" in ev:
-            met = False
             for he in self.hp_events.active_events:
                 if ev["higher_power_cond"] == he["key"]:
-                    met = True
                     break
-            if met == False:
+            else:
                 return False
 
         return ev["wait"] == 0
@@ -33,10 +31,8 @@ class PartiesEvents:
 
     def get_event(self) -> dict:
         filtered = list(filter(self.event_filter, self.events))
-        if (len(filtered) > 0):
-            n = random.randint(0, len(filtered) - 1)
-            ev = filtered[n]
-            return ev
+        if filtered:
+            return random.choice(filtered)
         else:
             return None
 
