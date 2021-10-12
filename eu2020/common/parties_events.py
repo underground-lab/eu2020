@@ -33,10 +33,8 @@ class PartiesEvents:
 
     def get_event(self) -> dict:
         filtered = list(filter(self.event_filter, self.events))
-        if (len(filtered) > 0):
-            n = random.randint(0, len(filtered) - 1)
-            ev = filtered[n]
-            return ev
+        if filtered:
+            return random.choice(filtered)
         else:
             return None
 
