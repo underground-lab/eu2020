@@ -30,7 +30,8 @@ ev_member_country = [
     },
     {
         "party": "HU",
-        "description": "Maďarsko zakázalo propagaci LGBT ve školách. LGBT aktivisté požadují odsoudit Maďarsko za porušování práv menšin",
+        "description": "Maďarsko zakázalo propagaci LGBT ve školách. LGBT aktivisté požadují odsoudit Maďarsko za porušování"
+                       " práv menšin",
         "options": [
             {
                 "key": "p",
@@ -98,7 +99,8 @@ ev_member_country = [
     },
     {
         "party": "GR",
-        "description": "Řecko se potýká s náporem uprchlíků přicházejících z Turecka a požaduje příjmutí urychleného plánu na přerozdělování uprchlíků v Evropě.",
+        "description": "Řecko se potýká s náporem uprchlíků přicházejících z Turecka a požaduje příjmutí urychleného plánu"
+                       " na přerozdělování uprchlíků v Evropě.",
         "options": [
             {
                 "key": "p",
@@ -261,7 +263,7 @@ ev_member_country = [
                 "description": "odmítnout požadavek",
                 "delay": 12,
                 "impact": {
-                    "satisfaction": {"HU": 3,"LU": -3,},
+                    "satisfaction": {"HU": 3, "LU": -3, },
                     "budget": 200_000_000,
                 }
             },
@@ -284,7 +286,11 @@ ev_member_country = [
                 "description": "přijmout rozhodnutí o uzavření fosilních elektráren",
                 "delay": 12,
                 "impact": {
-                    "satisfaction": { "BE": -1, "BG": -1, "CZ": -3, "DK": -1, "EE": -2, "FI": -2, "FR": -2, "HR": -1, "IE": -1, "IT": -2, "CY": -1, "LT": -2, "ES": -2, "SE": -2, "HU": -3, "MT": -1, "DE": +2, "NL": -2, "PL": -3, "PT": -1, "AT": -2, "RO": -3, "GR": -1, "SK": -3, "SI": -2, "LV": -2, "LU": -2,},
+                    "satisfaction": {
+                        "BE": -1, "BG": -1, "CZ": -3, "DK": -1, "EE": -2, "FI": -2, "FR": -2, "HR": -1, "IE": -1, "IT": -2,
+                        "CY": -1, "LT": -2, "ES": -2, "SE": -2, "HU": -3, "MT": -1, "DE": +2, "NL": -2, "PL": -3, "PT": -1,
+                        "AT": -2, "RO": -3, "GR": -1, "SK": -3, "SI": -2, "LV": -2, "LU": -2,
+                    },
                 }
             },
             {
@@ -292,7 +298,7 @@ ev_member_country = [
                 "description": "odmítnou rozhodnutí o uzavření fosilních elektráren",
                 "delay": 12,
                 "impact": {
-                    "satisfaction": {"DE": -5,},
+                    "satisfaction": {"DE": -5, },
                 }
             },
             {
@@ -306,14 +312,19 @@ ev_member_country = [
     },
     {
         "party": "GR",
-        "description": "Řecko zaznamenává masivní vlny přílivu uprchlíků přes Středozemní moře. Požaduje uzavření dohody s Tureckem a zaplacení 6 mld EUR aby zadržovalo uprchlíky.",
+        "description": "Řecko zaznamenává masivní vlny přílivu uprchlíků přes Středozemní moře. Požaduje uzavření dohody"
+                       " s Tureckem a zaplacení 6 mld EUR aby zadržovalo uprchlíky.",
         "options": [
             {
                 "key": "u",
                 "description": "uzavřít dohodu a zaplatit Turecku 6 mld EUR aby zadržovlo uprchlíky",
                 "delay": 12,
                 "impact": {
-                    "satisfaction": { "BE": -1, "BG": -1, "CZ": -2, "DK": -1, "EE": -2, "FI": -2, "FR": 2, "HR": 1, "IT": 2, "CY": -2, "LT": -2, "ES": -2, "SE": -2, "HU": -2, "MT": 1, "DE": -1, "NL": -2, "PL": -2, "PT": -1, "AT": -2, "RO": -3, "GR": 5, "SK": 1, "LV": -2, "LU": -2,},
+                    "satisfaction": {
+                        "BE": -1, "BG": -1, "CZ": -2, "DK": -1, "EE": -2, "FI": -2, "FR": 2, "HR": 1, "IT": 2, "CY": -2,
+                        "LT": -2, "ES": -2, "SE": -2, "HU": -2, "MT": 1, "DE": -1, "NL": -2, "PL": -2, "PT": -1, "AT": -2,
+                        "RO": -3, "GR": 5, "SK": 1, "LV": -2, "LU": -2,
+                    },
                     "budget": -6_000_000_000,
                 }
             },
@@ -322,7 +333,7 @@ ev_member_country = [
                 "description": "odmítnout uzavření dohody s Tureckem",
                 "delay": 12,
                 "impact": {
-                    "satisfaction": {"GR": -5,},
+                    "satisfaction": {"GR": -5, },
                 }
             },
             {
