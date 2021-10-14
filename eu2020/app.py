@@ -51,7 +51,7 @@ def main() -> None:
         event_processor.process_events(budget)
 
         hpe = high_power_events.get_event()
-        if hpe != None:
+        if hpe is not None:
             utils.print_text_in_box(texts.higher_power_event, "!")
             print(hpe + "\n")
             utils.proceed()
@@ -71,7 +71,7 @@ def main() -> None:
 
 
 def print_budget(budget: Budget) -> None:
-    #print(texts.budget.format(data.period.get_year(), budget.get_income(), budget.get_balance(), budget.get_dept()))
+    # print(texts.budget.format(data.period.get_year(), budget.get_income(), budget.get_balance(), budget.get_dept()))
     print(budget.get_budget_report())
 
 

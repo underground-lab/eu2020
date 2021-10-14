@@ -1,16 +1,14 @@
 import random
 
 
-class HigherPowerEvents: 
+class HigherPowerEvents:
 
     events = []
     active_events = []
 
-
     def __init__(self, events: list):
         self.events = events
 
-    
     def get_event(self) -> str:
         result = None
         i = random.randint(0, 2)
@@ -24,7 +22,6 @@ class HigherPowerEvents:
                 self.active_events.append(ev)
                 result = ev["start"]
         return result
-
 
     def get_current_events(self) -> str:
         result = ""
