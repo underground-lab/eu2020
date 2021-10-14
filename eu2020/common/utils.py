@@ -1,12 +1,13 @@
 import os
 import eu2020.data.texts as texts
+from rich import print
 
 
 def print_text_in_box(text: str, ch="*") -> None:
     boxw = len(text) + 4
     for _ in range(boxw):
         print(ch, end="")
-    print("\n{} {} {}".format(ch, text, ch))
+    print("\n{} [bold]{}[/bold] {}".format(ch, text, ch))
     for _ in range(boxw):
         print(ch, end="")
     print("\n")
