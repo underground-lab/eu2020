@@ -11,7 +11,6 @@ from eu2020.common.event_processor import EventProcessor
 from eu2020.data.ev_deep_state import ev_deep_state
 from eu2020.data.ev_higher_power import ev_higher_power
 from eu2020.data.ev_members import ev_member_country
-from rich import print
 
 
 def main() -> None:
