@@ -1,3 +1,5 @@
+# coding: utf-8
+
 ev_higher_power = [
     {
         "key": "PAN",

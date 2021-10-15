@@ -1,3 +1,5 @@
+# coding: utf-8
+
 import unittest
 from eu2020.common.name import Name
 
