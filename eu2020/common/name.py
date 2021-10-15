@@ -1,3 +1,5 @@
+# coding: utf-8
+
 import re
 import eu2020.data.texts as texts
 

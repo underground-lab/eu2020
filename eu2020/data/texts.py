@@ -1,3 +1,5 @@
+# coding: utf-8
+
 app_name = "EU Diktátor 2020"
 
 what_is_your_name = "Jak se jmenuješ? "

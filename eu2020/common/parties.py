@@ -13,7 +13,7 @@ class Parties:
     def get_satisfaction_pct(self) -> float:
         i = 0
         s = 0
-        for c in self.parties.keys():
+        for c in self.parties:
             s += self.parties[c]["satisfaction_pct"]
             i += 1
         return s / i
@@ -21,12 +21,12 @@ class Parties:
     def get_detailed_satisfaction_report(self) -> str:
         result = ""
         w = 0
-        for c in self.parties.keys():
+        for c in self.parties:
             t = len(self.parties[c]["name"])
             if w < t:
                 w = t
         w += 3
-        for c in self.parties.keys():
+        for c in self.parties:
             result += self.parties[c]["name"]
             for _ in range(w - len(self.parties[c]["name"])):
                 result += " "
@@ -38,20 +38,20 @@ class Parties:
         return result
 
     def update_satisfaction(self, satisfaction: dict) -> None:
-        for c in satisfaction.keys():
+        for c in satisfaction:
             self.parties[c]["satisfaction_pct"] += satisfaction[c]
             if self.parties[c]["satisfaction_pct"] < 0:
                 self.parties[c]["satisfaction_pct"] = 0
 
     def get_budget_contribution(self) -> int:
         result = 0
-        for c in self.parties.keys():
+        for c in self.parties:
             result += self.parties[c]["budget_contribution"]
         return result
 
     def get_budget_consumption(self) -> int:
         result = 0
-        for c in self.parties.keys():
+        for c in self.parties:
             result += self.parties[c]["budget_consumption"]
         return result
 

@@ -1,3 +1,5 @@
+# coding: utf-8
+
 ev_member_country = [
     {
         "party": "CZ",
