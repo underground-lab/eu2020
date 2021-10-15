@@ -15,9 +15,9 @@ names = {
 class TestName(unittest.TestCase):
 
     def testName5p(self):
-        for key in names.keys():
-            name = Name(key, "m")
-            self.assertEqual(names[key], name.get_name5p())
+        for name1p, name5p in names.items():
+            name = Name(name1p, "m")
+            self.assertEqual(name5p, name.get_name5p())
 
 
 if __name__ == "__main__":

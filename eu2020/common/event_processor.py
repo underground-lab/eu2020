@@ -14,8 +14,8 @@ class EventProcessor:
     def add_events(self, events: PartiesEvents) -> None:
         self.events.append(events)
         parties = events.get_parties().parties
-        for p in parties.keys():
-            if p not in self.all_parties.parties.keys():
+        for p in parties:
+            if p not in self.all_parties.parties:
                 self.all_parties.parties[p] = parties[p]
 
     def process_events(self, budget: Budget) -> None:

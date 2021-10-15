@@ -14,9 +14,9 @@ def print_text_in_box(text: str, ch="*") -> None:
 
 def input_with_options(question: str, options: dict) -> str:
     a = None
-    while a not in options.keys():
+    while a not in options:
         print(question)
-        for o in options.keys():
+        for o in options:
             print(f"{o} - {options[o]}")
         a = input("> ")
     clear()
