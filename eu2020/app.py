@@ -11,6 +11,7 @@ from eu2020.common.event_processor import EventProcessor
 from eu2020.data.ev_deep_state import ev_deep_state
 from eu2020.data.ev_higher_power import ev_higher_power
 from eu2020.data.ev_members import ev_member_country
+from eu2020 import console
 
 
 def main() -> None:
@@ -57,11 +58,11 @@ def main() -> None:
             utils.proceed()
 
         utils.print_text_in_box(texts.membership_satisfaction_header)
-        print(eu_members.get_detailed_satisfaction_report())
+        console.print(eu_members.get_detailed_satisfaction_report())
         utils.proceed()
 
         utils.print_text_in_box(texts.deep_state_satisfaction_header)
-        print(deep_state.get_detailed_satisfaction_report())
+        console.print(deep_state.get_detailed_satisfaction_report())
         utils.proceed()
 
         data.period.next()

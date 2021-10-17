@@ -4,28 +4,29 @@ from eu2020 import console
 
 
 def print_text_in_box(text: str, ch="*") -> None:
+    style = "cyan"
     boxw = len(text) + 4
     for _ in range(boxw):
-        print(ch, end="")
-    console.print("\n{} [bold]{}[/bold] {}".format(ch, text, ch))
+        console.print(ch, end="", style=style)
+    console.print("\n{} [yellow]{}[/yellow] [{}]{}[/{}]".format(ch, text, style, ch, style))
     for _ in range(boxw):
-        print(ch, end="")
+        console.print(ch, end="")
     print("\n")
 
 
 def input_with_options(question: str, options: dict) -> str:
     a = None
     while a not in options:
-        print(question)
+        console.print(f"[cyan]{question}[/cyan]")
         for o in options:
-            print(f"{o} - {options[o]}")
-        a = input("> ")
+            console.print(f"[magenta]{o}[/magenta] - {options[o]}")
+        a = console.input("[cyan]>[/cyan] ")
     clear()
     return a
 
 
 def proceed() -> None:
-    input(texts.proceed)
+    console.input(f"[cyan]{texts.proceed}[/cyan]")
     clear()
 
 

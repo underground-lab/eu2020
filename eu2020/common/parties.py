@@ -32,8 +32,10 @@ class Parties:
                 result += " "
             result += "{:.2f} %".format(self.parties[c]["satisfaction_pct"])
             diff = self.parties[c]["satisfaction_pct"] - self.parties_prev[c]["satisfaction_pct"]
-            if diff != 0:
-                result += "  ({:+.2f} %)".format(diff)
+            if diff > 0:
+                result += "  ([green]{:+.2f} %[/green])".format(diff)
+            if diff < 0:
+                result += "  ([red]{:+.2f} %[/red])".format(diff)
             result += "\n"
         return result
 
