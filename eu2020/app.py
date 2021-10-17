@@ -1,3 +1,4 @@
+import eu2020.data.colors as colors
 import eu2020.data.texts as texts
 import eu2020.data.data as data
 import eu2020.common.utils as utils
@@ -11,6 +12,7 @@ from eu2020.common.event_processor import EventProcessor
 from eu2020.data.ev_deep_state import ev_deep_state
 from eu2020.data.ev_higher_power import ev_higher_power
 from eu2020.data.ev_members import ev_member_country
+from eu2020 import console
 
 
 def main() -> None:
@@ -57,11 +59,11 @@ def main() -> None:
             utils.proceed()
 
         utils.print_text_in_box(texts.membership_satisfaction_header)
-        print(eu_members.get_detailed_satisfaction_report())
+        console.print(eu_members.get_detailed_satisfaction_report())
         utils.proceed()
 
         utils.print_text_in_box(texts.deep_state_satisfaction_header)
-        print(deep_state.get_detailed_satisfaction_report())
+        console.print(deep_state.get_detailed_satisfaction_report())
         utils.proceed()
 
         data.period.next()
@@ -71,12 +73,11 @@ def main() -> None:
 
 
 def print_budget(budget: Budget) -> None:
-    # print(texts.budget.format(data.period.get_year(), budget.get_income(), budget.get_balance(), budget.get_dept()))
-    print(budget.get_budget_report())
+    console.print(budget.get_budget_report())
 
 
 def print_membership_satisfaction(members: Parties) -> None:
-    print(texts.membership_satisfaction.format(members.get_satisfaction_pct()))
+    console.print(texts.membership_satisfaction.format(colors.numbers, members.get_satisfaction_pct(), colors.numbers))
 
 
 def print_hp_events(hp_events: PartiesEvents) -> None:
@@ -86,7 +87,7 @@ def print_hp_events(hp_events: PartiesEvents) -> None:
 
 
 def setup() -> None:
-    n = input(f"{texts.what_is_your_name}\n> ")
+    n = console.input(f"{texts.what_is_your_name}\n{texts.cursor}")
     print()
     g = utils.input_with_options(texts.what_is_your_gender, data.gender)
     data.name = Name(n, g)
