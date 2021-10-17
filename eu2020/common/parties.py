@@ -1,4 +1,5 @@
 import copy
+import eu2020.data.colors as colors
 
 
 class Parties:
@@ -30,12 +31,12 @@ class Parties:
             result += self.parties[c]["name"]
             for _ in range(w - len(self.parties[c]["name"])):
                 result += " "
-            result += "{:.2f} %".format(self.parties[c]["satisfaction_pct"])
+            result += "[{}]{:.2f} %[/{}]".format(colors.numbers, self.parties[c]["satisfaction_pct"], colors.numbers)
             diff = self.parties[c]["satisfaction_pct"] - self.parties_prev[c]["satisfaction_pct"]
             if diff > 0:
-                result += "  ([green]{:+.2f} %[/green])".format(diff)
+                result += "  ([{}]{:+.2f} %[/{}])".format(colors.positive_progress, diff, colors.positive_progress)
             if diff < 0:
-                result += "  ([red]{:+.2f} %[/red])".format(diff)
+                result += "  ([{}]{:+.2f} %[/{}])".format(colors.negative_progress, diff, colors.negative_progress)
             result += "\n"
         return result
 

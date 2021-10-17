@@ -1,15 +1,19 @@
 # coding: utf-8
 
+import eu2020.data.colors as colors
+
 app_name = "EU Diktátor 2020"
 
 what_is_your_name = "Jak se jmenuješ? "
 what_is_your_gender = "Jakého seš pohlaví? "
 
+cursor = f"[{colors.cursor}]>[/{colors.cursor}] "
+
 proceed = "Pokračovat..."
 
 period = "Období: {} {}"
 # budget = "Rozpočet {}: {:,} EUR, rozdíl příjmů a výdajů: {:,} EUR, dluh: {:,} EUR"
-membership_satisfaction = "Spokojenost členských států: {:.2f} %"
+membership_satisfaction = "Spokojenost členských států: [{}]{:.2f} %[/{}]"
 membership_satisfaction_header = "Spokojenost členských států"
 deep_state_satisfaction_header = "Spokojenost deep state"
 

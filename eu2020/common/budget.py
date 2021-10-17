@@ -1,3 +1,4 @@
+import eu2020.data.colors as colors
 from eu2020.common.parties import Parties
 
 
@@ -49,12 +50,12 @@ class Budget:
     def get_budget_report(self):
         result = ""
 
-        result += "Income:        {:20,} EUR\n".format(self.get_income())
-        result += "Outcome:       {:20,} EUR\n".format(self.get_outcome())
-        result += "Difference:    {:20,} EUR\n".format(self.get_income() - self.get_outcome())
-        result += "Extra Income:  {:20,} EUR\n".format(self.budget["extra_income"])
-        result += "Extra Outcome: {:20,} EUR\n".format(self.budget["extra_outcome"])
-        result += "Dept:          {:20,} EUR\n".format(self.budget["dept"])
-        result += "Guarantee:     {:20,} EUR\n".format(self.budget["guarantee"])
+        result += "Income:        [{}]{:20,} EUR[/{}]\n".format(colors.numbers, self.get_income(), colors.numbers)
+        result += "Outcome:       [{}]{:20,} EUR[/{}]\n".format(colors.numbers, self.get_outcome(), colors.numbers)
+        result += "Difference:    [{}]{:20,} EUR[/{}]\n".format(colors.numbers, self.get_income() - self.get_outcome(), colors.numbers)
+        result += "Extra Income:  [{}]{:20,} EUR[/{}]\n".format(colors.numbers, self.budget["extra_income"], colors.numbers)
+        result += "Extra Outcome: [{}]{:20,} EUR[/{}]\n".format(colors.numbers, self.budget["extra_outcome"], colors.numbers)
+        result += "Dept:          [{}]{:20,} EUR[/{}]\n".format(colors.numbers, self.budget["dept"], colors.numbers)
+        result += "Guarantee:     [{}]{:20,} EUR[/{}]\n".format(colors.numbers, self.budget["guarantee"], colors.numbers)
 
         return result
