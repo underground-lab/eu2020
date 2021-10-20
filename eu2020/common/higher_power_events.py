@@ -23,7 +23,4 @@ class HigherPowerEvents:
         return result
 
     def get_current_events(self) -> str:
-        result = ""
-        for ev in self.active_events:
-            result += ev["name"] + ", "
-        return result
+        return ", ".join(ev["name"] for ev in self.active_events)
