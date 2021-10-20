@@ -13,8 +13,7 @@ class HigherPowerEvents:
         result = None
         i = random.randint(0, 2)
         if i == 0:
-            i = random.randint(0, len(self.events) - 1)
-            ev = self.events[i]
+            ev = random.choice(self.events)
             if ev in self.active_events:
                 self.active_events.remove(ev)
                 result = ev["end"]
@@ -24,7 +23,4 @@ class HigherPowerEvents:
         return result
 
     def get_current_events(self) -> str:
-        result = ""
-        for ev in self.active_events:
-            result += ev["name"] + ", "
-        return result
+        return ", ".join(ev["name"] for ev in self.active_events)
