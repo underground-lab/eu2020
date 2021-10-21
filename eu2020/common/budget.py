@@ -1,4 +1,5 @@
 import eu2020.data.colors as colors
+import eu2020.data.texts as texts
 from eu2020.common.parties import Parties
 
 
@@ -50,10 +51,10 @@ class Budget:
     def get_budget_report(self):
         result = ""
 
-        result += "Příjmy:            [{}]{:20,} EUR[/{}]\n" \
-            .format(colors.numbers, self.get_income(), colors.numbers)
-        result += "Výdaje:            [{}]{:20,} EUR[/{}]\n" \
-            .format(colors.numbers, self.get_outcome(), colors.numbers)
+        result += "{} [{}]{:20,} EUR[/{}]\n" \
+            .format(texts.budget_income, colors.numbers, self.get_income(), colors.numbers)
+        result += "{} [{}]{:20,} EUR[/{}]\n" \
+            .format(texts.budget_outcome, colors.numbers, self.get_outcome(), colors.numbers)
 
         diff = self.get_income() - self.get_outcome()
         color = colors.numbers
@@ -61,15 +62,15 @@ class Budget:
             color = colors.positive_progress
         if diff < 0:
             color = colors.negative_progress
-        result += "Bilance:           [{}]{:{}20,} EUR[/{}]\n".format(color, diff, '+' if diff else '', color)
+        result += "{} [{}]{:{}20,} EUR[/{}]\n".format(texts.budget_balance, color, diff, '+' if diff else '', color)
 
-        result += "Mimořádné příjmy:  [{}]{:20,} EUR[/{}]\n" \
-            .format(colors.numbers, self.budget["extra_income"], colors.numbers)
-        result += "Mimořádní výdaje:  [{}]{:20,} EUR[/{}]\n" \
-            .format(colors.numbers, self.budget["extra_outcome"], colors.numbers)
-        result += "Dluh:              [{}]{:20,} EUR[/{}]\n" \
-            .format(colors.numbers, self.budget["dept"], colors.numbers)
-        result += "Garance:           [{}]{:20,} EUR[/{}]\n" \
-            .format(colors.numbers, self.budget["guarantee"], colors.numbers)
+        result += "{} [{}]{:20,} EUR[/{}]\n" \
+            .format(texts.budget_extra_income, colors.numbers, self.budget["extra_income"], colors.numbers)
+        result += "{} [{}]{:20,} EUR[/{}]\n" \
+            .format(texts.budget_extra_outcome, colors.numbers, self.budget["extra_outcome"], colors.numbers)
+        result += "{} [{}]{:20,} EUR[/{}]\n" \
+            .format(texts.budget_dept, colors.numbers, self.budget["dept"], colors.numbers)
+        result += "{} [{}]{:20,} EUR[/{}]\n" \
+            .format(texts.budget_guarantee, colors.numbers, self.budget["guarantee"], colors.numbers)
 
         return result

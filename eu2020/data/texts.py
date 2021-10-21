@@ -34,3 +34,11 @@ gender_dict = {
 options = "Možnosti:"
 higher_power_event = "Mimořádná událost"
 higher_power_events = "Mimořádné události: [{}]{}[/{}]"
+
+budget_income =        "Příjmy:           "
+budget_outcome =       "Výdaje:           "
+budget_balance =       "Bilance:          "
+budget_extra_income =  "Mimořádné příjmy: "
+budget_extra_outcome = "Mimořádné výdaje: "
+budget_dept =          "Dluh:             "
+budget_guarantee =     "Garance:          "
