@@ -45,7 +45,10 @@ class EventProcessor:
 
         # Budget
         if "budget" in options[0]["impact"]:
-            budget.add_extra_income(options[0]["impact"]["budget"])
+            if options[0]["impact"]["budget"] > 0:
+                budget.add_extra_income(options[0]["impact"]["budget"])
+            else:
+                budget.add_extra_outcome(-1 * options[0]["impact"]["budget"])
         if "guarantee" in options[0]["impact"]:
             budget.add_guarantee(options[0]["impact"]["guarantee"])
 

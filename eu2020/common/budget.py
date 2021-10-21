@@ -50,19 +50,26 @@ class Budget:
     def get_budget_report(self):
         result = ""
 
-        result += "Income:        [{}]{:20,} EUR[/{}]\n" \
+        result += "Příjmy:            [{}]{:20,} EUR[/{}]\n" \
             .format(colors.numbers, self.get_income(), colors.numbers)
-        result += "Outcome:       [{}]{:20,} EUR[/{}]\n" \
+        result += "Výdaje:            [{}]{:20,} EUR[/{}]\n" \
             .format(colors.numbers, self.get_outcome(), colors.numbers)
-        result += "Difference:    [{}]{:20,} EUR[/{}]\n" \
-            .format(colors.numbers, self.get_income() - self.get_outcome(), colors.numbers)
-        result += "Extra Income:  [{}]{:20,} EUR[/{}]\n" \
+
+        diff = self.get_income() - self.get_outcome()
+        color = colors.numbers
+        if diff > 0:
+            color = colors.positive_progress
+        if diff < 0:
+            color = colors.negative_progress
+        result += "Bilance:           [{}]{:{}20,} EUR[/{}]\n".format(color, diff, '+' if diff else '', color)
+
+        result += "Mimořádné příjmy:  [{}]{:20,} EUR[/{}]\n" \
             .format(colors.numbers, self.budget["extra_income"], colors.numbers)
-        result += "Extra Outcome: [{}]{:20,} EUR[/{}]\n" \
+        result += "Mimořádní výdaje:  [{}]{:20,} EUR[/{}]\n" \
             .format(colors.numbers, self.budget["extra_outcome"], colors.numbers)
-        result += "Dept:          [{}]{:20,} EUR[/{}]\n" \
+        result += "Dluh:              [{}]{:20,} EUR[/{}]\n" \
             .format(colors.numbers, self.budget["dept"], colors.numbers)
-        result += "Guarantee:     [{}]{:20,} EUR[/{}]\n" \
+        result += "Garance:           [{}]{:20,} EUR[/{}]\n" \
             .format(colors.numbers, self.budget["guarantee"], colors.numbers)
 
         return result
