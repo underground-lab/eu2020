@@ -10,11 +10,11 @@ from eu2020.common.higher_power_events import HigherPowerEvents
         ([], ""),
         (
             [{"name": "Inflace"}],
-            "Mimořádné události: Inflace\n"
+            "\nMimořádné události: Inflace\n"
         ),
         (
             [{"name": "Pandemie"}, {"name": "Inflace"}],
-            "Mimořádné události: Pandemie, Inflace\n"
+            "\nMimořádné události: Pandemie, Inflace\n"
         ),
     )
 )
