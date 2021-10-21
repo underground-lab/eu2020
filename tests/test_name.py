@@ -1,26 +1,21 @@
 # coding: utf-8
 
-import unittest
+import pytest
 from eu2020.common.name import Name
 
-names = {
-    "Adam": "Adame",
-    "Eliška": "Eliško",
-    "Jana": "Jano",
-    "Jarda": "Jardo",
-    "Petr": "Petře",
-    "Petra": "Petro",
-    "Tomáš": "Tomáši",
-}
-
-
-class TestName(unittest.TestCase):
-
-    def testName5p(self):
-        for name1p, name5p in names.items():
-            name = Name(name1p, "m")
-            self.assertEqual(name5p, name.get_name5p())
-
-
-if __name__ == "__main__":
-    unittest.main()
+@pytest.mark.parametrize(
+    'name1p, name5p',
+    (
+        ("Adam", "Adame"),
+        ("Eliška", "Eliško"),
+        ("Jana", "Jano"),
+        ("Jarda", "Jardo"),
+        ("Jaroslav", "Jaroslave"),
+        ("Petr", "Petře"),
+        ("Petra", "Petro"),
+        ("Tomáš", "Tomáši")
+    )
+)
+def testName5p(name1p, name5p):
+    name = Name(name1p, "m")
+    assert(name5p == name.get_name5p())

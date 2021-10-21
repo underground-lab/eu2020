@@ -4,11 +4,12 @@ import re
 import eu2020.data.texts as texts
 
 ch5p = [
-    (r"(.*)da$", "do"),
     (r"(.*)a$", "o"),
+    (r"(.*)da$", "do"),
     (r"(.*)m$", "me"),
     (r"(.*)r$", "ře"),
     (r"(.*)š$", "ši"),
+    (r"(.*)v$", "ve"),
 ]
 
 
