@@ -26,13 +26,13 @@ class Budget:
         result = 0
         for p in self.parties:
             result += p.get_budget_contribution()
-        return result + self.budget["extra_income"]
+        return result
 
     def get_outcome(self) -> int:
         result = 0
         for p in self.parties:
             result += p.get_budget_consumption()
-        return result + self.budget["extra_outcome"]
+        return result
 
     def add_extra_income(self, amt: int) -> None:
         self.budget["extra_income"] += amt
@@ -44,7 +44,8 @@ class Budget:
         self.budget["guarantee"] += amt
 
     def update_balance(self) -> None:
-        self.budget["dept"] -= self.get_income() - self.get_outcome()
+        self.budget["dept"] -= self.get_income() + self.budget["extra_income"] \
+            - self.get_outcome() - self.budget["extra_outcome"]
         self.budget["extra_income"] = 0
         self.budget["extra_outcome"] = 0
 
@@ -55,8 +56,15 @@ class Budget:
             .format(texts.budget_income, colors.numbers, self.get_income(), colors.numbers)
         result += "{} [{}]{:20,} EUR[/{}]\n" \
             .format(texts.budget_outcome, colors.numbers, self.get_outcome(), colors.numbers)
+        result += "{} [{}]{:20,} EUR[/{}]\n" \
+            .format(texts.budget_extra_income, colors.numbers, self.budget["extra_income"], colors.numbers)
+        result += "{} [{}]{:20,} EUR[/{}]\n" \
+            .format(texts.budget_extra_outcome, colors.numbers, self.budget["extra_outcome"], colors.numbers)
+        result += "{} [{}]{:20,} EUR[/{}]\n" \
+            .format(texts.budget_dept, colors.numbers, self.budget["dept"], colors.numbers)
 
-        diff = self.get_income() - self.get_outcome()
+        diff = self.get_income() + self.budget["extra_income"] \
+            - self.get_outcome() - self.budget["extra_outcome"] - self.budget["dept"]
         color = colors.numbers
         if diff > 0:
             color = colors.positive_progress
@@ -64,12 +72,6 @@ class Budget:
             color = colors.negative_progress
         result += "{} [{}]{:{}20,} EUR[/{}]\n".format(texts.budget_balance, color, diff, '+' if diff else '', color)
 
-        result += "{} [{}]{:20,} EUR[/{}]\n" \
-            .format(texts.budget_extra_income, colors.numbers, self.budget["extra_income"], colors.numbers)
-        result += "{} [{}]{:20,} EUR[/{}]\n" \
-            .format(texts.budget_extra_outcome, colors.numbers, self.budget["extra_outcome"], colors.numbers)
-        result += "{} [{}]{:20,} EUR[/{}]\n" \
-            .format(texts.budget_dept, colors.numbers, self.budget["dept"], colors.numbers)
         result += "{} [{}]{:20,} EUR[/{}]\n" \
             .format(texts.budget_guarantee, colors.numbers, self.budget["guarantee"], colors.numbers)
 
