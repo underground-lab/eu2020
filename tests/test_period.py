@@ -27,7 +27,7 @@ def period():
         (2021, "Leden")
     )
 )
-def testFilter(period, year, month):
+def test_next(period, year, month):
     assert year == period.get_year()
     assert month == period.get_month()
     period.next()

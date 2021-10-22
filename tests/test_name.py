@@ -22,6 +22,6 @@ from eu2020.common.name import Name
         ("Tomáš", "Tomáši")
     )
 )
-def testName5p(name1p, name5p):
+def test_name_5p(name1p, name5p):
     name = Name(name1p, "m")
     assert(name5p == name.get_name5p())
