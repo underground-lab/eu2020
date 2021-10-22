@@ -3,6 +3,7 @@
 import pytest
 from eu2020.common.name import Name
 
+
 @pytest.mark.parametrize(
     'name1p, name5p',
     (
@@ -11,6 +12,11 @@ from eu2020.common.name import Name
         ("Jana", "Jano"),
         ("Jarda", "Jardo"),
         ("Jaroslav", "Jaroslave"),
+        ("Karel", "Karle"),
+        ("Libor", "Libore"),
+        ("Michal", "Michale"),
+        ("Milan", "Milane"),
+        ("Pavel", "Pavle"),
         ("Petr", "Petře"),
         ("Petra", "Petro"),
         ("Tomáš", "Tomáši")
