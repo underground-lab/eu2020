@@ -27,14 +27,14 @@ class Name:
 
     def get_name5p(self) -> str:
         if self.gender != "n":
-            for ch in ch5p:
-                pattern = re.compile(ch[0])
+            for regex, suffix in ch5p:
+                pattern = re.compile(regex)
                 if pattern.match(self.name) is not None:
-                    return pattern.sub(r"\1" + ch[1], self.name)
+                    return pattern.sub(r"\1" + suffix, self.name)
         return self.name
 
     def translate(self, word: str) -> str:
-        t = texts.gender_dict[word]
-        if (t is not None):
+        t = texts.gender_dict.get(word)
+        if t is not None:
             return t[self.gender]
         return word
