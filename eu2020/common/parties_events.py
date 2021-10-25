@@ -1,4 +1,6 @@
 import random
+from typing import Optional
+
 from eu2020.common.higher_power_events import HigherPowerEvents
 from eu2020.common.parties import Parties
 
@@ -26,12 +28,11 @@ class PartiesEvents:
 
         return ev["wait"] == 0
 
-    def get_event(self) -> dict:
+    def get_event(self) -> Optional[dict]:
         filtered = list(filter(self.event_filter, self.events))
         if filtered:
             return random.choice(filtered)
-        else:
-            return None
+        return None
 
     def get_parties(self) -> Parties:
         return self.parties
