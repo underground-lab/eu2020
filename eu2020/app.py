@@ -80,7 +80,7 @@ def print_membership_satisfaction(members: Parties) -> None:
     console.print(texts.membership_satisfaction.format(colors.numbers, members.get_satisfaction_pct(), colors.numbers))
 
 
-def print_hp_events(hp_events: PartiesEvents) -> None:
+def print_hp_events(hp_events: HigherPowerEvents) -> None:
     ev = hp_events.get_current_events()
     if ev != "":
         console.print()

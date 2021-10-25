@@ -1,4 +1,6 @@
 import copy
+import statistics
+
 import eu2020.data.colors as colors
 
 
@@ -12,12 +14,9 @@ class Parties:
         self.parties_prev = copy.deepcopy(self.parties)
 
     def get_satisfaction_pct(self) -> float:
-        i = 0
-        s = 0
-        for c in self.parties:
-            s += self.parties[c]["satisfaction_pct"]
-            i += 1
-        return s / i
+        return statistics.mean(
+            party["satisfaction_pct"] for party in self.parties.values()
+        )
 
     def get_detailed_satisfaction_report(self) -> str:
         result = ""
