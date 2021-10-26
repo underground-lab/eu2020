@@ -1,4 +1,7 @@
 import eu2020.data.colors as colors
+import eu2020.data.ev_admin as ead
+import eu2020.data.ev_deep_state as eds
+import eu2020.data.ev_members as ems
 import eu2020.data.texts as texts
 import eu2020.data.data as data
 import eu2020.common.utils as utils
@@ -9,20 +12,18 @@ from eu2020.common.parties_events import PartiesEvents
 from eu2020.common.parties import Parties
 from eu2020.common.budget import Budget
 from eu2020.common.event_processor import EventProcessor
-from eu2020.data.ev_deep_state import ev_deep_state
 from eu2020.data.ev_higher_power import ev_higher_power
-from eu2020.data.ev_members import ev_member_country
 from eu2020 import console
 
 
 def main() -> None:
-    eu_members = Parties(data.member_countries)
-    eu_administration = Parties(data.eu_administration)
-    deep_state = Parties(data.deep_state)
+    eu_members = Parties(ems.member_countries)
+    eu_administration = Parties(ead.eu_administration)
+    deep_state = Parties(eds.deep_state)
 
     high_power_events = HigherPowerEvents(ev_higher_power)
-    eu_members_events = PartiesEvents(ev_member_country, eu_members, high_power_events)
-    deep_events = PartiesEvents(ev_deep_state, deep_state, high_power_events)
+    eu_members_events = PartiesEvents(ems.ev_member_country, eu_members, high_power_events)
+    deep_events = PartiesEvents(eds.ev_deep_state, deep_state, high_power_events)
 
     event_processor = EventProcessor()
     event_processor.add_events(eu_members_events)
@@ -39,7 +40,7 @@ def main() -> None:
     print_app_name()
 
     setup()
-    print(texts.intro.format(data.name.get_name5p(), data.name.translate("stal"), len(data.member_countries)))
+    print(texts.intro.format(data.name.get_name5p(), data.name.translate("stal"), len(ems.member_countries)))
     utils.proceed()
 
     while True:
