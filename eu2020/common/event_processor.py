@@ -8,11 +8,15 @@ from eu2020.common.parties_events import PartiesEvents
 
 class EventProcessor:
 
-    events = []
+    events = set()
+    flags = set()
     all_parties = Parties({})
 
+    def __init__(self, flags: set):
+        self.flags = flags
+
     def add_events(self, events: PartiesEvents) -> None:
-        self.events.append(events)
+        self.events.add(events)
         parties = events.get_parties().parties
         for p in parties:
             if p not in self.all_parties.parties:
@@ -51,6 +55,10 @@ class EventProcessor:
                 budget.add_extra_outcome(-1 * options[0]["impact"]["budget"])
         if "guarantee" in options[0]["impact"]:
             budget.add_guarantee(options[0]["impact"]["guarantee"])
+
+        # Flag set
+        if "flag_set" in options[0]:
+            self.flags.add(options[0]["flag_set"])
 
     def next_period(self) -> None:
         for evs in self.events:

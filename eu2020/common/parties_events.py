@@ -8,11 +8,13 @@ from eu2020.common.parties import Parties
 class PartiesEvents:
 
     events = []
+    flags = set()
     parties = None
     hp_events = None
 
-    def __init__(self, events: list, parties: Parties, hp_events: HigherPowerEvents):
+    def __init__(self, events: list, parties: Parties, hp_events: HigherPowerEvents, flags: set):
         self.events = events
+        self.flags = flags
         for ev in self.events:
             ev["wait"] = 0
         self.parties = parties
@@ -24,6 +26,10 @@ class PartiesEvents:
                 if ev["higher_power_cond"] == he["key"]:
                     break
             else:
+                return False
+
+        if "flag" in ev:
+            if ev["flag"] not in self.flags:
                 return False
 
         return ev["wait"] == 0

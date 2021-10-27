@@ -12,6 +12,7 @@ ev_admin_ek = [
                 "key": "p",
                 "description": "přijmout Green Deal",
                 "delay": -1,
+                "flag_set": "green_deal",
                 "impact": {
                     "satisfaction": {
                         "NBM": 2, "WHO": 2, "GDA": 2, "SOR": 2, "BIT": 2, "BE": -2, "BG": -2, "CZ": -2, "DK": -2,
@@ -40,6 +41,42 @@ ev_admin_ek = [
                 "delay": 2,
                 "impact": {
                     "satisfaction": {"GDA": -1, "SOR": -1},
+                }
+            },
+        ]
+    },
+    {
+        "party": "EK",
+        "description": "EK navrhuje v rámci Green Deal zavedení klimatické daně pro všechny majitele domů a aut.",
+        "flag": "green_deal",
+        "options": [
+            {
+                "key": "p",
+                "description": "přijmout zavedení klimatické daně pro domácnosti",
+                "delay": -1,
+                "impact": {
+                    "satisfaction": {
+                        "WHO": 2, "GDA": 2, "SOR": 2, "BE": -2, "BG": -2, "CZ": -2, "DK": -2,
+                        "EE": -2, "FI": -1, "FR": -2, "HR": -1, "IE": -1, "IT": -1, "CY": -2, "LT": -2, "ES": -2, "SE": -1,
+                        "HU": -2, "MT": -1, "DE": -1, "NL": -1, "PL": -2, "PT": -1, "AT": -1, "RO": -2, "GR": -1, "SK": -2,
+                        "SI": -1, "LV": -1, "LU": -1,
+                    },
+                }
+            },
+            {
+                "key": "o",
+                "description": "odmítnout zavedení klimatické daně pro domácnosti",
+                "delay": 6,
+                "impact": {
+                    "satisfaction": {"WHO": -1, "GDA": -1, "SOR": -1},
+                }
+            },
+            {
+                "key": "n",
+                "description": "nerozhodnout teď",
+                "delay": 2,
+                "impact": {
+                    "satisfaction": {},
                 }
             },
         ]
