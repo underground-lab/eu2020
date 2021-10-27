@@ -26,7 +26,7 @@ ev_deep_state_sor = [
             {
                 "key": "n",
                 "description": "nerozhodnout teď",
-                "delay": 1,
+                "delay": 2,
                 "impact": {
                     "satisfaction": {"SOR": -3, },
                 }

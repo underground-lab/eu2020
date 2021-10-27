@@ -25,7 +25,7 @@ ev_others_ru = [
             {
                 "key": "n",
                 "description": "nerozhodnout teď",
-                "delay": 1,
+                "delay": 2,
                 "impact": {
                     "satisfaction": {"NEZ": -1},
                 }
