@@ -24,7 +24,7 @@ class EventProcessor:
 
     def process_events(self, budget: Budget) -> None:
         for evs in self.events:
-            for _ in range(random.randint(1, 3)):
+            for _ in range(random.randint(1, 2)):
                 ev = evs.get_event()
                 if ev is not None:
                     country = evs.get_parties().parties[ev["party"]]
