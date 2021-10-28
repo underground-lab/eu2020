@@ -5,21 +5,23 @@ from eu2020.common.higher_power_events import HigherPowerEvents
 
 
 @pytest.mark.parametrize(
-    'events, expected_stdout',
+    'events, active, expected_stdout',
     (
-        ([], ""),
+        ([], [], ""),
         (
-            [{"name": "Inflace"}],
+            [{"key": "inflation", "name": "Inflace"}],
+            ["inflation"],
             "\nMimořádné události: Inflace\n"
         ),
         (
-            [{"name": "Pandemie"}, {"name": "Inflace"}],
+            [{"key": "pandemic", "name": "Pandemie"}, {"key": "inflation", "name": "Inflace"}],
+            ["pandemic", "inflation"],
             "\nMimořádné události: Pandemie, Inflace\n"
         ),
     )
 )
-def test_print_hp_events(capsys, events, expected_stdout):
-    hp_events = HigherPowerEvents(events, set())
-    hp_events.active_events = events
+def test_print_hp_events(capsys, events, active, expected_stdout):
+    active = set(active)
+    hp_events = HigherPowerEvents(events, active)
     print_hp_events(hp_events)
     assert capsys.readouterr().out == expected_stdout

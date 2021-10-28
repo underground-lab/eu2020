@@ -8,8 +8,8 @@ ev_higher_power = [
         "end": "Zdá se, že pandemie ustala.",
     },
     {
-        "key": "floods",
-        "name": "Povodně",
+        "key": "floods_de",
+        "name": "Povodně v Německu",
         "start": "V Německu propukly povodně.",
         "end": "Povodně v Německu se podařilo zvládnout.",
     },
@@ -27,7 +27,7 @@ ev_higher_power = [
     },
     {
         "key": "fires_gr",
-        "name": "Požáry",
+        "name": "Požáry v Řecku",
         "start": "V Řecku propukly lesní požáry.",
         "end": "Lesní požáry v Řecku se podařilo zvládnout.",
     },
