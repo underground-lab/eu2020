@@ -19,7 +19,7 @@ from eu2020.common.higher_power_events import HigherPowerEvents
     )
 )
 def test_print_hp_events(capsys, events, expected_stdout):
-    hp_events = HigherPowerEvents(events)
+    hp_events = HigherPowerEvents(events, set())
     hp_events.active_events = events
     print_hp_events(hp_events)
     assert capsys.readouterr().out == expected_stdout

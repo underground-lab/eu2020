@@ -5,9 +5,11 @@ class HigherPowerEvents:
 
     events = []
     active_events = []
+    flags = set()
 
-    def __init__(self, events: list):
+    def __init__(self, events: list, flags: set):
         self.events = events
+        self.flags = flags
 
     def get_event(self) -> str:
         result = None
@@ -16,9 +18,11 @@ class HigherPowerEvents:
             ev = random.choice(self.events)
             if ev in self.active_events:
                 self.active_events.remove(ev)
+                self.flags.remove(ev["key"])
                 result = ev["end"]
             else:
                 self.active_events.append(ev)
+                self.flags.add(ev["key"])
                 result = ev["start"]
         return result
 

@@ -5,7 +5,7 @@ ev_deep_state_nbm = [
         "party": "NBM",
         "description": "Bill Gates oznámil otevření nových gigantických výrobních kapacit pro vakcíny, které by měly pomoci"
                        " při dalších pandemiích. Nyní požaduje aby byly zavedené povinné elektronické očkovací průkazy.",
-        "higher_power_cond": "PAN",
+        "flag": "pandemic",
         "options": [
             {
                 "key": "p",

@@ -25,11 +25,11 @@ def main() -> None:
     deep_state = Parties(eds.deep_state)
     others = Parties(eot.deep_others)
 
-    high_power_events = HigherPowerEvents(ev_higher_power)
-    eu_members_events = PartiesEvents(ems.ev_member_country, eu_members, high_power_events, flags)
-    eu_admin_events = PartiesEvents(ead.ev_admin, eu_admin, high_power_events, flags)
-    deep_events = PartiesEvents(eds.ev_deep_state, deep_state, high_power_events, flags)
-    others_events = PartiesEvents(eot.ev_others, others, high_power_events, flags)
+    high_power_events = HigherPowerEvents(ev_higher_power, flags)
+    eu_members_events = PartiesEvents(ems.ev_member_country, eu_members, flags)
+    eu_admin_events = PartiesEvents(ead.ev_admin, eu_admin, flags)
+    deep_events = PartiesEvents(eds.ev_deep_state, deep_state, flags)
+    others_events = PartiesEvents(eot.ev_others, others, flags)
 
     event_processor = EventProcessor(flags)
     event_processor.add_events(eu_members_events)
