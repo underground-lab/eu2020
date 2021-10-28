@@ -3,13 +3,13 @@
 ev_member_country_hu = [
     {
         "party": "HU",
-        "description": "Maďarsko zakázalo propagaci LGBT ve školách. LGBT aktivisté požadují odsoudit Maďarsko za porušování"
+        "description": "Maďarsko zakázalo propagaci LGBT ve školách. LGBT aktivisté požadují odsoudit Maďarsko za porušování."
                        " práv menšin",
         "options": [
             {
                 "key": "p",
                 "description": "přijmout deklaraci a odsoudit Maďarsko za porušování práv menšin LGBT",
-                "delay": 12,
+                "delay": -1,
                 "impact": {
                     "satisfaction": {"CZ": -3, "HU": -8, "PL": -3, "SK": -1},
                 }
@@ -17,7 +17,7 @@ ev_member_country_hu = [
             {
                 "key": "k",
                 "description": "udělit pokutu 200 000 000 EUR",
-                "delay": 12,
+                "delay": -1,
                 "impact": {
                     "satisfaction": {"CZ": -3, "HU": -8, "PL": -3, "SK": -1},
                     "budget": 200_000_000,
@@ -26,7 +26,7 @@ ev_member_country_hu = [
             {
                 "key": "o",
                 "description": "odmítnout deklaraci",
-                "delay": 6,
+                "delay": -1,
                 "impact": {
                     "satisfaction": {"CZ": 3, "HU": 8, "PL": 3, "SK": 1},
                 }
@@ -34,7 +34,7 @@ ev_member_country_hu = [
             {
                 "key": "n",
                 "description": "nerozhodnout teď",
-                "delay": 1,
+                "delay": 2,
                 "impact": {
                 }
             },

@@ -30,4 +30,44 @@ ev_member_country_cz = [
             },
         ]
     },
+    {
+        "party": "CZ",
+        "description": "České tajné služby přinesly informaci, že za výbuchy muničních skladů ve Vrběticích stojí "
+                       "ruští agenti. Česká vládal žádá společnou reakci na úrovni EU.",
+        "options": [
+            {
+                "key": "d",
+                "description": "přijmout deklaraci a odsoudit Rusko za operace na území svrchovaného státu",
+                "delay": -1,
+                "flag_set": "vrbetice",
+                "impact": {
+                    "satisfaction": {"CZ": 5, "RU": -5},
+                }
+            },
+            {
+                "key": "s",
+                "description": "odsoudit Rusko a přijmou sankce",
+                "delay": -1,
+                "flag_set": "vrbetice",
+                "impact": {
+                    "satisfaction": {"CZ": 5, "RU": -10},
+                }
+            },
+            {
+                "key": "o",
+                "description": "odmítnout společnou reakci na úrovni EU",
+                "delay": -1,
+                "impact": {
+                    "satisfaction": {"CZ": -5, "RU": 5},
+                }
+            },
+            {
+                "key": "n",
+                "description": "nerozhodnout teď",
+                "delay": 1,
+                "impact": {
+                }
+            },
+        ]
+    },
 ]
