@@ -3,7 +3,7 @@
 ev_member_country_it = [
     {
         "party": "IT",
-        "description": "Itálie požaduje záruku za vydané státní dluhopisy ve výši 10 000 000 000 EUR",
+        "description": "Itálie požaduje záruku za vydané státní dluhopisy ve výši 10 000 000 000 EUR.",
         "options": [
             {
                 "key": "p",
@@ -28,12 +28,12 @@ ev_member_country_it = [
         "party": "IT",
         "description": "V Itálii hrozí bankrot některých významných bank. Pokud by se tak stalo, znamenalo by to "
                        "nebezpečnou destabilizaci, která by mohla vyústit v odchod zěmě z EU. Itálie proto požaduje "
-                       "mimořádnou dotaci na sanaci bank ve výši 12 000 000 000 EUR",
+                       "mimořádnou dotaci na sanaci bank ve výši 12 000 000 000 EUR.",
         "options": [
             {
                 "key": "p",
                 "description": "poskytnout mimořádnou dotaci ve výši 12 000 000 000 EUR",
-                "delay": 12,
+                "delay": 24,
                 "impact": {
                     "satisfaction": {"IT": 5},
                     "budget": -12_000_000_000

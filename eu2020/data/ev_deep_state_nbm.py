@@ -10,7 +10,7 @@ ev_deep_state_nbm = [
             {
                 "key": "p",
                 "description": "přijmout zavedení povinných elektronických očkovacích průkazů",
-                "delay": 12,
+                "delay": -1,
                 "impact": {
                     "satisfaction": {
                         "NBM": 5, "WHO": 5, "GDA": 2, "SOR": 1, "BIT": 2, "BIP": 5, "BE": -3, "BG": -3, "CZ": -5, "DK": -2,
@@ -23,7 +23,7 @@ ev_deep_state_nbm = [
             {
                 "key": "o",
                 "description": "odmítnout zavedení povinných elektronických očkovacích průkazů",
-                "delay": 5,
+                "delay": 12,
                 "impact": {
                     "satisfaction": {
                         "NBM": -5, "WHO": -5, "GDA": -2, "SOR": -1, "BIT": -2, "BIP": -5, "BE": 3, "BG": 3, "CZ": 5, "DK": 2,
@@ -36,7 +36,7 @@ ev_deep_state_nbm = [
             {
                 "key": "n",
                 "description": "nerozhodnout teď",
-                "delay": 1,
+                "delay": 2,
                 "impact": {
                     "satisfaction": {"NBM": -1},
                 }

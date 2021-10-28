@@ -3,7 +3,7 @@
 ev_member_country_fr = [
     {
         "party": "FR",
-        "description": "Francie požaduje záruku za vydané státní dluhopisy ve výši 20 000 000 000 EUR",
+        "description": "Francie požaduje záruku za vydané státní dluhopisy ve výši 20 000 000 000 EUR.",
         "options": [
             {
                 "key": "p",

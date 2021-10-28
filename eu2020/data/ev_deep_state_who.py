@@ -10,7 +10,7 @@ ev_deep_state_who = [
             {
                 "key": "p",
                 "description": "přijmout",
-                "delay": 12,
+                "delay": -1,
                 "impact": {
                     "satisfaction": {"WHO": 20, "NEZ": 10, "NBM": 10, "SOR": 5, "GDA": 5, "BIP": 10},
                     "budget": -10_000_000_000,
@@ -19,7 +19,7 @@ ev_deep_state_who = [
             {
                 "key": "o",
                 "description": "odmítnout",
-                "delay": 3,
+                "delay": 6,
                 "impact": {
                     "satisfaction": {"WHO": -10, "NEZ": -5, "NBM": -5, "SOR": -5, "GDA": -5, "BIP": -5},
                 }
@@ -27,9 +27,9 @@ ev_deep_state_who = [
             {
                 "key": "n",
                 "description": "nerozhodnout teď",
-                "delay": 1,
+                "delay": 2,
                 "impact": {
-                    "satisfaction": {"WHO": -10},
+                    "satisfaction": {"WHO": -2},
                 }
             },
         ]

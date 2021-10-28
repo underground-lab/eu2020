@@ -3,8 +3,8 @@
 ev_deep_state_sor = [
     {
         "party": "SOR",
-        "description": "George Soros požaduje rychlejší přísun migrantů z Afriky. Nabízí příspěvek 1 000 000 000 EUR"
-                       " jako podporu pro lidskoprávní organizace.",
+        "description": "George Soros požaduje rychlejší přísun migrantů z Afriky. Nabízí příspěvek 1 000 000 000 EUR "
+                       "jako podporu pro lidskoprávní organizace.",
         "options": [
             {
                 "key": "p",
@@ -18,7 +18,7 @@ ev_deep_state_sor = [
             {
                 "key": "o",
                 "description": "odmítnout",
-                "delay": 3,
+                "delay": 6,
                 "impact": {
                     "satisfaction": {"SOR": -10, "NEZ": -5, "WHO": -2},
                 }

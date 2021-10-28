@@ -8,7 +8,7 @@ ev_member_country_de = [
             {
                 "key": "p",
                 "description": "přijmout rozhodnutí o uzavření fosilních elektráren",
-                "delay": 12,
+                "delay": -1,
                 "impact": {
                     "satisfaction": {
                         "BE": -1, "BG": -1, "CZ": -3, "DK": -1, "EE": -2, "FI": -2, "FR": -2, "HR": -1, "IE": -1, "IT": -2,
@@ -28,7 +28,7 @@ ev_member_country_de = [
             {
                 "key": "n",
                 "description": "nerozhodnout teď",
-                "delay": 1,
+                "delay": 2,
                 "impact": {
                 }
             },

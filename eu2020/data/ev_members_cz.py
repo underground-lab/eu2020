@@ -8,23 +8,23 @@ ev_member_country_cz = [
             {
                 "key": "p",
                 "description": "přijmout deklaraci",
-                "delay": 12,
+                "delay": -1,
                 "impact": {
-                    "satisfaction": {"CZ": -5, "HU": -3, "PL": -3, "SK": -1},
+                    "satisfaction": {"CZ": -3, "HU": -3, "PL": -3, "SK": -1},
                 }
             },
             {
                 "key": "o",
                 "description": "odmítnout deklaraci",
-                "delay": 6,
+                "delay": -1,
                 "impact": {
-                    "satisfaction": {"CZ": 5, "HU": 1, "PL": 1, "SK": 1},
+                    "satisfaction": {"CZ": 1, "HU": 1, "PL": 1, "SK": 1},
                 }
             },
             {
                 "key": "n",
                 "description": "nerozhodnout teď",
-                "delay": 1,
+                "delay": 2,
                 "impact": {
                 }
             },
@@ -33,7 +33,7 @@ ev_member_country_cz = [
     {
         "party": "CZ",
         "description": "České tajné služby přinesly informaci, že za výbuchy muničních skladů ve Vrběticích stojí "
-                       "ruští agenti. Česká vládal žádá společnou reakci na úrovni EU.",
+                       "ruští agenti. Česká vláda žádá společnou reakci na úrovni EU.",
         "options": [
             {
                 "key": "d",
@@ -64,7 +64,7 @@ ev_member_country_cz = [
             {
                 "key": "n",
                 "description": "nerozhodnout teď",
-                "delay": 1,
+                "delay": 2,
                 "impact": {
                 }
             },

@@ -8,8 +8,8 @@ ev_others_ru = [
         "options": [
             {
                 "key": "p",
-                "description": "přijmout deklaraci a ostře odsoudit Rusko za diskriminaci",
-                "delay": 12,
+                "description": "přijmout deklaraci a ostře odsoudit Rusko za porušování práv menšin LGBT",
+                "delay": -1,
                 "impact": {
                     "satisfaction": {"NEZ": 10, "HU": -1, "PL": -1},
                 }
@@ -17,7 +17,7 @@ ev_others_ru = [
             {
                 "key": "i",
                 "description": "ignorovat",
-                "delay": 12,
+                "delay": -1,
                 "impact": {
                     "satisfaction": {"NEZ": -8},
                 }

@@ -25,7 +25,7 @@ ev_admin_ek = [
             {
                 "key": "o",
                 "description": "odmítnout Green Deal",
-                "delay": 6,
+                "delay": 12,
                 "impact": {
                     "satisfaction": {
                         "NBM": -1, "WHO": -1, "GDA": -1, "SOR": -1, "BIT": -1, "BE": 1, "BG": 1, "CZ": 1, "DK": 1,

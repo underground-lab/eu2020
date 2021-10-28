@@ -8,7 +8,7 @@ ev_member_country_pl = [
             {
                 "key": "p",
                 "description": "přijmout deklaraci a odsoudit Polsko",
-                "delay": 12,
+                "delay": -1,
                 "impact": {
                     "satisfaction": {"CZ": -3, "HU": -3, "PL": -10, "SK": -1},
                 }
@@ -16,7 +16,7 @@ ev_member_country_pl = [
             {
                 "key": "k",
                 "description": "udělit pokutu 200 000 000 EUR",
-                "delay": 12,
+                "delay": -1,
                 "impact": {
                     "satisfaction": {"CZ": -3, "HU": -3, "PL": -10, "SK": -1},
                     "budget": 200_000_000,
@@ -25,7 +25,7 @@ ev_member_country_pl = [
             {
                 "key": "n",
                 "description": "nerozhodnout teď",
-                "delay": 1,
+                "delay": 2,
                 "impact": {
                 }
             },
@@ -40,7 +40,7 @@ ev_member_country_pl = [
             {
                 "key": "k",
                 "description": "udělit pokutu 200 000 000 EUR a zahájit kroky k vyloučení Polska z EU",
-                "delay": 12,
+                "delay": -1,
                 "impact": {
                     "satisfaction": {"PL": -5},
                     "budget": 200_000_000,
@@ -49,7 +49,7 @@ ev_member_country_pl = [
             {
                 "key": "p",
                 "description": "přijmout deklaraci proti Polsku a udělit pokutu  200 000 000 EUR",
-                "delay": 12,
+                "delay": -1,
                 "impact": {
                     "satisfaction": {"PL": -5},
                     "budget": 200_000_000,
@@ -58,7 +58,7 @@ ev_member_country_pl = [
             {
                 "key": "n",
                 "description": "nerozhodnout teď",
-                "delay": 1,
+                "delay": 2,
                 "impact": {
                 }
             },

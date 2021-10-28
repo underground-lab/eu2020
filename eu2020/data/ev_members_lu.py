@@ -8,16 +8,15 @@ ev_member_country_lu = [
             {
                 "key": "z",
                 "description": "zahájit kroky k vyloučení Maďarska z EU",
-                "delay": 12,
+                "delay": -1,
                 "impact": {
                     "satisfaction": {"CZ": -3, "HU": -10, "PL": -3, "SK": -1, "LU": 3},
-                    "budget": 12,
                 }
             },
             {
                 "key": "k",
                 "description": "udělit Maďarsku pokutu 200 000 000 EUR",
-                "delay": 12,
+                "delay": -1,
                 "impact": {
                     "satisfaction": {"CZ": -3, "HU": -10, "PL": -3, "SK": -1, "LU": 3},
                     "budget": 200_000_000,
@@ -26,7 +25,7 @@ ev_member_country_lu = [
             {
                 "key": "o",
                 "description": "odmítnout požadavek",
-                "delay": 12,
+                "delay": -1,
                 "impact": {
                     "satisfaction": {"HU": 3, "LU": -3, },
                     "budget": 200_000_000,
@@ -35,7 +34,7 @@ ev_member_country_lu = [
             {
                 "key": "n",
                 "description": "nerozhodnout teď",
-                "delay": 1,
+                "delay": 2,
                 "impact": {
                     "satisfaction": {"LU": -1},
                 }

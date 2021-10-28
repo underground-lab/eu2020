@@ -3,7 +3,7 @@
 ev_member_country_es = [
     {
         "party": "ES",
-        "description": "Španělsko požaduje záruku za vydané státní dluhopisy ve výši 10 000 000 000 EUR",
+        "description": "Španělsko požaduje záruku za vydané státní dluhopisy ve výši 10 000 000 000 EUR.",
         "options": [
             {
                 "key": "p",

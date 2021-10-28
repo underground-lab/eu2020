@@ -9,7 +9,7 @@ ev_member_country_gr = [
             {
                 "key": "p",
                 "description": "přijmout urychleně plán pro spravedlivé přerozdělování uprchlíků",
-                "delay": 6,
+                "delay": -1,
                 "impact": {
                     "satisfaction": {"CZ": -3, "HU": -3, "PL": -3, "SK": -1, "AT": -3, "GR": 5, "IT": 4, "ES": 4},
                 }
@@ -17,7 +17,7 @@ ev_member_country_gr = [
             {
                 "key": "n",
                 "description": "nerozhodnout teď",
-                "delay": 1,
+                "delay": 2,
                 "impact": {
                     "satisfaction": {"GR": -5},
                 }
@@ -26,7 +26,7 @@ ev_member_country_gr = [
     },
     {
         "party": "GR",
-        "description": "Řecko požaduje záruku za vydané státní dluhopisy ve výši 5 000 000 000 EUR",
+        "description": "Řecko požaduje záruku za vydané státní dluhopisy ve výši 5 000 000 000 EUR.",
         "options": [
             {
                 "key": "p",
@@ -49,7 +49,7 @@ ev_member_country_gr = [
     },
     {
         "party": "GR",
-        "description": "Řecko požaduje mimořádnou dotaci ve výši 500 000 000 EUR na zvládnutí lesních požárů",
+        "description": "Řecko požaduje mimořádnou dotaci ve výši 500 000 000 EUR na zvládnutí lesních požárů.",
         "flag": "fires_gr",
         "options": [
             {
@@ -79,7 +79,7 @@ ev_member_country_gr = [
             {
                 "key": "u",
                 "description": "uzavřít dohodu a zaplatit Turecku 6 mld EUR aby zadržovlo uprchlíky",
-                "delay": 12,
+                "delay": -1,
                 "impact": {
                     "satisfaction": {
                         "BE": -1, "BG": -1, "CZ": -2, "DK": -1, "EE": -2, "FI": -2, "FR": 2, "HR": 1, "IT": 2, "CY": -2,
@@ -100,7 +100,7 @@ ev_member_country_gr = [
             {
                 "key": "n",
                 "description": "nerozhodnout teď",
-                "delay": 1,
+                "delay": 2,
                 "impact": {
                 }
             },
