@@ -3,7 +3,7 @@
 ev_member_country_cz = [
     {
         "party": "CZ",
-        "description": "Některé české strany požadují deklaraci proti střetu zájmů českého premiéra.",
+        "description": "České opoziční strany požadují deklaraci proti střetu zájmů českého premiéra.",
         "options": [
             {
                 "key": "p",
