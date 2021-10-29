@@ -83,7 +83,7 @@ ev_member_country_gr = [
                 "delay": -1,
                 "impact": {
                     "satisfaction": {
-                        "BE": -1, "BG": -1, "CZ": -2, "DK": -1, "EE": -2, "FI": -2, "FR": 2, "HR": 1, "IT": 2, "CY": -2,
+                        "BE": -1, "BG": -1, "CZ": -2, "DK": -1, "EE": -2, "FI": -2, "FR": 2, "HR": 1, "IT": 2, "CY": -10,
                         "LT": -2, "ES": -2, "SE": -2, "HU": -2, "MT": 1, "DE": -1, "NL": -2, "PL": -2, "PT": -1, "AT": -2,
                         "RO": -3, "GR": 5, "SK": 1, "LV": -2, "LU": -2,
                     },
@@ -95,7 +95,7 @@ ev_member_country_gr = [
                 "description": "odmítnout uzavření dohody s Tureckem",
                 "delay": 12,
                 "impact": {
-                    "satisfaction": {"GR": -5, },
+                    "satisfaction": {"GR": -5, "CY": 3},
                 }
             },
             {
