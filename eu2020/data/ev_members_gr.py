@@ -81,6 +81,7 @@ ev_member_country_gr = [
                 "key": "u",
                 "description": "uzavřít dohodu a zaplatit Turecku 6 mld EUR aby zadržovlo uprchlíky",
                 "delay": -1,
+                "flag_set": "turkey_refugee_agreement",
                 "impact": {
                     "satisfaction": {
                         "BE": -1, "BG": -1, "CZ": -2, "DK": -1, "EE": -2, "FI": -2, "FR": 2, "HR": 1, "IT": 2, "CY": -10,
