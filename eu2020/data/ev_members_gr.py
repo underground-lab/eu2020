@@ -10,6 +10,7 @@ ev_member_country_gr = [
                 "key": "p",
                 "description": "přijmout urychleně plán pro spravedlivé přerozdělování uprchlíků",
                 "delay": -1,
+                "flag_set": "refugee_distribution",
                 "impact": {
                     "satisfaction": {"CZ": -3, "HU": -3, "PL": -3, "SK": -1, "AT": -3, "GR": 5, "IT": 4, "ES": 4},
                 }

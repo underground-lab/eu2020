@@ -81,4 +81,36 @@ ev_admin_ek = [
             },
         ]
     },
+    {
+        "party": "EK",
+        "description": "Polsko, Česko, Slovensko a Maďarsko odmítly plán na přerozdělování uprchlíků. "
+                       "EK proto navrhuje podání žaloby na tyto země k Evropskému soudu.",
+        "flag": "refugee_distribution",
+        "options": [
+            {
+                "key": "s",
+                "description": "odsouhlasit podání žaloby na Polsko, Česko, Slovensko a Maďarsko",
+                "delay": -1,
+                "impact": {
+                    "satisfaction": {"CZ": -3, "HU": -3, "PL": -3, "SK": -3, "FR": 1, "IT": 1, "GR": 1, "ES": 1},
+                }
+            },
+            {
+                "key": "o",
+                "description": "odmítnout podání žaloby na Polsko, Česko, Slovensko a Maďarsko",
+                "delay": -1,
+                "impact": {
+                    "satisfaction": {"CZ": 1, "HU": 1, "PL": 1, "SK": 1, "FR": -3, "IT": -3, "GR": -3, "ES": -3},
+                }
+            },
+            {
+                "key": "n",
+                "description": "nerozhodnout teď",
+                "delay": 2,
+                "impact": {
+                    "satisfaction": {"FR": -1, "IT": -1, "GR": -1, "ES": -1},
+                }
+            },
+        ]
+    },
 ]
