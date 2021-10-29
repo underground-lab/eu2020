@@ -1,6 +1,6 @@
-# Textová hra Evropská Unie 2020
+# Experimentální Textová hra Evropská Unie 2020
 
-Staňte se nejvyšším vládcem Evropské Unie a vyzkoušejte zda byste byli schopni uspokojit zájmy všech člsenských států a dalších dalších temných zájmových skupin kolem EU.
+Staňte se vládcem Evropské Unie a vyzkoušejte zda byste byli schopni uspokojit zájmy všech člsenských států a dalších temných zájmových skupin.
 
 Hra stále není hotová - jedná se jen o prototyp.
 
@@ -9,6 +9,7 @@ Hra stále není hotová - jedná se jen o prototyp.
 Udělejte si klon repozitáře a spusťte hru následujícím příkazem.
 
 ```
+python -m pip install -r requirements.txt
 python -m eu2020
 ```
 
