@@ -38,5 +38,40 @@ ev_admin_es = [
                 }
             },
         ]
-    }
+    },
+    {
+        "party": "ES",
+        "description": "V Polsku začala platit sporná novela o trestání soudců (takzvaný náhubkový zákon). "
+                       "Polská opozice a další kritici novinek varují, že upravené předpisy umožní trestat a "
+                       "odvolat z funkce neposlušné soudce, kteří se staví proti změnám v justici prosazovaným "
+                       "současnou národně-konzervativní vládou. Evropský soud navrhuje pro Polsko pokutu "
+                       "1 000 000 EUR za každý den platnosti sporného zákona. Nicméně existuje riziko "
+                       "že Polsko bude následně vetovat Unijní rozpočet.",
+        "options": [
+            {
+                "key": "p",
+                "description": "podpořit pokutu 1 000 000 EUR za každý den platnosti sporného zákona",
+                "delay": -1,
+                "impact": {
+                    "satisfaction": {"PL": -10},
+                    "budget": 365_000_000,
+                }
+            },
+            {
+                "key": "o",
+                "description": "nepodpořit pokutu",
+                "delay": -1,
+                "impact": {
+                    "satisfaction": {"PL": 2},
+                }
+            },
+            {
+                "key": "n",
+                "description": "nerozhodnout teď",
+                "delay": 2,
+                "impact": {
+                }
+            },
+        ]
+    },
 ]
