@@ -1,9 +1,11 @@
 # coding: utf-8
 
+from eu2020.data.ev_admin_eb import ev_admin_eb
 from eu2020.data.ev_admin_ek import ev_admin_ek
 from eu2020.data.ev_admin_es import ev_admin_es
 
 ev_admin = []
+ev_admin += ev_admin_eb
 ev_admin += ev_admin_ek
 ev_admin += ev_admin_es
 
@@ -30,7 +32,13 @@ eu_administration = {
         "name": "Evropský soudní dvůr",
         "satisfaction_pct": 50,
         "budget_contribution": 0,
-        "budget_consumption": 2_500_000_000,
+        "budget_consumption": 1_250_000_000,
+    },
+    "EB": {
+        "name": "Evropská centrální banka",
+        "satisfaction_pct": 50,
+        "budget_contribution": 0,
+        "budget_consumption": 1_250_000_000,
     },
     "AD": {
         "name": "Administrativa",

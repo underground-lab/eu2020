@@ -5,7 +5,7 @@ ev_higher_power = [
         "key": "pandemic",
         "name": "Pandemie",
         "start": "Propukla pandemie nové neznámé choroby.",
-        "end": "Zdá se, že pandemie ustala.",
+        "end": "Pandemie ustoupila.",
     },
     {
         "key": "floods_de",
