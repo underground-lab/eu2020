@@ -64,16 +64,16 @@ class Budget:
     def get_budget_report(self):
         result = ""
 
-        result += "{} [{}]{:20,} EUR[/{}]\n" \
-            .format(texts.budget_income, colors.numbers, self.get_income(), colors.numbers)
-        result += "{} [{}]{:20,} EUR[/{}]\n" \
-            .format(texts.budget_outcome, colors.numbers, self.get_outcome(), colors.numbers)
-        result += "{} [{}]{:20,} EUR[/{}]\n" \
-            .format(texts.budget_extra_income, colors.numbers, self.get_extra_income(), colors.numbers)
-        result += "{} [{}]{:20,} EUR[/{}]\n" \
-            .format(texts.budget_extra_outcome, colors.numbers, self.get_extra_outcome(), colors.numbers)
-        result += "{} [{}]{:20,} EUR[/{}]\n" \
-            .format(texts.budget_dept, colors.numbers, self.get_dept(), colors.numbers)
+        result += "{0} [{1}]{2:20,} EUR[/{1}]\n" \
+            .format(texts.budget_income, colors.numbers, self.get_income())
+        result += "{0} [{1}]{2:20,} EUR[/{1}]\n" \
+            .format(texts.budget_outcome, colors.numbers, self.get_outcome())
+        result += "{0} [{1}]{2:20,} EUR[/{1}]\n" \
+            .format(texts.budget_extra_income, colors.numbers, self.get_extra_income())
+        result += "{0} [{1}]{2:20,} EUR[/{1}]\n" \
+            .format(texts.budget_extra_outcome, colors.numbers, self.get_extra_outcome())
+        result += "{0} [{1}]{2:20,} EUR[/{1}]\n" \
+            .format(texts.budget_dept, colors.numbers, self.get_dept())
 
         diff = self.get_balance()
         color = colors.numbers
@@ -81,9 +81,9 @@ class Budget:
             color = colors.positive_progress
         if diff < 0:
             color = colors.negative_progress
-        result += "{} [{}]{:{}20,} EUR[/{}]\n".format(texts.budget_balance, color, diff, '+' if diff else '', color)
+        result += "{0} [{1}]{2:{3}20,} EUR[/{1}]\n".format(texts.budget_balance, color, diff, '+' if diff else '')
 
-        result += "{} [{}]{:20,} EUR[/{}]\n" \
-            .format(texts.budget_guarantee, colors.numbers, self.get_guarantee(), colors.numbers)
+        result += "{0} [{1}]{2:20,} EUR[/{1}]\n" \
+            .format(texts.budget_guarantee, colors.numbers, self.get_guarantee())
 
         return result

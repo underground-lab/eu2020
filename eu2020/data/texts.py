@@ -13,7 +13,7 @@ proceed = "Pokračovat..."
 
 period = "Období: {} {}"
 # budget = "Rozpočet {}: {:,} EUR, rozdíl příjmů a výdajů: {:,} EUR, dluh: {:,} EUR"
-membership_satisfaction = "Spokojenost členských států: [{}]{:.2f} %[/{}]"
+membership_satisfaction = "Spokojenost členských států: [{0}]{1:.2f} %[/{0}]"
 membership_satisfaction_header = "Spokojenost členských států"
 deep_state_satisfaction_header = "Spokojenost deep state"
 
@@ -33,7 +33,7 @@ gender_dict = {
 
 options = "Možnosti:"
 higher_power_event = "Mimořádná událost"
-higher_power_events = "Mimořádné události: [{}]{}[/{}]"
+higher_power_events = "Mimořádné události: [{0}]{1}[/{0}]"
 
 budget_income =        "Příjmy:                 "
 budget_outcome =       "Výdaje:                 "

@@ -30,12 +30,12 @@ class Parties:
             result += self.parties[c]["name"]
             for _ in range(w - len(self.parties[c]["name"])):
                 result += " "
-            result += "[{}]{:.2f} %[/{}]".format(colors.numbers, self.parties[c]["satisfaction_pct"], colors.numbers)
+            result += "[{0}]{1:.2f} %[/{0}]".format(colors.numbers, self.parties[c]["satisfaction_pct"])
             diff = self.parties[c]["satisfaction_pct"] - self.parties_prev[c]["satisfaction_pct"]
             if diff > 0:
-                result += "  ([{}]{:+.2f} %[/{}])".format(colors.positive_progress, diff, colors.positive_progress)
+                result += "  ([{0}]{1:+.2f} %[/{0}])".format(colors.positive_progress, diff)
             if diff < 0:
-                result += "  ([{}]{:+.2f} %[/{}])".format(colors.negative_progress, diff, colors.negative_progress)
+                result += "  ([{0}]{1:+.2f} %[/{0}])".format(colors.negative_progress, diff)
             result += "\n"
         return result
 
