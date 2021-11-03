@@ -32,10 +32,9 @@ class Parties:
                 result += " "
             result += "[{0}]{1:.2f} %[/{0}]".format(colors.numbers, self.parties[c]["satisfaction_pct"])
             diff = self.parties[c]["satisfaction_pct"] - self.parties_prev[c]["satisfaction_pct"]
-            if diff > 0:
-                result += "  ([{0}]{1:+.2f} %[/{0}])".format(colors.positive_progress, diff)
-            if diff < 0:
-                result += "  ([{0}]{1:+.2f} %[/{0}])".format(colors.negative_progress, diff)
+            if diff != 0:
+                color = colors.positive_progress if diff > 0 else colors.negative_progress
+                result += "  ([{0}]{1:+.2f} %[/{0}])".format(color, diff)
             result += "\n"
         return result
 
