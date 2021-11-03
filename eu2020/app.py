@@ -86,14 +86,14 @@ def print_budget(budget: Budget) -> None:
 
 
 def print_membership_satisfaction(members: Parties) -> None:
-    console.print(texts.membership_satisfaction.format(colors.numbers, members.get_satisfaction_pct(), colors.numbers))
+    console.print(texts.membership_satisfaction.format(colors.numbers, members.get_satisfaction_pct()))
 
 
 def print_hp_events(hp_events: HigherPowerEvents) -> None:
     ev = hp_events.get_current_events()
     if ev != "":
         console.print()
-        console.print(texts.higher_power_events.format(colors.high_power_events, ev, colors.high_power_events))
+        console.print(texts.higher_power_events.format(colors.high_power_events, ev))
 
 
 def setup() -> None:
