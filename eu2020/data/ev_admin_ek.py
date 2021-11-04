@@ -3,6 +3,39 @@
 ev_admin_ek = [
     {
         "party": "EK",
+        "description": "EK připravila návrh zákona na rozbití monopolu národních producentů a distributorů energií. "
+                       "Zákon ukládá národním producentům energií prodat 1/4 produkce 'pod cenou' lokálním konkurenčním "
+                       "distributorům a tím má vzniknout konkurenční prostředí s cenami energií.",
+        "options": [
+            {
+                "key": "p",
+                "description": "přijmout návrh zákona a nařídit členským státům vytvoření konkurenčních distributorů energií",
+                "delay": -1,
+                "flag_set": "local_energy_distributors",
+                "impact": {
+                    "satisfaction": {"LOB": 10},
+                }
+            },
+            {
+                "key": "o",
+                "description": "odmítnout návrh zákona",
+                "delay": 12,
+                "impact": {
+                    "satisfaction": {"LOB": -5},
+                }
+            },
+            {
+                "key": "n",
+                "description": "nerozhodnout teď",
+                "delay": 2,
+                "impact": {
+                    "satisfaction": {"LOB": -1},
+                }
+            },
+        ]
+    },
+    {
+        "party": "EK",
         "description": "Evropská komise připravila Zelenou Dohodu (Green Deal), která představuje soubor "
                        "politických iniciativ, jejichž hlavním cílem je dosáhnout toho, aby Evropa byla v "
                        "roce 2050 klimaticky neutrální. Obsahuje plán s vyhodnocenými dopady, jejíž cílem "

@@ -54,4 +54,10 @@ deep_state = {
         "budget_contribution": 0,
         "budget_consumption": 0,
     },
+    "LOB": {
+        "name": "Lobbystické skupiny",
+        "satisfaction_pct": 50,
+        "budget_contribution": 0,
+        "budget_consumption": 0,
+    },
 }
