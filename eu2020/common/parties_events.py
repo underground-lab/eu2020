@@ -18,17 +18,20 @@ class PartiesEvents:
         self.parties = parties
 
     def event_filter(self, ev: dict) -> bool:
-        if "flag" in ev:
-            if ev["flag"] not in self.flags:
-                return False
 
-        if "satisfaction" in ev:
-            if ev["satisfaction"]["condition"] == "<":
-                if self.parties.parties[ev["party"]]["satisfaction_pct"] >= ev["satisfaction"]["value"]:
+        if "condition" in ev:
+
+            if "flag" in ev["condition"]:
+                if ev["condition"]["flag"] not in self.flags:
                     return False
-            if ev["satisfaction"]["condition"] == ">":
-                if self.parties.parties[ev["party"]]["satisfaction_pct"] <= ev["satisfaction"]["value"]:
-                    return False
+
+            if "satisfaction" in ev["condition"]:
+                if ev["condition"]["satisfaction"]["op"] == "<":
+                    if self.parties.parties[ev["party"]]["satisfaction_pct"] >= ev["condition"]["satisfaction"]["value"]:
+                        return False
+                if ev["condition"]["satisfaction"]["op"] == ">":
+                    if self.parties.parties[ev["party"]]["satisfaction_pct"] <= ev["condition"]["satisfaction"]["value"]:
+                        return False
 
         return ev["wait"] == 0
 

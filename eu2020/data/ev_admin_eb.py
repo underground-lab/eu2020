@@ -7,7 +7,9 @@ ev_admin_eb = [
                        "sazeb (tj. zdražením úvěrů). Toto opatření ale může vážně ohrozit státy s vysokým "
                        "zadlužením jako je Itálie, Francie a Španělsko a plánované opatření by je mohlo dovést "
                        "k bankrotu.",
-        "flag": "inflation",
+        "condition": {
+            "flag": "inflation",
+        },
         "options": [
             {
                 "key": "p",
@@ -40,7 +42,9 @@ ev_admin_eb = [
         "description": "Evropská centrální banka navrhuje řešit probíhající hospodářskou recesi takzvaným "
                        "kvantitativním uvolňováním (pumpováním peněz do ekonomiky). Důsledkem tohoto opatření "
                        "je ale růst inflace.",
-        "flag": "economic_recession",
+        "condition": {
+            "flag": "economic_recession",
+        },
         "options": [
             {
                 "key": "t",

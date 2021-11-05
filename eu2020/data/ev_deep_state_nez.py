@@ -31,7 +31,9 @@ ev_deep_state_nez = [
                        "a Irácké uprchlíky přes hranici s Polskem a Litvou. Obě země následně začaly své hranice "
                        "s Běloruskem opevňovat a stavět proti-imigrační plot. Neziskové lidskoprávní organizace "
                        "požadují okamžité odstranění plotu a volný průchod pro uprchlíky.",
-        "flag": "belarus_border_conflict",
+        "condition": {
+            "flag": "belarus_border_conflict",
+        },
         "options": [
             {
                 "key": "o",

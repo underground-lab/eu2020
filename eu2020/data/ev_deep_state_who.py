@@ -5,7 +5,9 @@ ev_deep_state_who = [
         "party": "WHO",
         "description": "V souvislosti s probíhající pandemií WHO založila nadační fond COVAX, který má financovat nákup"
                        " a distiribuci vakcín po celém světe. WHO žádá Evropskou unii o příspěvek 10 000 000 000 EUR",
-        "flag": "pandemic",
+        "condition": {
+            "flag": "pandemic",
+        },
         "options": [
             {
                 "key": "p",

@@ -36,7 +36,9 @@ ev_others_ru = [
         "party": "RU",
         "description": "Rusko prohlásilo obvinění týkající se výbuchu skladů ve Vrběticích za "
                        "vykonstruované a pohrozilo odvetnými kroky.",
-        "flag": "vrbetice",
+        "condition": {
+            "flag": "vrbetice",
+        },
         "options": [
             {
                 "key": "p",
