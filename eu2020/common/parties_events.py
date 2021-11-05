@@ -22,6 +22,14 @@ class PartiesEvents:
             if ev["flag"] not in self.flags:
                 return False
 
+        if "satisfaction" in ev:
+            if ev["satisfaction"]["condition"] == "<":
+                if self.parties.parties[ev["party"]]["satisfaction_pct"] >= ev["satisfaction"]["value"]:
+                    return False
+            if ev["satisfaction"]["condition"] == ">":
+                if self.parties.parties[ev["party"]]["satisfaction_pct"] <= ev["satisfaction"]["value"]:
+                    return False
+
         return ev["wait"] == 0
 
     def get_event(self) -> Optional[dict]:
