@@ -23,11 +23,11 @@ class EventProcessor:
                 self.all_parties.parties[p] = parties[p]
 
     def process_events(self, budget: Budget) -> None:
-        for evs in self.events:
+        for party_evs in self.events:
             for _ in range(random.randint(1, 2)):
-                ev = evs.get_event()
+                ev = party_evs.get_event()
                 if ev is not None:
-                    country = evs.get_parties().parties[ev["party"]]
+                    country = party_evs.get_parties().parties[ev["party"]]
                     utils.print_text_in_box(country["name"])
                     self.make_decision(ev, self.all_parties, budget)
 
