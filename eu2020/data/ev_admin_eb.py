@@ -8,7 +8,7 @@ ev_admin_eb = [
                        "zadlužením jako je Itálie, Francie a Španělsko a plánované opatření by je mohlo dovést "
                        "k bankrotu.",
         "condition": {
-            "flag": "inflation",
+            "flag": ["inflation"],
         },
         "options": [
             {
@@ -43,7 +43,7 @@ ev_admin_eb = [
                        "kvantitativním uvolňováním (pumpováním peněz do ekonomiky). Důsledkem tohoto opatření "
                        "je ale růst inflace.",
         "condition": {
-            "flag": "economic_recession",
+            "flag": ["economic_recession"],
         },
         "options": [
             {

@@ -45,7 +45,7 @@ ev_member_country_hu = [
         "description": "Maďarsko postavilo plot proti uprchlíkům přicházejícím ze Srbska a Chorvatska. "
                        "Lidskoprávní organizace požadují okamžité odstranění plotu.",
         "condition": {
-            "flag": "turkey_refugee_agreement",
+            "flag": ["turkey_refugee_agreement"],
         },
         "options": [
             {

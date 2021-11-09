@@ -5,7 +5,7 @@ ev_member_country_lu = [
         "party": "LU",
         "description": "Lucemburský šéf diplomacie požaduje vyloučení Maďarska z EU kvůli přístupu k uprchlíkům.",
         "condition": {
-            "flag": "fence_hu",
+            "flag": ["fence_hu"],
         },
         "options": [
             {

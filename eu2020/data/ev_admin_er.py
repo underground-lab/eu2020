@@ -9,7 +9,7 @@ ev_admin_er = [
                        "lidé se dostávají do obtížných situací. Rada v reakci na aktuální situaci navrhuje "
                        "snížení DPH z energií.",
         "condition": {
-            "flag": "coal_power_stations_closure"
+            "flag": ["coal_power_stations_closure"]
         },
         "options": [
             {

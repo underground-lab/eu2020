@@ -22,8 +22,9 @@ class PartiesEvents:
         if "condition" in ev:
 
             if "flag" in ev["condition"]:
-                if ev["condition"]["flag"] not in self.flags:
-                    return False
+                for c in ev["condition"]["flag"]:
+                    if c not in self.flags:
+                        return False
 
             if "satisfaction" in ev["condition"]:
                 if ev["condition"]["satisfaction"]["op"] == "<":

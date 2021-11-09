@@ -82,7 +82,7 @@ ev_admin_ek = [
         "party": "EK",
         "description": "EK navrhuje v rámci Green Deal zavedení klimatické daně pro všechny majitele domů a aut.",
         "condition": {
-            "flag": "green_deal",
+            "flag": ["green_deal"],
         },
         "options": [
             {
@@ -121,7 +121,7 @@ ev_admin_ek = [
         "description": "Polsko, Česko, Slovensko a Maďarsko odmítly plán na přerozdělování uprchlíků. "
                        "EK proto navrhuje podání žaloby na tyto země k Evropskému soudu.",
         "condition": {
-            "flag": "refugee_distribution",
+            "flag": ["refugee_distribution"],
         },
         "options": [
             {
