@@ -5,7 +5,7 @@ ev_member_country_de = [
         "party": "DE",
         "description": "Němečtí Zelení chtějí prosadit uzavření všech fosilních elektráren v EU.",
         "condition": {
-            "flag": "local_energy_distributors"
+            "flag": ["local_energy_distributors"]
         },
         "options": [
             {

@@ -52,7 +52,7 @@ ev_member_country_gr = [
         "party": "GR",
         "description": "Řecko požaduje mimořádnou dotaci ve výši 500 000 000 EUR na zvládnutí lesních požárů.",
         "condition": {
-            "flag": "fires_gr",
+            "flag": ["fires_gr"],
         },
         "options": [
             {

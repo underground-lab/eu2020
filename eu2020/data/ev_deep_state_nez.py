@@ -32,13 +32,14 @@ ev_deep_state_nez = [
                        "s Běloruskem opevňovat a stavět proti-imigrační plot. Neziskové lidskoprávní organizace "
                        "požadují okamžité odstranění plotu a volný průchod pro uprchlíky.",
         "condition": {
-            "flag": "belarus_border_conflict",
+            "flag": ["belarus_border_conflict"],
         },
         "options": [
             {
                 "key": "o",
                 "description": "přikázat Polsku a Litvě odstranění plotu",
                 "delay": -1,
+                "flag_set": "fence_pl",
                 "impact": {
                     "satisfaction": {"PL": -5, "LT": -5, "NEZ": 3},
                 }
@@ -47,6 +48,7 @@ ev_deep_state_nez = [
                 "key": "s",
                 "description": "schválit ochranu vnějších hranic s Běloruskem",
                 "delay": -1,
+                "flag_set": "fence_pl",
                 "impact": {
                     "satisfaction": {"PL": 3, "LT": 3, "NEZ": -5},
                 }
