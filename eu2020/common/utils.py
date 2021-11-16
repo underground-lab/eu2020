@@ -5,13 +5,10 @@ from eu2020 import console
 
 
 def print_text_in_box(text: str, ch="*") -> None:
-    boxw = len(text) + 4
-    for _ in range(boxw):
-        console.print(ch, end="", style=colors.header_style)
-    console.print(f"\n{ch} [{colors.header_1}]{text}[/{colors.header_1}] [{colors.header_style}]{ch}[/{colors.header_style}]")
-    for _ in range(boxw):
-        console.print(ch, end="")
-    print("\n")
+    edge = ch * (len(text) + 4)
+    console.print(edge, style=colors.header_style)
+    console.print(f"{ch} [{colors.header_1}]{text}[/{colors.header_1}] [{colors.header_style}]{ch}[/{colors.header_style}]")
+    console.print(edge)
 
 
 def input_with_options(question: str, options: dict) -> str:
