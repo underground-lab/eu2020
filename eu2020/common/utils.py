@@ -8,7 +8,7 @@ def print_text_in_box(text: str, ch="*") -> None:
     edge = ch * (len(text) + 4)
     console.print(edge, style=colors.header_style)
     console.print(f"{ch} [{colors.header_1}]{text}[/{colors.header_1}] [{colors.header_style}]{ch}[/{colors.header_style}]")
-    console.print(edge)
+    console.print(f"{edge}\n")
 
 
 def input_with_options(question: str, options: dict) -> str:
