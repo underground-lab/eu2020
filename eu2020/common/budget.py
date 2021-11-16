@@ -24,16 +24,10 @@ class Budget:
         return self.budget["dept"]
 
     def get_income(self) -> int:
-        result = 0
-        for p in self.parties:
-            result += p.get_budget_contribution()
-        return result
+        return sum(p.get_budget_contribution() for p in self.parties)
 
     def get_outcome(self) -> int:
-        result = 0
-        for p in self.parties:
-            result += p.get_budget_consumption()
-        return result
+        return sum(p.get_budget_consumption() for p in self.parties)
 
     def get_extra_income(self):
         return self.budget["extra_income"]
