@@ -42,7 +42,7 @@ def main() -> None:
     budget.add_parties(eu_admin)
     budget.add_parties(deep_state)
 
-    data.period = Period(2020, 0)
+    period = Period(2020, 0)
 
     utils.clear()
     print_app_name()
@@ -52,7 +52,7 @@ def main() -> None:
     utils.proceed()
 
     while True:
-        utils.print_text_in_box(texts.period.format(data.period.get_month(), data.period.get_year()))
+        utils.print_text_in_box(texts.period.format(period.get_month(), period.get_year()))
         print_budget(budget)
         print_membership_satisfaction(eu_members)
         print_hp_events(high_power_events)
@@ -75,9 +75,9 @@ def main() -> None:
         console.print(deep_state.get_detailed_satisfaction_report())
         utils.proceed()
 
-        data.period.next()
+        period.next()
         event_processor.next_period()
-        if data.period.month == 0:
+        if period.month == 0:
             budget.update_balance()
 
 

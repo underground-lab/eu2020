@@ -3,7 +3,7 @@
 ev_admin_es = [
     {
         "party": "ES",
-        "description": "Lichtenštejnsko se obrátito na Evropský soud pro lidská práva ve věci "
+        "description": "Lichtenštejnsko se obrátilo na Evropský soud pro lidská práva ve věci "
                        "navrácení zabaveného majetku. Po válce byly totiž na majetek Lichtenštejnů "
                        "uplatněny dekrety prezidenta Beneše. Knížecí rodina tvrdí, že jí český stát "
                        "zabavil majetek nezákonně, protože vládnoucí kníže se za Němce neprohlásil "

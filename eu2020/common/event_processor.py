@@ -34,31 +34,31 @@ class EventProcessor:
     def make_decision(self, ev: dict, members: Parties, budget: Budget) -> None:
         print(ev["description"])
         print()
-        dopt = {}
-        for opt in ev["options"]:
-            dopt[opt["key"]] = opt["description"]
-        g = utils.input_with_options(texts.options, dopt)
-        options = list(filter(lambda o: o["key"] == g, ev["options"]))
+        options = {option["key"]: option for option in ev["options"]}
+        descriptions = {key: option["description"] for key, option in options.items()}
+        g = utils.input_with_options(texts.options, descriptions)
+        option = options[g]
 
         # Set delay
-        ev["wait"] = options[0]["delay"]
+        ev["wait"] = option["delay"]
 
         # Satisfaction
-        if "satisfaction" in options[0]["impact"]:
-            members.update_satisfaction(options[0]["impact"]["satisfaction"])
+        option_impact = option["impact"]
+        if "satisfaction" in option_impact:
+            members.update_satisfaction(option_impact["satisfaction"])
 
         # Budget
-        if "budget" in options[0]["impact"]:
-            if options[0]["impact"]["budget"] > 0:
-                budget.add_extra_income(options[0]["impact"]["budget"])
+        if "budget" in option_impact:
+            if option_impact["budget"] > 0:
+                budget.add_extra_income(option_impact["budget"])
             else:
-                budget.add_extra_outcome(-1 * options[0]["impact"]["budget"])
-        if "guarantee" in options[0]["impact"]:
-            budget.add_guarantee(options[0]["impact"]["guarantee"])
+                budget.add_extra_outcome(-1 * option_impact["budget"])
+        if "guarantee" in option_impact:
+            budget.add_guarantee(option_impact["guarantee"])
 
         # Flag set
-        if "flag_set" in options[0]:
-            self.flags.add(options[0]["flag_set"])
+        if "flag_set" in option:
+            self.flags.add(option["flag_set"])
 
     def next_period(self) -> None:
         for evs in self.events:
