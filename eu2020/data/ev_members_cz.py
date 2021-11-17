@@ -46,7 +46,7 @@ ev_member_country_cz = [
             },
             {
                 "key": "s",
-                "description": "odsoudit Rusko a přijmou sankce",
+                "description": "odsoudit Rusko a přijmout sankce",
                 "delay": -1,
                 "flag_set": "vrbetice",
                 "impact": {
