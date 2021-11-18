@@ -20,12 +20,8 @@ class Parties:
 
     def get_detailed_satisfaction_report(self) -> str:
         result = ""
-        w = 0
-        for c in self.parties:
-            t = len(self.parties[c]["name"])
-            if w < t:
-                w = t
-        w += 3
+        w = 3 + max(len(party["name"]) for party in self.parties.values())
+
         for c in self.parties:
             result += self.parties[c]["name"]
             for _ in range(w - len(self.parties[c]["name"])):
@@ -39,10 +35,9 @@ class Parties:
         return result
 
     def update_satisfaction(self, satisfaction: dict) -> None:
-        for c in satisfaction:
-            self.parties[c]["satisfaction_pct"] += satisfaction[c]
-            if self.parties[c]["satisfaction_pct"] < 0:
-                self.parties[c]["satisfaction_pct"] = 0
+        for code, diff in satisfaction.items():
+            party = self.parties[code]
+            party["satisfaction_pct"] = max(0, party["satisfaction_pct"] + diff)
 
     def get_budget_contribution(self) -> int:
         return sum(party["budget_contribution"] for party in self.parties.values())
