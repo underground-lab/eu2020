@@ -9,6 +9,7 @@ def period():
     period = Period(2020, 0)
     return period
 
+
 @pytest.mark.parametrize(
     'year, month',
     (
@@ -24,7 +25,7 @@ def period():
         (2020, "Říjen"),
         (2020, "Listopad"),
         (2020, "Prosinec"),
-        (2021, "Leden")
+        (2021, "Leden"),
     )
 )
 def test_next(period, year, month):
