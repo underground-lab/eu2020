@@ -45,16 +45,10 @@ class Parties:
                 self.parties[c]["satisfaction_pct"] = 0
 
     def get_budget_contribution(self) -> int:
-        result = 0
-        for c in self.parties:
-            result += self.parties[c]["budget_contribution"]
-        return result
+        return sum(party["budget_contribution"] for party in self.parties.values())
 
     def get_budget_consumption(self) -> int:
-        result = 0
-        for c in self.parties:
-            result += self.parties[c]["budget_consumption"]
-        return result
+        return sum(party["budget_consumption"] for party in self.parties.values())
 
     def next_period(self) -> None:
         self.parties_prev = copy.deepcopy(self.parties)
