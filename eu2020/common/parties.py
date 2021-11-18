@@ -23,11 +23,10 @@ class Parties:
         w = 3 + max(len(party["name"]) for party in self.parties.values())
 
         for c in self.parties:
-            result += self.parties[c]["name"]
-            for _ in range(w - len(self.parties[c]["name"])):
-                result += " "
-            result += "[{0}]{1:.2f} %[/{0}]".format(colors.numbers, self.parties[c]["satisfaction_pct"])
-            diff = self.parties[c]["satisfaction_pct"] - self.parties_prev[c]["satisfaction_pct"]
+            party = self.parties[c]
+            result += f"{party['name']:<{w}}"
+            result += "[{0}]{1:.2f} %[/{0}]".format(colors.numbers, party["satisfaction_pct"])
+            diff = party["satisfaction_pct"] - self.parties_prev[c]["satisfaction_pct"]
             if diff != 0:
                 color = colors.positive_progress if diff > 0 else colors.negative_progress
                 result += "  ([{0}]{1:+.2f} %[/{0}])".format(color, diff)
