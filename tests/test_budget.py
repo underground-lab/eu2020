@@ -1,6 +1,73 @@
 # coding: utf-8
 
+import pytest
+
 from eu2020.common.budget import Budget
+from eu2020.common.parties import Parties
+
+
+@pytest.fixture
+def parties():
+    data = {
+        "CZ": {
+            "name": "Česko",
+            "satisfaction_pct": 64,
+            "budget_contribution": 2_345_000_001,
+            "budget_consumption": 3_456_000_001,
+        },
+        "DK": {
+            "name": "Dánsko",
+            "satisfaction_pct": 57,
+            "budget_contribution": 2_001_000_000,
+            "budget_consumption": 888_000_099,
+        },
+        "IE": {
+            "name": "Irsko",
+            "satisfaction_pct": 72,
+            "budget_contribution": 2_222_000_001,
+            "budget_consumption": 1_555_000_001,
+        },
+    }
+
+    return Parties(data)
+
+
+@pytest.fixture
+def parties_non_eu():
+    data = {
+        "CN": {
+            "name": "Čína",
+            "satisfaction_pct": 42,
+            "budget_contribution": 0,
+            "budget_consumption": 0,
+        },
+        "US": {
+            "name": "USA",
+            "satisfaction_pct": 68,
+            "budget_contribution": 0,
+            "budget_consumption": 0,
+        },
+    }
+
+    return Parties(data)
+
+
+@pytest.fixture
+def budget(parties, parties_non_eu):
+    b = Budget()
+    b.add_parties(parties)
+    b.add_parties(parties_non_eu)
+    return b
+
+
+def test_get_income(budget):
+    result = budget.get_income()
+    assert result == 2_345_000_001 + 2_001_000_000 + 2_222_000_001
+
+
+def test_get_outcome(budget):
+    result = budget.get_outcome()
+    assert result == 3_456_000_001 + 888_000_099 + 1_555_000_001
 
 
 def test_budget():
