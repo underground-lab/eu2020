@@ -41,6 +41,11 @@ def parties():
     return Parties(data)
 
 
+@pytest.fixture
+def satisfaction_change():
+    return {"CZ": -2, "DK": -3, "CN": -70, "IE": 2}
+
+
 def test_get_satisfaction_pct(parties):
     result = parties.get_satisfaction_pct()
     assert result == pytest.approx((48 + 64 + 57 + 72 + 67) / 5)
@@ -57,8 +62,20 @@ def test_get_detailed_satisfaction_report(parties):
     )
 
 
-def test_update_satisfaction(parties):
-    parties.update_satisfaction({"CZ": -2, "DK": -3, "CN": -70, "IE": 2})
+def test_get_detailed_satisfaction_report_with_diff(parties, satisfaction_change):
+    parties.update_satisfaction(satisfaction_change)
+    result = parties.get_detailed_satisfaction_report()
+    assert result == (
+        "Evropský parlament   [magenta]48.00 %[/magenta]\n"
+        "Česko                [magenta]62.00 %[/magenta]  ([red]-2.00 %[/red])\n"
+        "Dánsko               [magenta]54.00 %[/magenta]  ([red]-3.00 %[/red])\n"
+        "Irsko                [magenta]74.00 %[/magenta]  ([green]+2.00 %[/green])\n"
+        "Čína                 [magenta]0.00 %[/magenta]  ([red]-67.00 %[/red])\n"
+    )
+
+
+def test_update_satisfaction(parties, satisfaction_change):
+    parties.update_satisfaction(satisfaction_change)
     assert parties.parties["EP"]["satisfaction_pct"] == 48
     assert parties.parties["CZ"]["satisfaction_pct"] == 62
     assert parties.parties["DK"]["satisfaction_pct"] == 54
