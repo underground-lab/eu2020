@@ -5,7 +5,7 @@ from eu2020.common.name import Name
 
 
 @pytest.mark.parametrize(
-    'name1p, name5p',
+    "name1p, name5p",
     (
         ("Adam", "Adame"),
         ("Eliška", "Eliško"),
@@ -23,7 +23,7 @@ from eu2020.common.name import Name
         ("Vladimír", "Vladimíre"),
         ("Vlastík", "Vlastíku"),
         ("Rudolf", "Rudolfe"),
-    )
+    ),
 )
 def test_name_5p(name1p, name5p):
     name = Name(name1p, "m")

@@ -11,7 +11,7 @@ def period():
 
 
 @pytest.mark.parametrize(
-    'year, month',
+    "year, month",
     (
         (2020, "Leden"),
         (2020, "Únor"),
@@ -26,7 +26,7 @@ def period():
         (2020, "Listopad"),
         (2020, "Prosinec"),
         (2021, "Leden"),
-    )
+    ),
 )
 def test_next(period, year, month):
     assert year == period.get_year()

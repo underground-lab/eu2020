@@ -1,3 +1,5 @@
+# coding: utf-8
+
 from eu2020.common.budget import Budget
 
 
