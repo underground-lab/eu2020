@@ -5,10 +5,6 @@ import eu2020.data.colors as colors
 
 
 class Parties:
-
-    parties = {}
-    parties_prev = {}
-
     def __init__(self, parties: dict):
         self.parties = parties
         self.parties_prev = copy.deepcopy(self.parties)

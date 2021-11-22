@@ -4,14 +4,14 @@ from eu2020.common.parties import Parties
 
 
 class Budget:
-
-    parties = []
-    budget = {
-        "extra_income": 0,
-        "extra_outcome": 0,
-        "dept": 0,
-        "guarantee": 0
-    }
+    def __init__(self):
+        self.parties = []
+        self.budget = {
+            "extra_income": 0,
+            "extra_outcome": 0,
+            "dept": 0,
+            "guarantee": 0
+        }
 
     def add_parties(self, parties: Parties) -> None:
         self.parties.append(parties)
