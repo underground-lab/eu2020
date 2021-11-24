@@ -48,8 +48,8 @@ class Budget:
         self.budget["guarantee"] += amt
 
     def update_balance(self) -> None:
-        self.budget["dept"] -= self.get_income() + self.budget["extra_income"] \
-            - self.get_outcome() - self.budget["extra_outcome"] \
+        self.budget["dept"] -= self.get_income() + self.get_extra_income() \
+            - self.get_outcome() - self.get_extra_outcome() \
             - int(self.get_guarantee() * 0.25)
         self.budget["extra_income"] = 0
         self.budget["extra_outcome"] = 0
