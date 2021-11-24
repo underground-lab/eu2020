@@ -50,10 +50,10 @@ class Budget:
     def update_balance(self) -> None:
         self.budget["dept"] -= self.get_income() + self.get_extra_income() \
             - self.get_outcome() - self.get_extra_outcome() \
-            - int(self.get_guarantee() * 0.25)
+            - self.get_guarantee() // 4
         self.budget["extra_income"] = 0
         self.budget["extra_outcome"] = 0
-        self.budget["guarantee"] = int(self.get_guarantee() * 0.5)
+        self.budget["guarantee"] = self.get_guarantee() // 2
 
     def get_budget_report(self):
         result = ""
