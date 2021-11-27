@@ -1,4 +1,17 @@
+import logging
+import rich
 from rich.console import Console
 from rich.theme import Theme
 
+
+LOGFILE = 'eu2020.log'
+WRITE_LOG = True
+
+def printlg(text, print=True, log=True):
+    if print is True:
+        console.print(text)
+    if WRITE_LOG is True and log is True:
+        logging.info(text)
+
+logging.basicConfig(filename=LOGFILE, filemode='w', level=logging.DEBUG, format='%(asctime)s - %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 console = Console(theme=Theme(inherit=False))

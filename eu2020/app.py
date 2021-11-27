@@ -14,7 +14,7 @@ from eu2020.common.parties import Parties
 from eu2020.common.budget import Budget
 from eu2020.common.event_processor import EventProcessor
 from eu2020.data.ev_higher_power import ev_higher_power
-from eu2020 import console
+from eu2020 import console, printlg
 
 
 def main() -> None:
@@ -48,11 +48,12 @@ def main() -> None:
     print_app_name()
 
     setup()
-    print(texts.intro.format(data.name.get_name5p(), data.name.translate("stal"), len(ems.member_countries)))
+    printlg(texts.intro.format(data.name.get_name5p(), data.name.translate("stal"), len(ems.member_countries)))
     utils.proceed()
 
     while True:
         utils.print_text_in_box(texts.period.format(period.get_month(), period.get_year()))
+        printlg(texts.period.format(period.get_month(), period.get_year()), print=False)
         print_budget(budget)
         print_membership_satisfaction(eu_members)
         print_hp_events(high_power_events)
