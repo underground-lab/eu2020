@@ -32,7 +32,8 @@ class Parties:
     def update_satisfaction(self, satisfaction: dict) -> None:
         for code, diff in satisfaction.items():
             party = self.parties[code]
-            party["satisfaction_pct"] = max(0, party["satisfaction_pct"] + diff)
+            new_value = party["satisfaction_pct"] + diff
+            party["satisfaction_pct"] = min(100, max(0, new_value))
 
     def get_budget_contribution(self) -> int:
         return sum(party["budget_contribution"] for party in self.parties.values())
