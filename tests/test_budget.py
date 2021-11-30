@@ -73,3 +73,47 @@ def test_budget():
     assert 2_500_000_000 == budget.get_guarantee()
     assert -900_000_000 + 2_500_000_000 + 1_250_000_000 == budget.get_dept()
     assert 900_000_000 - 2_500_000_000 - 1_250_000_000 == budget.get_balance()
+
+
+def test_get_budget_report():
+    budget = Budget()
+    budget.add_parties(Parties({
+        "XY": {"budget_contribution": 800_000_000, "budget_consumption": 800_000_000}
+    }))
+    assert budget.get_budget_report() == (
+        "Příjmy:                  [magenta]         800,000,000 EUR[/magenta]\n"
+        "Výdaje:                  [magenta]         800,000,000 EUR[/magenta]\n"
+        "Mimořádné příjmy:        [magenta]                   0 EUR[/magenta]\n"
+        "Mimořádné výdaje:        [magenta]                   0 EUR[/magenta]\n"
+        "Dluh z minulých období:  [magenta]                   0 EUR[/magenta]\n"
+
+        # default color
+        "Bilance:                 [magenta]                   0 EUR[/magenta]\n"
+        "Poskytnuté garance:      [magenta]                   0 EUR[/magenta]\n"
+    )
+
+    budget.add_extra_income(1_400_000_000)
+    assert budget.get_budget_report() == (
+        "Příjmy:                  [magenta]         800,000,000 EUR[/magenta]\n"
+        "Výdaje:                  [magenta]         800,000,000 EUR[/magenta]\n"
+        "Mimořádné příjmy:        [magenta]       1,400,000,000 EUR[/magenta]\n"
+        "Mimořádné výdaje:        [magenta]                   0 EUR[/magenta]\n"
+        "Dluh z minulých období:  [magenta]                   0 EUR[/magenta]\n"
+
+        # positive progress color
+        "Bilance:                 [green]      +1,400,000,000 EUR[/green]\n"
+        "Poskytnuté garance:      [magenta]                   0 EUR[/magenta]\n"
+    )
+
+    budget.add_extra_outcome(2_900_000_000)
+    assert budget.get_budget_report() == (
+        "Příjmy:                  [magenta]         800,000,000 EUR[/magenta]\n"
+        "Výdaje:                  [magenta]         800,000,000 EUR[/magenta]\n"
+        "Mimořádné příjmy:        [magenta]       1,400,000,000 EUR[/magenta]\n"
+        "Mimořádné výdaje:        [magenta]       2,900,000,000 EUR[/magenta]\n"
+        "Dluh z minulých období:  [magenta]                   0 EUR[/magenta]\n"
+
+        # negative progress color
+        "Bilance:                 [red]      -1,500,000,000 EUR[/red]\n"
+        "Poskytnuté garance:      [magenta]                   0 EUR[/magenta]\n"
+    )
