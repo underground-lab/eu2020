@@ -1,3 +1,5 @@
+from string import Template
+
 import eu2020.data.colors as colors
 import eu2020.data.texts as texts
 from eu2020.common.parties import Parties
@@ -56,28 +58,25 @@ class Budget:
         self.budget["guarantee"] = self.get_guarantee() // 2
 
     def get_budget_report(self):
-        result = ""
-
-        result += "{0} [{1}]{2:20,} EUR[/{1}]\n" \
-            .format(texts.budget_income, colors.numbers, self.get_income())
-        result += "{0} [{1}]{2:20,} EUR[/{1}]\n" \
-            .format(texts.budget_outcome, colors.numbers, self.get_outcome())
-        result += "{0} [{1}]{2:20,} EUR[/{1}]\n" \
-            .format(texts.budget_extra_income, colors.numbers, self.get_extra_income())
-        result += "{0} [{1}]{2:20,} EUR[/{1}]\n" \
-            .format(texts.budget_extra_outcome, colors.numbers, self.get_extra_outcome())
-        result += "{0} [{1}]{2:20,} EUR[/{1}]\n" \
-            .format(texts.budget_dept, colors.numbers, self.get_dept())
-
-        diff = self.get_balance()
+        number_format = "20,"
         color = colors.numbers
-        if diff > 0:
-            color = colors.positive_progress
-        if diff < 0:
-            color = colors.negative_progress
-        result += "{0} [{1}]{2:{3}20,} EUR[/{1}]\n".format(texts.budget_balance, color, diff, '+' if diff else '')
+        budget_values = dict(
+            income=f"{self.get_income():{number_format}}",
+            outcome=f"{self.get_outcome():{number_format}}",
+            extra_income=f"{self.get_extra_income():{number_format}}",
+            extra_outcome=f"{self.get_extra_outcome():{number_format}}",
+            dept=f"{self.get_dept():{number_format}}",
+            guarantee=f"{self.get_guarantee():{number_format}}",
+            number_color=color,
+        )
 
-        result += "{0} [{1}]{2:20,} EUR[/{1}]\n" \
-            .format(texts.budget_guarantee, colors.numbers, self.get_guarantee())
+        balance = self.get_balance()
+        if balance:
+            color = colors.positive_progress if balance > 0 else colors.negative_progress
+            number_format = "+" + number_format
+        budget_values.update(
+            balance=f"{balance:{number_format}}",
+            balance_color=color,
+        )
 
-        return result
+        return Template(texts.budget_report_template).substitute(budget_values)

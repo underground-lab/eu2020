@@ -35,10 +35,12 @@ options = "Možnosti:"
 higher_power_event = "Mimořádná událost"
 higher_power_events = "Mimořádné události: [{0}]{1}[/{0}]"
 
-budget_income =        "Příjmy:                 "
-budget_outcome =       "Výdaje:                 "
-budget_balance =       "Bilance:                "
-budget_extra_income =  "Mimořádné příjmy:       "
-budget_extra_outcome = "Mimořádné výdaje:       "
-budget_dept =          "Dluh z minulých období: "
-budget_guarantee =     "Poskytnuté garance:     "
+budget_report_template = """
+Příjmy:                  [$number_color]$income EUR[/$number_color]
+Výdaje:                  [$number_color]$outcome EUR[/$number_color]
+Mimořádné příjmy:        [$number_color]$extra_income EUR[/$number_color]
+Mimořádné výdaje:        [$number_color]$extra_outcome EUR[/$number_color]
+Dluh z minulých období:  [$number_color]$dept EUR[/$number_color]
+Bilance:                 [$balance_color]$balance EUR[/$balance_color]
+Poskytnuté garance:      [$number_color]$guarantee EUR[/$number_color]
+""".lstrip()
