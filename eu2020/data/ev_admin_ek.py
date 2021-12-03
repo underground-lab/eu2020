@@ -150,4 +150,80 @@ ev_admin_ek = [
             },
         ]
     },
+    {
+        "party": "EK",
+        "description": "EK navrhuje v rámci Green Deal zavedení klimatické daně pro všechny majitele domů a aut.",
+        "condition": {
+            "flag": ["green_deal"],
+        },
+        "options": [
+            {
+                "key": "p",
+                "description": "přijmout zavedení klimatické daně pro domácnosti",
+                "delay": -1,
+                "impact": {
+                    "satisfaction": {
+                        "WHO": 2, "GDA": 2, "SOR": 2, "BE": -2, "BG": -2, "CZ": -2, "DK": -2,
+                        "EE": -2, "FI": -1, "FR": -2, "HR": -1, "IE": -1, "IT": -1, "CY": -2, "LT": -2, "ES": -2, "SE": -1,
+                        "HU": -2, "MT": -1, "DE": -1, "NL": -1, "PL": -2, "PT": -1, "AT": -1, "RO": -2, "GR": -1, "SK": -2,
+                        "SI": -1, "LV": -1, "LU": -1,
+                    },
+                }
+            },
+            {
+                "key": "o",
+                "description": "odmítnout zavedení klimatické daně pro domácnosti",
+                "delay": 6,
+                "impact": {
+                    "satisfaction": {"WHO": -1, "GDA": -1, "SOR": -1},
+                }
+            },
+            {
+                "key": "n",
+                "description": "nerozhodnout teď",
+                "delay": 2,
+                "impact": {
+                    "satisfaction": {},
+                }
+            },
+        ]
+    },
+    {
+        "party": "EK",
+        "description": "Evropská komise vypracovala dokument 'Inkluzivní komunikace' ve kterém navrhuje "
+                       "zakázat některá slova jako například Vánoce, vánoční svátky, oslovení dámy a pánové "
+                       "a mají se přestat používat křesťanská jména jako Marie a Jan. Důvodem je fakt, že Evropa "
+                       "už není křesťanská a vánoční oslavy nejsou dostatečně inkluzivní.",
+        "options": [
+            {
+                "key": "s",
+                "description": "odsouhlasit dokument",
+                "delay": -1,
+                "impact": {
+                    "satisfaction": {
+                        "NEZ": 3, "SOR": 3, "BE": -3, "BG": -3, "CZ": -4, "DK": -3,
+                        "EE": -3, "FI": -3, "FR": -3, "HR": -3, "IE": -3, "IT": -5, "CY": -3, "LT": -3, "ES": -3, "SE": -3,
+                        "HU": -3, "MT": -2, "DE": -3, "NL": -3, "PL": -5, "PT": -3, "AT": -3, "RO": -3, "GR": -3, "SK": -5,
+                        "SI": -3, "LV": -3, "LU": -3,
+                    },
+                }
+            },
+            {
+                "key": "o",
+                "description": "odmítnout dokument",
+                "delay": -1,
+                "impact": {
+                    "satisfaction": {"NEZ": -3, "SOR": -3},
+                }
+            },
+            {
+                "key": "n",
+                "description": "nerozhodnout teď",
+                "delay": 6,
+                "impact": {
+                    "satisfaction": {"SOR": -1},
+                }
+            },
+        ]
+    },
 ]
