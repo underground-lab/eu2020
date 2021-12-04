@@ -39,7 +39,9 @@ class EventProcessor:
         descriptions = {key: option["description"] for key, option in options.items()}
         g = utils.input_with_options(texts.options, descriptions)
         option = options[g]
-        printlg(option["description"], print=False)
+        key = option["key"]
+        desc = option["description"]
+        printlg(f"({key}) => {desc}", print=False)
 
         # Set delay
         ev["wait"] = option["delay"]

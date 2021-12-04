@@ -69,11 +69,11 @@ def main() -> None:
             utils.proceed()
 
         utils.print_text_in_box(texts.membership_satisfaction_header)
-        console.print(eu_members.get_detailed_satisfaction_report())
+        printlg(eu_members.get_detailed_satisfaction_report())
         utils.proceed()
 
         utils.print_text_in_box(texts.deep_state_satisfaction_header)
-        console.print(deep_state.get_detailed_satisfaction_report())
+        printlg(deep_state.get_detailed_satisfaction_report())
         utils.proceed()
 
         period.next()
@@ -83,18 +83,18 @@ def main() -> None:
 
 
 def print_budget(budget: Budget) -> None:
-    console.print(budget.get_budget_report())
+    printlg(budget.get_budget_report())
 
 
 def print_membership_satisfaction(members: Parties) -> None:
-    console.print(texts.membership_satisfaction.format(colors.numbers, members.get_satisfaction_pct()))
+    printlg(texts.membership_satisfaction.format(colors.numbers, members.get_satisfaction_pct()))
 
 
 def print_hp_events(hp_events: HigherPowerEvents) -> None:
     ev = hp_events.get_current_events()
     if ev != "":
         console.print()
-        console.print(texts.higher_power_events.format(colors.high_power_events, ev))
+        printlg(texts.higher_power_events.format(colors.high_power_events, ev))
 
 
 def setup() -> None:

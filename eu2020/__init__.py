@@ -1,4 +1,5 @@
 import logging
+import re
 from rich.console import Console
 from rich.theme import Theme
 
@@ -11,7 +12,8 @@ def printlg(text, print=True, log=True):
     if print is True:
         console.print(text)
     if WRITE_LOG is True and log is True:
-        logging.info(text)
+        t = re.sub(r'\[[^\[]*\]', '', text)
+        logging.info(t)
 
 
 logging.basicConfig(filename=LOGFILE, filemode='w', level=logging.DEBUG,
