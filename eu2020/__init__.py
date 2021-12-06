@@ -9,9 +9,9 @@ LOGFILE = 'eu2020.log'
 WRITE_LOG = True
 
 def printlg(text, print=True, log=True):
-    if print is True:
+    if print:
         console.print(text)
-    if WRITE_LOG is True and log is True:
+    if WRITE_LOG and log:
         t = re.sub(r'\[[^\[]*\]', '', text)
         logging.info(t)
 
