@@ -52,8 +52,9 @@ def main() -> None:
     utils.proceed()
 
     while True:
-        utils.print_text_in_box(texts.period.format(period.get_month(), period.get_year()))
-        printlg(texts.period.format(period.get_month(), period.get_year()), print=False)
+        period_info = texts.period.format(period.get_month(), period.get_year())
+        utils.print_text_in_box(period_info)
+        printlg(period_info, print=False)
         print_budget(budget)
         print_membership_satisfaction(eu_members)
         print_hp_events(high_power_events)
