@@ -8,7 +8,8 @@ WIDTH = 80
 LOGFILE = 'eu2020.log'
 WRITE_LOG = True
 
-def printlg(text, print=True, log=True):
+
+def print_log(text, print=True, log=True):
     if print:
         console.print(text)
     if WRITE_LOG and log:

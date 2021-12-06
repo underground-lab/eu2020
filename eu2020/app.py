@@ -14,7 +14,7 @@ from eu2020.common.parties import Parties
 from eu2020.common.budget import Budget
 from eu2020.common.event_processor import EventProcessor
 from eu2020.data.ev_higher_power import ev_higher_power
-from eu2020 import console, printlg
+from eu2020 import console, print_log
 
 
 def main() -> None:
@@ -48,13 +48,13 @@ def main() -> None:
     print_app_name()
 
     setup()
-    printlg(texts.intro.format(data.name.get_name5p(), data.name.translate("stal"), len(ems.member_countries)))
+    print_log(texts.intro.format(data.name.get_name5p(), data.name.translate("stal"), len(ems.member_countries)))
     utils.proceed()
 
     while True:
         period_info = texts.period.format(period.get_month(), period.get_year())
         utils.print_text_in_box(period_info)
-        printlg(period_info, print=False)
+        print_log(period_info, print=False)
         print_budget(budget)
         print_membership_satisfaction(eu_members)
         print_hp_events(high_power_events)
@@ -70,11 +70,11 @@ def main() -> None:
             utils.proceed()
 
         utils.print_text_in_box(texts.membership_satisfaction_header)
-        printlg(eu_members.get_detailed_satisfaction_report())
+        print_log(eu_members.get_detailed_satisfaction_report())
         utils.proceed()
 
         utils.print_text_in_box(texts.deep_state_satisfaction_header)
-        printlg(deep_state.get_detailed_satisfaction_report())
+        print_log(deep_state.get_detailed_satisfaction_report())
         utils.proceed()
 
         period.next()
@@ -84,18 +84,18 @@ def main() -> None:
 
 
 def print_budget(budget: Budget) -> None:
-    printlg(budget.get_budget_report())
+    print_log(budget.get_budget_report())
 
 
 def print_membership_satisfaction(members: Parties) -> None:
-    printlg(texts.membership_satisfaction.format(colors.numbers, members.get_satisfaction_pct()))
+    print_log(texts.membership_satisfaction.format(colors.numbers, members.get_satisfaction_pct()))
 
 
 def print_hp_events(hp_events: HigherPowerEvents) -> None:
     ev = hp_events.get_current_events()
     if ev != "":
         console.print()
-        printlg(texts.higher_power_events.format(colors.high_power_events, ev))
+        print_log(texts.higher_power_events.format(colors.high_power_events, ev))
 
 
 def setup() -> None:
