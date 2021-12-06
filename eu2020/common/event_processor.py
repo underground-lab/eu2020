@@ -4,6 +4,7 @@ import eu2020.common.utils as utils
 from eu2020.common.budget import Budget
 from eu2020.common.parties import Parties
 from eu2020.common.parties_events import PartiesEvents
+from eu2020 import print_log
 
 
 class EventProcessor:
@@ -32,12 +33,15 @@ class EventProcessor:
                     self.make_decision(ev, self.all_parties, budget)
 
     def make_decision(self, ev: dict, members: Parties, budget: Budget) -> None:
-        print(ev["description"])
+        print_log(ev["description"])
         print()
         options = {option["key"]: option for option in ev["options"]}
         descriptions = {key: option["description"] for key, option in options.items()}
         g = utils.input_with_options(texts.options, descriptions)
         option = options[g]
+        key = option["key"]
+        desc = option["description"]
+        print_log(f"({key}) => {desc}", print=False)
 
         # Set delay
         ev["wait"] = option["delay"]

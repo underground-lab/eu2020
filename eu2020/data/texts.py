@@ -19,7 +19,9 @@ deep_state_satisfaction_header = "Spokojenost deep state"
 
 intro = """
 Ahoj {},
+
 gratuluji - právě si se {} šéfem Evropské komise. Tvá síla a možnosti jsou prakticky neomezené.
+
 Vládneš {} členským zemím a tvým úkolem je udržet země co nejdéle v EU.
 """
 
