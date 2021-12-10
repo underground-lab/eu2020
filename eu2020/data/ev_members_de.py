@@ -38,4 +38,30 @@ ev_member_country_de = [
             },
         ]
     },
+    {
+        "party": "DE",
+        "description": "Německo požaduje mimořádnou pomoc ve výši 500 000 000 EUR na zvládnutí povodní.",
+        "condition": {
+            "flag": ["floods_de"],
+        },
+        "options": [
+            {
+                "key": "p",
+                "description": "poskytnout pomoc",
+                "delay": 12,
+                "impact": {
+                    "satisfaction": {"GR": 2},
+                    "budget": -500_000_000,
+                }
+            },
+            {
+                "key": "n",
+                "description": "neposkytnout pomoc",
+                "delay": 3,
+                "impact": {
+                    "satisfaction": {"GR": -5},
+                }
+            },
+        ]
+    },
 ]

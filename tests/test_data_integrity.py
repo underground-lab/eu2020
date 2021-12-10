@@ -65,6 +65,5 @@ def test_all_provided_flags_are_required(required_flags, provided_flags):
     assert provided_flags.issubset(required_flags)
 
 
-@pytest.mark.xfail(reason="floods_de")
 def test_all_higher_power_flags_are_required(required_flags, provided_flags, higher_power_flags):
     assert higher_power_flags.issubset(required_flags)
