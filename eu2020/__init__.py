@@ -19,6 +19,7 @@ def print_log(text, print=True, log=True):
         logging.info(t)
 
 
+# pytest doesn't like os.get_terminal_size()
 try:
     (WIDTH, HEIGHT) = os.get_terminal_size()
 except Exception:
