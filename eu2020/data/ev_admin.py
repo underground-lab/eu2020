@@ -5,11 +5,12 @@ from eu2020.data.ev_admin_ek import ev_admin_ek
 from eu2020.data.ev_admin_er import ev_admin_er
 from eu2020.data.ev_admin_es import ev_admin_es
 
-ev_admin = []
-ev_admin += ev_admin_eb
-ev_admin += ev_admin_ek
-ev_admin += ev_admin_er
-ev_admin += ev_admin_es
+ev_admin = [
+    *ev_admin_eb,
+    *ev_admin_ek,
+    *ev_admin_er,
+    *ev_admin_es,
+]
 
 eu_administration = {
     "EK": {

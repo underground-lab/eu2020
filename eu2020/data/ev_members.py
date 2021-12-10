@@ -10,17 +10,17 @@ from eu2020.data.ev_members_it import ev_member_country_it
 from eu2020.data.ev_members_lu import ev_member_country_lu
 from eu2020.data.ev_members_pl import ev_member_country_pl
 
-ev_member_country = []
-ev_member_country += ev_member_country_cz
-ev_member_country += ev_member_country_de
-ev_member_country += ev_member_country_es
-ev_member_country += ev_member_country_fr
-ev_member_country += ev_member_country_gr
-ev_member_country += ev_member_country_hu
-ev_member_country += ev_member_country_it
-ev_member_country += ev_member_country_lu
-ev_member_country += ev_member_country_pl
-
+ev_member_country = [
+    *ev_member_country_cz,
+    *ev_member_country_de,
+    *ev_member_country_es,
+    *ev_member_country_fr,
+    *ev_member_country_gr,
+    *ev_member_country_hu,
+    *ev_member_country_it,
+    *ev_member_country_lu,
+    *ev_member_country_pl,
+]
 
 member_countries = {
     "BE": {
