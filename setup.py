@@ -12,14 +12,14 @@ with open("requirements.txt", "r") as fh:
 setup(
     name='eu2020',
     version=version,
-    author='Jaroslav Beran',
-    author_email='jaroslav.beran@gmail.com',
+    author='Jaroslav Beran, Michal Porteš',
+    author_email='jaroslav.beran@gmail.com, michalportes1@gmail.com',
     description='Textová hra Evropská Unie 2020',
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url='https://github.com/berk76/eu2020',
+    url='https://github.com/underground-lab/eu2020',
     project_urls={
-        "Bug Tracker": "https://github.com/berk76/eu2020/issues"
+        "Bug Tracker": "https://github.com/underground-lab/eu2020/eu2020/issues"
     },
     entry_points={
         'console_scripts': [
