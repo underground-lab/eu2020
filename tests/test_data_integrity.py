@@ -58,13 +58,16 @@ def higher_power_flags():
 
 def test_all_required_flags_are_provided(required_flags, provided_flags, higher_power_flags):
     # some events depend on higher power flags
-    assert required_flags.issubset(provided_flags | higher_power_flags)
+    diff = required_flags - (provided_flags | higher_power_flags)
+    assert not diff, f"not provided in data: {', '.join(diff)}"
 
 
 def test_all_provided_flags_are_required(required_flags, provided_flags):
-    assert provided_flags.issubset(required_flags)
+    diff = provided_flags - required_flags
+    assert not diff, f"not required in data: {', '.join(diff)}"
 
 
 @pytest.mark.xfail(reason="floods_de")
 def test_all_higher_power_flags_are_required(required_flags, provided_flags, higher_power_flags):
-    assert higher_power_flags.issubset(required_flags)
+    diff = higher_power_flags - required_flags
+    assert not diff, f"not required in data: {', '.join(diff)}"
