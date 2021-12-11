@@ -29,4 +29,13 @@ setup(
     license='GPL-3.0',
     packages=find_namespace_packages(include=['eu2020', 'eu2020.*']),
     install_requires=requirements,
+    python_requires='>=3.6',
+    classifiers=[
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
+    ],
 )
