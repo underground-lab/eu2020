@@ -60,14 +60,14 @@ ev_others_ru = [
     {
         "party": "RU",
         "description": "Rusko prohlásilo, že by EU měla Bělorusku za zastavení migrace zaplatit "
-                       "stejné peníza jako zaplatila Turecku.",
+                       "stejné peníze jako zaplatila Turecku.",
         "condition": {
             "flag": ["turkey_refugee_agreement", "fence_pl"],
         },
         "options": [
             {
                 "key": "z",
-                "description": "zaplatit Bělorusku 6 mld EUR aby zadržovlo uprchlíky",
+                "description": "zaplatit Bělorusku 6 mld EUR aby zadržovalo uprchlíky",
                 "delay": -1,
                 "impact": {
                     "satisfaction": {"RU": 3, "PL": 5, "LT": 5},
@@ -76,7 +76,7 @@ ev_others_ru = [
             },
             {
                 "key": "o",
-                "description": "odmítnout zaplatit Bělorusku aby zadržovlo uprchlíky",
+                "description": "odmítnout zaplatit Bělorusku aby zadržovalo uprchlíky",
                 "delay": -1,
                 "impact": {
                     "satisfaction": {"RU": -1, "PL": -3, "LT": -3},

@@ -3,7 +3,7 @@
 ev_admin_eb = [
     {
         "party": "EB",
-        "description": "Evropská centrální banka navrhuje řešit vysokou míru inflace zvednutím úrkokových "
+        "description": "Evropská centrální banka navrhuje řešit vysokou míru inflace zvednutím úrokových "
                        "sazeb (tj. zdražením úvěrů). Toto opatření ale může vážně ohrozit státy s vysokým "
                        "zadlužením jako je Itálie, Francie a Španělsko a plánované opatření by je mohlo dovést "
                        "k bankrotu.",
@@ -48,7 +48,7 @@ ev_admin_eb = [
         "options": [
             {
                 "key": "t",
-                "description": "podpořit kvatntitativní uvolňování tiskem nových peněz",
+                "description": "podpořit kvantitativní uvolňování tiskem nových peněz",
                 "delay": 12,
                 "impact": {
                     "satisfaction": {"FR": 2, "IT": 2, "ES": 2, "GR": 2},
@@ -56,7 +56,7 @@ ev_admin_eb = [
             },
             {
                 "key": "s",
-                "description": "podpořit kvatntitativní uvolňování zavedením záporných úrokových sazeb",
+                "description": "podpořit kvantitativní uvolňování zavedením záporných úrokových sazeb",
                 "delay": 12,
                 "impact": {
                     "satisfaction": {"FR": 2, "IT": 2, "ES": 2, "GR": 2},

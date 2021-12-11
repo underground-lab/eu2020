@@ -72,7 +72,7 @@ ev_member_country_cz = [
     },
     {
         "party": "CZ",
-        "description": "Spokojenost veřejnosti s členstvím v EU je Česku menší než 30%. Česko plánuje "
+        "description": "Spokojenost veřejnosti s členstvím v EU je v Česku menší než 30%. Česko plánuje "
                        "referendum o vystoupení z EU.",
         "condition": {
             "satisfaction": {"op": "<", "value": 30},

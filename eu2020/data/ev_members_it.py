@@ -27,7 +27,7 @@ ev_member_country_it = [
     {
         "party": "IT",
         "description": "V Itálii hrozí bankrot některých významných bank. Pokud by se tak stalo, znamenalo by to "
-                       "nebezpečnou destabilizaci, která by mohla vyústit v odchod zěmě z EU. Itálie proto požaduje "
+                       "nebezpečnou destabilizaci, která by mohla vyústit v odchod země z EU. Itálie proto požaduje "
                        "mimořádnou dotaci na sanaci bank ve výši 12 000 000 000 EUR.",
         "options": [
             {

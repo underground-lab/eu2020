@@ -34,7 +34,7 @@ ev_member_country_pl = [
     {
         "party": "PL",
         "description": "Polsko udělalo krok k odchodu z Evropské unie. Ústavní soud rozhodl, že polské právo "
-                       "je nadřazené unijnímu. Postavení ústav a jejich ustanoveních jsou předmětem vášnivé debaty "
+                       "je nadřazené unijnímu. Postavení ústav a jejich ustanovení jsou předmětem vášnivé debaty "
                        "v právnické komunitě v celé Evropské unii.",
         "options": [
             {
@@ -48,7 +48,7 @@ ev_member_country_pl = [
             },
             {
                 "key": "p",
-                "description": "přijmout deklaraci proti Polsku a udělit pokutu  200 000 000 EUR",
+                "description": "přijmout deklaraci proti Polsku a udělit pokutu 200 000 000 EUR",
                 "delay": -1,
                 "impact": {
                     "satisfaction": {"PL": -5},

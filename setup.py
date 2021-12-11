@@ -19,7 +19,7 @@ setup(
     long_description_content_type="text/markdown",
     url='https://github.com/underground-lab/eu2020',
     project_urls={
-        "Bug Tracker": "https://github.com/underground-lab/eu2020/eu2020/issues"
+        "Bug Tracker": "https://github.com/underground-lab/eu2020/issues"
     },
     entry_points={
         'console_scripts': [

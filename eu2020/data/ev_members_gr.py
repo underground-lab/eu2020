@@ -3,7 +3,7 @@
 ev_member_country_gr = [
     {
         "party": "GR",
-        "description": "Řecko se potýká s náporem uprchlíků přicházejících z Turecka a požaduje příjmutí urychleného plánu"
+        "description": "Řecko se potýká s náporem uprchlíků přicházejících z Turecka a požaduje přijmutí urychleného plánu"
                        " na přerozdělování uprchlíků v Evropě.",
         "options": [
             {
@@ -81,7 +81,7 @@ ev_member_country_gr = [
         "options": [
             {
                 "key": "u",
-                "description": "uzavřít dohodu a zaplatit Turecku 6 mld EUR aby zadržovlo uprchlíky",
+                "description": "uzavřít dohodu a zaplatit Turecku 6 mld EUR aby zadržovalo uprchlíky",
                 "delay": -1,
                 "flag_set": "turkey_refugee_agreement",
                 "impact": {
