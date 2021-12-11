@@ -5,7 +5,7 @@ import shutil
 from rich.console import Console
 from rich.theme import Theme
 
-WIDTH, HEIGHT = shutil.get_terminal_size()
+WIDTH, HEIGHT = shutil.get_terminal_size(fallback=(80, 20))
 LOGFILE = 'eu2020.log'
 WRITE_LOG = True
 
