@@ -79,6 +79,7 @@ def main() -> None:
 
         period.next()
         event_processor.next_period()
+        high_power_events.next_period()
         if period.month == 0:
             budget.update_balance()
 
