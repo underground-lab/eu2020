@@ -83,7 +83,7 @@ ev_member_country_cz = [
                 "description": "vzít na vědomí",
                 "delay": -1,
                 "impact": {
-                    "satisfaction": {"GDA": -5, "SOR": -5, "NEZ": -5},
+                    "satisfaction": {"WEF": -5, "SOR": -5, "NEZ": -5},
                 }
             },
         ]

@@ -3,24 +3,26 @@
 from eu2020.data.ev_deep_state_nbm import ev_deep_state_nbm
 from eu2020.data.ev_deep_state_nez import ev_deep_state_nez
 from eu2020.data.ev_deep_state_sor import ev_deep_state_sor
+from eu2020.data.ev_deep_state_wef import ev_deep_state_wef
 from eu2020.data.ev_deep_state_who import ev_deep_state_who
 
 ev_deep_state = [
     *ev_deep_state_nbm,
     *ev_deep_state_nez,
     *ev_deep_state_sor,
+    *ev_deep_state_wef,
     *ev_deep_state_who,
 ]
 
 deep_state = {
-    "GDA": {
-        "name": "Globalisti z Davosu",
+    "SOR": {
+        "name": "George Soros",
         "satisfaction_pct": 50,
         "budget_contribution": 0,
         "budget_consumption": 0,
     },
-    "SOR": {
-        "name": "George Soros",
+    "LOB": {
+        "name": "Lobbystické skupiny",
         "satisfaction_pct": 50,
         "budget_contribution": 0,
         "budget_consumption": 0,
@@ -37,6 +39,18 @@ deep_state = {
         "budget_contribution": 0,
         "budget_consumption": 4_816_000_000,
     },
+    "OSN": {
+        "name": "Organizace Spojených národů",
+        "satisfaction_pct": 50,
+        "budget_contribution": 0,
+        "budget_consumption": 0,
+    },
+    "WEF": {
+        "name": "Světové Ekonomické Fórum",
+        "satisfaction_pct": 50,
+        "budget_contribution": 0,
+        "budget_consumption": 0,
+    },
     "WHO": {
         "name": "Světová Zdravotnická Organizace",
         "satisfaction_pct": 50,
@@ -51,12 +65,6 @@ deep_state = {
     },
     "BIP": {
         "name": "Big Pharma Korporace",
-        "satisfaction_pct": 50,
-        "budget_contribution": 0,
-        "budget_consumption": 0,
-    },
-    "LOB": {
-        "name": "Lobbystické skupiny",
         "satisfaction_pct": 50,
         "budget_contribution": 0,
         "budget_consumption": 0,
