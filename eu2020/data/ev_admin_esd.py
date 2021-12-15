@@ -1,6 +1,6 @@
 # coding: utf-8
 
-ev_admin_es = [
+ev_admin_esd = [
     {
         "party": "ESD",
         "description": "Lichtenštejnsko se obrátilo na Evropský soud pro lidská práva ve věci "
