@@ -1,8 +1,8 @@
 # coding: utf-8
 
-ev_admin_es = [
+ev_admin_esd = [
     {
-        "party": "ES",
+        "party": "ESD",
         "description": "Lichtenštejnsko se obrátilo na Evropský soud pro lidská práva ve věci "
                        "navrácení zabaveného majetku. Po válce byly totiž na majetek Lichtenštejnů "
                        "uplatněny dekrety prezidenta Beneše. Knížecí rodina tvrdí, že jí český stát "
@@ -40,7 +40,7 @@ ev_admin_es = [
         ]
     },
     {
-        "party": "ES",
+        "party": "ESD",
         "description": "V Polsku začala platit sporná novela o trestání soudců (takzvaný náhubkový zákon). "
                        "Polská opozice a další kritici novinek varují, že upravené předpisy umožní trestat a "
                        "odvolat z funkce neposlušné soudce, kteří se staví proti změnám v justici prosazovaným "
