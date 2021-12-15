@@ -1,3 +1,4 @@
+from collections import Counter
 from itertools import chain
 
 import pytest
@@ -70,3 +71,11 @@ def test_all_provided_flags_are_required(required_flags, provided_flags):
 def test_all_higher_power_flags_are_required(required_flags, provided_flags, higher_power_flags):
     diff = higher_power_flags - required_flags
     assert not diff, f"not required in data: {', '.join(diff)}"
+
+
+def test_unique_party_codes():
+    code_counts = Counter(
+        chain(eu_administration, deep_state, member_countries, deep_others)
+    )
+    duplicate = [code for code, count in code_counts.items() if count > 1]
+    assert not duplicate, f"duplicate codes: {', '.join(duplicate)}"
