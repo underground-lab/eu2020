@@ -31,7 +31,7 @@ eu_administration = {
         "budget_contribution": 0,
         "budget_consumption": 10_000_000_000,
     },
-    "ES": {
+    "ESD": {
         "name": "Evropský soudní dvůr",
         "satisfaction_pct": 50,
         "budget_contribution": 0,

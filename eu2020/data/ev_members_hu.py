@@ -3,8 +3,8 @@
 ev_member_country_hu = [
     {
         "party": "HU",
-        "description": "Maďarsko zakázalo propagaci LGBT ve školách. LGBT aktivisté požadují odsoudit Maďarsko za porušování."
-                       " práv menšin",
+        "description": "Maďarsko zakázalo propagaci LGBT ve školách. LGBT aktivisté požadují odsoudit Maďarsko za porušování"
+                       " práv menšin.",
         "options": [
             {
                 "key": "p",
