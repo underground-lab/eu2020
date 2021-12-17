@@ -9,6 +9,9 @@ from eu2020.data.ev_higher_power import ev_higher_power
 from eu2020.data.ev_members import ev_member_country, member_countries
 from eu2020.data.ev_others import ev_others, deep_others
 
+EVENTS = tuple(chain(ev_admin, ev_deep_state, ev_member_country, ev_others))
+PARTY_CODES = tuple(chain(eu_administration, deep_state, member_countries, deep_others))
+
 
 def test_ev_admin_all_parties_exists():
     for event in ev_admin:
@@ -37,7 +40,7 @@ def test_ev_others_all_parties_exists():
 @pytest.fixture
 def required_flags():
     flags = set()
-    for event in chain(ev_admin, ev_deep_state, ev_member_country, ev_others):
+    for event in EVENTS:
         flags.update(event.get("condition", {}).get("flag", []))
     return flags
 
@@ -45,7 +48,7 @@ def required_flags():
 @pytest.fixture
 def provided_flags():
     flags = set()
-    for event in chain(ev_admin, ev_deep_state, ev_member_country, ev_others):
+    for event in EVENTS:
         for option in event.get("options", []):
             if "flag_set" in option:
                 flags.add(option["flag_set"])
@@ -74,18 +77,13 @@ def test_all_higher_power_flags_are_required(required_flags, provided_flags, hig
 
 
 def test_unique_party_codes():
-    code_counts = Counter(
-        chain(eu_administration, deep_state, member_countries, deep_others)
-    )
+    code_counts = Counter(PARTY_CODES)
     duplicate = [code for code, count in code_counts.items() if count > 1]
     assert not duplicate, f"duplicate codes: {', '.join(duplicate)}"
 
 
 def test_satisfaction_impact_all_parties_exists():
-    all_party_codes = set(
-        chain(eu_administration, deep_state, member_countries, deep_others)
-    )
-    for event in chain(ev_admin, ev_deep_state, ev_member_country, ev_others):
+    for event in EVENTS:
         for option in event["options"]:
             for code in option["impact"].get("satisfaction", {}):
-                assert code in all_party_codes, f"unknown code: {code}"
+                assert code in PARTY_CODES, f"unknown code: {code}"
