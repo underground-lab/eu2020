@@ -79,3 +79,13 @@ def test_unique_party_codes():
     )
     duplicate = [code for code, count in code_counts.items() if count > 1]
     assert not duplicate, f"duplicate codes: {', '.join(duplicate)}"
+
+
+def test_satisfaction_impact_all_parties_exists():
+    all_party_codes = set(
+        chain(eu_administration, deep_state, member_countries, deep_others)
+    )
+    for event in chain(ev_admin, ev_deep_state, ev_member_country, ev_others):
+        for option in event["options"]:
+            for code in option["impact"].get("satisfaction", {}):
+                assert code in all_party_codes, f"unknown code: {code}"
