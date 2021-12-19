@@ -51,7 +51,7 @@ ev_story_covid19 = [
     {
         "party": "IT",
         "description": "V Itálii se onemocnění velmi rychle šíří a zasahuje hlavně starší obyvatele. "
-                       "Nemocnice nestíhají a převážejí nemocné do méně zasažených regionů",
+                       "Nemocnice nestíhají a převážejí nemocné do méně zasažených regionů.",
         "condition": {
             "flag": ["pandemic_3"],
         },
@@ -192,10 +192,68 @@ ev_story_covid19 = [
         ]
     },
     {
+        "party": "ELA",
+        "description": "Evropská Léková Agentura registrovala první vakcínu Pfizer BioNTech (podávanou ve dvou dávkách) "
+                       "proti COVID19.",
+        "condition": {
+            "flag": ["pandemic_7"],
+        },
+        "options": [
+            {
+                "key": "v",
+                "description": "vzít na vědomí",
+                "delay": -1,
+                "flag_set": "pandemic_8",
+            },
+        ]
+    },
+    {
+        "party": "ELA",
+        "description": "Evropská Léková Agentura registrovala novou vakcínu AstraZeneca proti COVID19",
+        "condition": {
+            "flag": ["pandemic_8"],
+        },
+        "options": [
+            {
+                "key": "v",
+                "description": "vzít na vědomí",
+                "delay": -1,
+            },
+        ]
+    },
+    {
+        "party": "ELA",
+        "description": "Evropská Léková Agentura registrovala novou vakcínu Moderna proti COVID19",
+        "condition": {
+            "flag": ["pandemic_8"],
+        },
+        "options": [
+            {
+                "key": "v",
+                "description": "vzít na vědomí",
+                "delay": -1,
+            },
+        ]
+    },
+    {
+        "party": "ELA",
+        "description": "Evropská Léková Agentura registrovala první jedno-dávkovou vakcínu Johnson & Johnson proti COVID19",
+        "condition": {
+            "flag": ["pandemic_8"],
+        },
+        "options": [
+            {
+                "key": "v",
+                "description": "vzít na vědomí",
+                "delay": -1,
+            },
+        ]
+    },
+    {
         "party": "EK",
         "description": "Evropská komise navrhuje zavedení takzvaných Green Pasů pro cestování mezi zeměmi EU.",
         "condition": {
-            "flag": ["pandemic_7"],
+            "flag": ["pandemic_8"],
         },
         "options": [
             {

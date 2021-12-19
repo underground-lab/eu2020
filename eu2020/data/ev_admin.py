@@ -56,9 +56,15 @@ eu_administration = {
         "budget_consumption": 5_000_000_000,
     },
     "ED": {
-        "name": "Evropská obranná Agentura",
+        "name": "Evropská Obranná Agentura",
         "satisfaction_pct": 50,
         "budget_contribution": 0,
         "budget_consumption": 5_000_000_000,
+    },
+    "ELA": {
+        "name": "Evropská Léková Agentura",
+        "satisfaction_pct": 50,
+        "budget_contribution": 0,
+        "budget_consumption": 0,
     },
 }
