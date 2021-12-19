@@ -1,4 +1,7 @@
 import os
+
+from yaml import safe_load
+
 import eu2020.data.texts as texts
 import eu2020.data.colors as colors
 from eu2020 import console
@@ -29,3 +32,9 @@ def proceed() -> None:
 
 def clear() -> None:
     os.system('cls' if os.name == 'nt' else 'clear')
+
+
+def from_yaml_file(filename):
+    with open(filename, encoding="utf-8") as f:
+        result = safe_load(f)
+    return result
