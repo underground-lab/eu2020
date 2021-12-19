@@ -11,7 +11,7 @@ class Budget:
         self.budget = {
             "extra_income": 0,
             "extra_outcome": 0,
-            "dept": 0,
+            "debt": 0,
             "guarantee": 0
         }
 
@@ -20,10 +20,10 @@ class Budget:
 
     def get_balance(self) -> int:
         return self.get_income() + self.get_extra_income() \
-            - self.get_outcome() - self.get_extra_outcome() - self.get_dept()
+            - self.get_outcome() - self.get_extra_outcome() - self.get_debt()
 
-    def get_dept(self) -> int:
-        return self.budget["dept"]
+    def get_debt(self) -> int:
+        return self.budget["debt"]
 
     def get_income(self) -> int:
         return sum(p.get_budget_contribution() for p in self.parties)
@@ -50,7 +50,7 @@ class Budget:
         self.budget["guarantee"] += amt
 
     def update_balance(self) -> None:
-        self.budget["dept"] -= self.get_income() + self.get_extra_income() \
+        self.budget["debt"] -= self.get_income() + self.get_extra_income() \
             - self.get_outcome() - self.get_extra_outcome() \
             - self.get_guarantee() // 4
         self.budget["extra_income"] = 0
@@ -65,7 +65,7 @@ class Budget:
             outcome=f"{self.get_outcome():{number_format}}",
             extra_income=f"{self.get_extra_income():{number_format}}",
             extra_outcome=f"{self.get_extra_outcome():{number_format}}",
-            dept=f"{self.get_dept():{number_format}}",
+            debt=f"{self.get_debt():{number_format}}",
             guarantee=f"{self.get_guarantee():{number_format}}",
             number_color=color,
         )
