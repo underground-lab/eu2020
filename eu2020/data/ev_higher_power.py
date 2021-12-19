@@ -4,7 +4,7 @@ ev_higher_power = [
     {
         "key": "pandemic",
         "name": "Pandemie",
-        "start": "Propukla pandemie nové neznámé choroby.",
+        "start": "V Číně vypukla pandemie nové neznámé choroby.",
         "end": "Pandemie ustoupila.",
         "duration": -1,
     },
