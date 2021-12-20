@@ -25,14 +25,11 @@ class EventProcessor:
 
     def add_stories(self, stories: list) -> None:
         for s in stories:
-            sorted = False
             for pe in self.events:
                 p = pe.get_parties()
                 if s["party"] in p.parties:
                     pe.add_event(s)
-                    sorted = True
-                    continue
-            assert(sorted is True)
+                    break
 
     def process_events(self, budget: Budget) -> None:
         for party_evs in self.events:

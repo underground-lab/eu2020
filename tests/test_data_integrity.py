@@ -38,6 +38,12 @@ def test_ev_others_all_parties_exists():
         assert event["party"] in deep_others
 
 
+def test_ev_story_all_parties_exists():
+    for event in ev_story:
+        assert "party" in event
+        assert event["party"] in PARTY_CODES
+
+
 @pytest.fixture
 def required_flags():
     flags = set()
