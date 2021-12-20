@@ -43,3 +43,6 @@ class Parties:
 
     def next_period(self) -> None:
         self.parties_prev = copy.deepcopy(self.parties)
+
+    def __str__(self):
+        return f"{self.__class__.__name__}<{','.join(self.parties)}>"

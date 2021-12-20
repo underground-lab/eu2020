@@ -51,3 +51,6 @@ class PartiesEvents:
                 ev["wait"] -= 1
 
         self.parties.next_period()
+
+    def __str__(self):
+        return f"{self.__class__.__name__}<{','.join(self.parties.parties)}>"
