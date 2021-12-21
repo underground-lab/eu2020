@@ -17,6 +17,10 @@ class PartiesEvents:
             ev["wait"] = 0
         self.parties = parties
 
+    def add_event(self, ev: dict) -> None:
+        ev["wait"] = 0
+        self.events.append(ev)
+
     def event_filter(self, ev: dict) -> bool:
 
         if "condition" in ev:

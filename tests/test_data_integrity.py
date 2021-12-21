@@ -8,8 +8,9 @@ from eu2020.data.ev_deep_state import ev_deep_state, deep_state
 from eu2020.data.ev_higher_power import ev_higher_power
 from eu2020.data.ev_members import ev_member_country, member_countries
 from eu2020.data.ev_others import ev_others, deep_others
+from eu2020.data.ev_story import ev_story
 
-EVENTS = tuple(chain(ev_admin, ev_deep_state, ev_member_country, ev_others))
+EVENTS = tuple(chain(ev_admin, ev_deep_state, ev_member_country, ev_others, ev_story))
 PARTY_CODES = tuple(chain(eu_administration, deep_state, member_countries, deep_others))
 
 
@@ -35,6 +36,12 @@ def test_ev_others_all_parties_exists():
     for event in ev_others:
         assert "party" in event
         assert event["party"] in deep_others
+
+
+def test_ev_story_all_parties_exists():
+    for event in ev_story:
+        assert "party" in event
+        assert event["party"] in PARTY_CODES
 
 
 @pytest.fixture
@@ -85,5 +92,6 @@ def test_unique_party_codes():
 def test_satisfaction_impact_all_parties_exists():
     for event in EVENTS:
         for option in event["options"]:
-            for code in option["impact"].get("satisfaction", {}):
-                assert code in PARTY_CODES, f"unknown code: {code}"
+            if "impact" in option:
+                for code in option["impact"].get("satisfaction", {}):
+                    assert code in PARTY_CODES, f"unknown code: {code}"

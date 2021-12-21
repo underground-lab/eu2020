@@ -23,6 +23,16 @@ class EventProcessor:
             if p not in self.all_parties.parties:
                 self.all_parties.parties[p] = parties[p]
 
+    def add_stories(self, stories: list) -> None:
+        for s in stories:
+            for pe in self.events:
+                p = pe.get_parties()
+                if s["party"] in p.parties:
+                    pe.add_event(s)
+                    break
+            else:
+                raise ValueError(f"party not found: {s['party']}")
+
     def process_events(self, budget: Budget) -> None:
         for party_evs in self.events:
             for _ in range(random.randint(0, 2)):
@@ -46,23 +56,26 @@ class EventProcessor:
         # Set delay
         ev["wait"] = option["delay"]
 
-        # Satisfaction
-        option_impact = option["impact"]
-        if "satisfaction" in option_impact:
-            members.update_satisfaction(option_impact["satisfaction"])
-
-        # Budget
-        if "budget" in option_impact:
-            if option_impact["budget"] > 0:
-                budget.add_extra_income(option_impact["budget"])
-            else:
-                budget.add_extra_outcome(-1 * option_impact["budget"])
-        if "guarantee" in option_impact:
-            budget.add_guarantee(option_impact["guarantee"])
-
         # Flag set
         if "flag_set" in option:
             self.flags.add(option["flag_set"])
+
+        if "impact" in option:
+            option_impact = option["impact"]
+
+            # Satisfaction
+            if "satisfaction" in option_impact:
+                members.update_satisfaction(option_impact["satisfaction"])
+
+            # Budget
+            if "budget" in option_impact:
+                if option_impact["budget"] > 0:
+                    budget.add_extra_income(option_impact["budget"])
+                else:
+                    budget.add_extra_outcome(-1 * option_impact["budget"])
+            # Guarantee
+            if "guarantee" in option_impact:
+                budget.add_guarantee(option_impact["guarantee"])
 
     def next_period(self) -> None:
         for evs in self.events:
