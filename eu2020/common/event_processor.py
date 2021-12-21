@@ -9,23 +9,23 @@ from eu2020 import print_log
 
 class EventProcessor:
 
-    events = set()
+    p_events = set()
     flags = set()
     all_parties = Parties({})
 
     def __init__(self, flags: set):
         self.flags = flags
 
-    def add_events(self, events: PartiesEvents) -> None:
-        self.events.add(events)
-        parties = events.get_parties().parties
+    def add_events(self, p_events: PartiesEvents) -> None:
+        self.p_events.add(p_events)
+        parties = p_events.get_parties().parties
         for p in parties:
             if p not in self.all_parties.parties:
                 self.all_parties.parties[p] = parties[p]
 
     def add_stories(self, stories: list) -> None:
         for s in stories:
-            for pe in self.events:
+            for pe in self.p_events:
                 p = pe.get_parties()
                 if s["party"] in p.parties:
                     pe.add_event(s)
@@ -34,7 +34,7 @@ class EventProcessor:
                 raise ValueError(f"party not found: {s['party']}")
 
     def process_events(self, budget: Budget) -> None:
-        for party_evs in self.events:
+        for party_evs in self.p_events:
             for _ in range(random.randint(0, 2)):
                 ev = party_evs.get_event()
                 if ev is not None:
@@ -78,5 +78,5 @@ class EventProcessor:
                 budget.add_guarantee(option_impact["guarantee"])
 
     def next_period(self) -> None:
-        for evs in self.events:
+        for evs in self.p_events:
             evs.next_period()
