@@ -30,6 +30,8 @@ class EventProcessor:
                 if s["party"] in p.parties:
                     pe.add_event(s)
                     break
+            else:
+                raise ValueError(f"party not found: {s['party']}")
 
     def process_events(self, budget: Budget) -> None:
         for party_evs in self.events:
