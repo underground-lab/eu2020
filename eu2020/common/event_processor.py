@@ -5,38 +5,31 @@ import eu2020.data.texts as texts
 import eu2020.common.utils as utils
 from eu2020.common.budget import Budget
 from eu2020.common.parties import Parties
-from eu2020.common.parties_events import PartiesEvents
 from eu2020 import print_log
 
 
 class EventProcessor:
 
-    p_events = set()
     flags = set()
+    parties = list()
     all_parties = Parties({})
     all_events = list()
 
     def __init__(self, flags: set):
         self.flags = flags
 
-    def add_events(self, p_events: PartiesEvents) -> None:
-        self.p_events.add(p_events)
-        parties = p_events.get_parties().parties
-        for p in parties:
+    def add_parties(self, parties: Parties) -> None:
+        self.parties.append(parties)
+        for p in parties.parties:
             if p not in self.all_parties.parties:
-                self.all_parties.parties[p] = parties[p]
-        self.all_events += p_events.events
+                self.all_parties.parties[p] = parties.parties[p]
 
-    def add_stories(self, stories: list) -> None:
-        for s in stories:
-            for pe in self.p_events:
-                p = pe.get_parties()
-                if s["party"] in p.parties:
-                    pe.add_event(s)
-                    break
-            else:
-                raise ValueError(f"party not found: {s['party']}")
-        self.all_events += stories
+    def add_events(self, events: list) -> None:
+        for ev in events:
+            ev["wait"] = 0
+            if ev["party"] not in self.all_parties.parties:
+                raise ValueError(f"party not found: {ev['party']}")
+        self.all_events += events
 
     def event_filter(self, ev: dict) -> bool:
         if "condition" in ev:
@@ -104,5 +97,9 @@ class EventProcessor:
                 budget.add_guarantee(option_impact["guarantee"])
 
     def next_period(self) -> None:
-        for evs in self.p_events:
-            evs.next_period()
+        for ev in self.all_events:
+            if ev["wait"] > 0:
+                ev["wait"] -= 1
+
+        for p in self.parties:
+            p.next_period()

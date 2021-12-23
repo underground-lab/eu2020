@@ -10,7 +10,6 @@ import eu2020.common.utils as utils
 from eu2020.common.name import Name
 from eu2020.common.period import Period
 from eu2020.common.higher_power_events import HigherPowerEvents
-from eu2020.common.parties_events import PartiesEvents
 from eu2020.common.parties import Parties
 from eu2020.common.budget import Budget
 from eu2020.common.event_processor import EventProcessor
@@ -20,24 +19,26 @@ from eu2020 import console, print_log
 
 def main() -> None:
     flags = set()
+    high_power_events = HigherPowerEvents(ev_higher_power, flags)
+    event_processor = EventProcessor(flags)
 
     eu_members = Parties(ems.member_countries)
+    event_processor.add_parties(eu_members)
+    event_processor.add_events(ems.ev_member_country)
+
     eu_admin = Parties(ead.eu_administration)
+    event_processor.add_parties(eu_admin)
+    event_processor.add_events(ead.ev_admin)
+
     deep_state = Parties(eds.deep_state)
+    event_processor.add_parties(deep_state)
+    event_processor.add_events(eds.ev_deep_state)
+
     others = Parties(eot.deep_others)
+    event_processor.add_parties(others)
+    event_processor.add_events(eot.ev_others)
 
-    high_power_events = HigherPowerEvents(ev_higher_power, flags)
-    eu_members_events = PartiesEvents(ems.ev_member_country, eu_members, flags)
-    eu_admin_events = PartiesEvents(ead.ev_admin, eu_admin, flags)
-    deep_events = PartiesEvents(eds.ev_deep_state, deep_state, flags)
-    others_events = PartiesEvents(eot.ev_others, others, flags)
-
-    event_processor = EventProcessor(flags)
-    event_processor.add_events(eu_members_events)
-    event_processor.add_events(eu_admin_events)
-    event_processor.add_events(deep_events)
-    event_processor.add_events(others_events)
-    event_processor.add_stories(stories.ev_story)
+    event_processor.add_events(stories.ev_story)
 
     budget = Budget()
     budget.add_parties(eu_members)
