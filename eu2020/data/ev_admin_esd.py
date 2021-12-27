@@ -10,7 +10,6 @@ ev_admin_esd = [
                        "a byl hlavou suverénního státu, který za války zachovával neutralitu.",
         "options": [
             {
-                "key": "p",
                 "description": "podpořit Lichtenštejnsko u Evropského soudu",
                 "delay": -1,
                 "impact": {
@@ -30,7 +29,6 @@ ev_admin_esd = [
                 }
             },
             {
-                "key": "n",
                 "description": "nerozhodnout teď",
                 "delay": 2,
                 "impact": {
@@ -49,7 +47,6 @@ ev_admin_esd = [
                        "že Polsko bude následně vetovat Unijní rozpočet.",
         "options": [
             {
-                "key": "p",
                 "description": "podpořit pokutu 1 000 000 EUR za každý den platnosti sporného zákona",
                 "delay": -1,
                 "impact": {
@@ -66,7 +63,6 @@ ev_admin_esd = [
                 }
             },
             {
-                "key": "n",
                 "description": "nerozhodnout teď",
                 "delay": 2,
                 "impact": {

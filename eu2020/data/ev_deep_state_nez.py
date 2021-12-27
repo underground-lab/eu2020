@@ -7,7 +7,6 @@ ev_deep_state_nez = [
                        "poukazují na to, že volby byly zmanipulované a požadují odsouzení Běloruska.",
         "options": [
             {
-                "key": "p",
                 "description": "přijmout deklaraci a odsoudit Bělorusko za zmanipulované volby",
                 "delay": -1,
                 "flag_set": "belarus_border_conflict",
@@ -16,7 +15,6 @@ ev_deep_state_nez = [
                 }
             },
             {
-                "key": "n",
                 "description": "nepřijmout deklaraci odsuzující Bělorusko",
                 "delay": -1,
                 "impact": {
@@ -45,7 +43,6 @@ ev_deep_state_nez = [
                 }
             },
             {
-                "key": "s",
                 "description": "schválit ochranu vnějších hranic s Běloruskem",
                 "delay": -1,
                 "flag_set": "fence_pl",
@@ -54,7 +51,6 @@ ev_deep_state_nez = [
                 }
             },
             {
-                "key": "n",
                 "description": "nerozhodnout teď",
                 "delay": 2,
                 "impact": {

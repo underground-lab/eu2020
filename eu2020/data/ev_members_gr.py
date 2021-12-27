@@ -7,7 +7,6 @@ ev_member_country_gr = [
                        " na přerozdělování uprchlíků v Evropě.",
         "options": [
             {
-                "key": "p",
                 "description": "přijmout urychleně plán pro spravedlivé přerozdělování uprchlíků",
                 "delay": -1,
                 "flag_set": "refugee_distribution",
@@ -16,7 +15,6 @@ ev_member_country_gr = [
                 }
             },
             {
-                "key": "n",
                 "description": "nerozhodnout teď",
                 "delay": 2,
                 "impact": {
@@ -30,7 +28,6 @@ ev_member_country_gr = [
         "description": "Řecko požaduje záruku za vydané státní dluhopisy ve výši 5 000 000 000 EUR.",
         "options": [
             {
-                "key": "p",
                 "description": "přijmout záruku",
                 "delay": 12,
                 "impact": {
@@ -39,7 +36,6 @@ ev_member_country_gr = [
                 }
             },
             {
-                "key": "n",
                 "description": "nepřijmout záruku",
                 "delay": 2,
                 "impact": {
@@ -56,7 +52,6 @@ ev_member_country_gr = [
         },
         "options": [
             {
-                "key": "p",
                 "description": "poskytnout pomoc",
                 "delay": 12,
                 "impact": {
@@ -65,7 +60,6 @@ ev_member_country_gr = [
                 }
             },
             {
-                "key": "n",
                 "description": "neposkytnout pomoc",
                 "delay": 3,
                 "impact": {
@@ -80,7 +74,6 @@ ev_member_country_gr = [
                        " s Tureckem a zaplacení 6 mld EUR aby zadržovalo uprchlíky.",
         "options": [
             {
-                "key": "u",
                 "description": "uzavřít dohodu a zaplatit Turecku 6 mld EUR aby zadržovalo uprchlíky",
                 "delay": -1,
                 "flag_set": "turkey_refugee_agreement",
@@ -94,7 +87,6 @@ ev_member_country_gr = [
                 }
             },
             {
-                "key": "o",
                 "description": "odmítnout uzavření dohody s Tureckem",
                 "delay": 12,
                 "impact": {
@@ -102,7 +94,6 @@ ev_member_country_gr = [
                 }
             },
             {
-                "key": "n",
                 "description": "nerozhodnout teď",
                 "delay": 2,
                 "impact": {
@@ -119,7 +110,6 @@ ev_member_country_gr = [
         },
         "options": [
             {
-                "key": "v",
                 "description": "vzít na vědomí",
                 "delay": -1,
                 "impact": {
@@ -136,7 +126,6 @@ ev_member_country_gr = [
         },
         "options": [
             {
-                "key": "v",
                 "description": "vzít na vědomí",
                 "delay": -1,
                 "operation": {"cmd": "remove_from_party", "party": "EU_MEMBERS"},

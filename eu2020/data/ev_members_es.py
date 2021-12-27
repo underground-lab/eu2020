@@ -6,7 +6,6 @@ ev_member_country_es = [
         "description": "Španělsko požaduje záruku za vydané státní dluhopisy ve výši 10 000 000 000 EUR.",
         "options": [
             {
-                "key": "p",
                 "description": "přijmout záruku",
                 "delay": 12,
                 "impact": {
@@ -15,7 +14,6 @@ ev_member_country_es = [
                 }
             },
             {
-                "key": "n",
                 "description": "nepřijmout záruku",
                 "delay": 2,
                 "impact": {
@@ -33,7 +31,6 @@ ev_member_country_es = [
         },
         "options": [
             {
-                "key": "v",
                 "description": "vzít na vědomí",
                 "delay": -1,
                 "impact": {
@@ -50,7 +47,6 @@ ev_member_country_es = [
         },
         "options": [
             {
-                "key": "v",
                 "description": "vzít na vědomí",
                 "delay": -1,
                 "operation": {"cmd": "remove_from_party", "party": "EU_MEMBERS"},

@@ -1,10 +1,13 @@
 # coding: utf-8
 
+from eu2020.common.utils import auto_set_option_keys
 from eu2020.data.ev_empires_ru import ev_empires_ru
 
 ev_empires = [
     *ev_empires_ru,
 ]
+
+auto_set_option_keys(ev_empires)
 
 empires = {
     "RU": {

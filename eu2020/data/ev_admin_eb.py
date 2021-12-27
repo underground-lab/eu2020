@@ -12,7 +12,6 @@ ev_admin_eb = [
         },
         "options": [
             {
-                "key": "p",
                 "description": "podpořit opatření proti inflaci zvednutím úrokových sazeb",
                 "delay": 12,
                 "impact": {
@@ -20,7 +19,6 @@ ev_admin_eb = [
                 }
             },
             {
-                "key": "o",
                 "description": "odmítnout opatření proti inflaci zvednutím úrokových sazeb",
                 "delay": 12,
                 "impact": {
@@ -28,7 +26,6 @@ ev_admin_eb = [
                 }
             },
             {
-                "key": "n",
                 "description": "nerozhodnout teď",
                 "delay": 2,
                 "impact": {
@@ -63,7 +60,6 @@ ev_admin_eb = [
                 }
             },
             {
-                "key": "o",
                 "description": "odmítnout zavedení kvantitativního uvolňování",
                 "delay": 12,
                 "impact": {
@@ -71,7 +67,6 @@ ev_admin_eb = [
                 }
             },
             {
-                "key": "n",
                 "description": "nerozhodnout teď",
                 "delay": 2,
                 "impact": {

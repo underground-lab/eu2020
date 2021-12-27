@@ -7,7 +7,6 @@ ev_deep_state_sor = [
                        "jako podporu pro lidskoprávní organizace.",
         "options": [
             {
-                "key": "p",
                 "description": "přijmout",
                 "delay": 12,
                 "impact": {
@@ -16,7 +15,6 @@ ev_deep_state_sor = [
                 }
             },
             {
-                "key": "o",
                 "description": "odmítnout",
                 "delay": 6,
                 "impact": {
@@ -24,7 +22,6 @@ ev_deep_state_sor = [
                 }
             },
             {
-                "key": "n",
                 "description": "nerozhodnout teď",
                 "delay": 2,
                 "impact": {

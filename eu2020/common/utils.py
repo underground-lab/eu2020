@@ -29,3 +29,10 @@ def proceed() -> None:
 
 def clear() -> None:
     os.system('cls' if os.name == 'nt' else 'clear')
+
+
+def auto_set_option_keys(events) -> None:
+    for event in events:
+        for option in event["options"]:
+            if "key" not in option:
+                option["key"] = option["description"][0]

@@ -1,5 +1,6 @@
 # coding: utf-8
 
+from eu2020.common.utils import auto_set_option_keys
 from eu2020.data.ev_deep_state_nbm import ev_deep_state_nbm
 from eu2020.data.ev_deep_state_nez import ev_deep_state_nez
 from eu2020.data.ev_deep_state_sor import ev_deep_state_sor
@@ -13,6 +14,8 @@ ev_deep_state = [
     *ev_deep_state_wef,
     *ev_deep_state_who,
 ]
+
+auto_set_option_keys(ev_deep_state)
 
 deep_state = {
     "SOR": {

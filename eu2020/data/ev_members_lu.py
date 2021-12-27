@@ -9,7 +9,6 @@ ev_member_country_lu = [
         },
         "options": [
             {
-                "key": "z",
                 "description": "zahájit kroky k vyloučení Maďarska z EU",
                 "delay": -1,
                 "impact": {
@@ -26,7 +25,6 @@ ev_member_country_lu = [
                 }
             },
             {
-                "key": "o",
                 "description": "odmítnout požadavek",
                 "delay": -1,
                 "impact": {
@@ -35,7 +33,6 @@ ev_member_country_lu = [
                 }
             },
             {
-                "key": "n",
                 "description": "nerozhodnout teď",
                 "delay": 2,
                 "impact": {
@@ -53,7 +50,6 @@ ev_member_country_lu = [
         },
         "options": [
             {
-                "key": "v",
                 "description": "vzít na vědomí",
                 "delay": -1,
                 "impact": {
@@ -70,7 +66,6 @@ ev_member_country_lu = [
         },
         "options": [
             {
-                "key": "v",
                 "description": "vzít na vědomí",
                 "delay": -1,
                 "operation": {"cmd": "remove_from_party", "party": "EU_MEMBERS"},

@@ -1,5 +1,6 @@
 # coding: utf-8
 
+from eu2020.common.utils import auto_set_option_keys
 from eu2020.data.ev_admin_eb import ev_admin_eb
 from eu2020.data.ev_admin_ek import ev_admin_ek
 from eu2020.data.ev_admin_er import ev_admin_er
@@ -11,6 +12,8 @@ ev_admin = [
     *ev_admin_er,
     *ev_admin_esd,
 ]
+
+auto_set_option_keys(ev_admin)
 
 eu_administration = {
     "EK": {

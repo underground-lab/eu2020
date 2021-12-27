@@ -9,7 +9,6 @@ ev_member_country_de = [
         },
         "options": [
             {
-                "key": "p",
                 "description": "přijmout rozhodnutí o uzavření fosilních elektráren",
                 "delay": -1,
                 "flag_set": "coal_power_stations_closure",
@@ -22,7 +21,6 @@ ev_member_country_de = [
                 }
             },
             {
-                "key": "o",
                 "description": "odmítnout rozhodnutí o uzavření fosilních elektráren",
                 "delay": 12,
                 "impact": {
@@ -30,7 +28,6 @@ ev_member_country_de = [
                 }
             },
             {
-                "key": "n",
                 "description": "nerozhodnout teď",
                 "delay": 2,
                 "impact": {
@@ -46,7 +43,6 @@ ev_member_country_de = [
         },
         "options": [
             {
-                "key": "p",
                 "description": "poskytnout pomoc",
                 "delay": 12,
                 "impact": {
@@ -55,7 +51,6 @@ ev_member_country_de = [
                 }
             },
             {
-                "key": "n",
                 "description": "neposkytnout pomoc",
                 "delay": 3,
                 "impact": {
@@ -73,7 +68,6 @@ ev_member_country_de = [
         },
         "options": [
             {
-                "key": "v",
                 "description": "vzít na vědomí",
                 "delay": -1,
                 "impact": {
@@ -90,7 +84,6 @@ ev_member_country_de = [
         },
         "options": [
             {
-                "key": "v",
                 "description": "vzít na vědomí",
                 "delay": -1,
                 "operation": {"cmd": "remove_from_party", "party": "EU_MEMBERS"},

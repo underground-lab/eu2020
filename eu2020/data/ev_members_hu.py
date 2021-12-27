@@ -7,7 +7,6 @@ ev_member_country_hu = [
                        " práv menšin.",
         "options": [
             {
-                "key": "p",
                 "description": "přijmout deklaraci a odsoudit Maďarsko za porušování práv menšin LGBT",
                 "delay": -1,
                 "impact": {
@@ -24,7 +23,6 @@ ev_member_country_hu = [
                 }
             },
             {
-                "key": "o",
                 "description": "odmítnout deklaraci",
                 "delay": -1,
                 "impact": {
@@ -32,7 +30,6 @@ ev_member_country_hu = [
                 }
             },
             {
-                "key": "n",
                 "description": "nerozhodnout teď",
                 "delay": 2,
                 "impact": {
@@ -68,7 +65,6 @@ ev_member_country_hu = [
                 }
             },
             {
-                "key": "n",
                 "description": "nerozhodnout teď",
                 "delay": 2,
                 "impact": {
@@ -85,7 +81,6 @@ ev_member_country_hu = [
         },
         "options": [
             {
-                "key": "v",
                 "description": "vzít na vědomí",
                 "delay": -1,
                 "impact": {
@@ -102,7 +97,6 @@ ev_member_country_hu = [
         },
         "options": [
             {
-                "key": "v",
                 "description": "vzít na vědomí",
                 "delay": -1,
                 "operation": {"cmd": "remove_from_party", "party": "EU_MEMBERS"},
