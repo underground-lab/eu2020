@@ -37,7 +37,7 @@ member_countries = {
     },
     "CZ": {
         "name": "Česko",
-        "satisfaction_pct": 12,
+        "satisfaction_pct": 52,
         "budget_contribution": 2_224_000_000,
         "budget_consumption": 3_000_000_000,
     },
