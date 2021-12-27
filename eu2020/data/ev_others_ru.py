@@ -34,31 +34,6 @@ ev_others_ru = [
     },
     {
         "party": "RU",
-        "description": "Rusko prohlásilo obvinění týkající se výbuchu skladů ve Vrběticích za "
-                       "vykonstruované a pohrozilo odvetnými kroky.",
-        "condition": {
-            "flag": ["vrbetice"],
-        },
-        "options": [
-            {
-                "key": "p",
-                "description": "podniknout diplomatické kroky ke zmírnění napětí",
-                "delay": -1,
-                "impact": {
-                    "satisfaction": {"RU": 3},
-                }
-            },
-            {
-                "key": "i",
-                "description": "ignorovat",
-                "delay": -1,
-                "impact": {
-                }
-            },
-        ]
-    },
-    {
-        "party": "RU",
         "description": "Rusko prohlásilo, že by EU měla Bělorusku za zastavení migrace zaplatit "
                        "stejné peníze jako zaplatila Turecku.",
         "condition": {
