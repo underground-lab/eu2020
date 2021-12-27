@@ -12,7 +12,7 @@ class EventProcessor:
 
     flags = set()
     parties = list()
-    all_parties = Parties({})
+    all_parties = Parties({}, "ALL")
     all_events = list()
 
     def __init__(self, flags: set):
@@ -27,11 +27,15 @@ class EventProcessor:
     def add_events(self, events: list) -> None:
         for ev in events:
             ev["wait"] = 0
+            ev["enabled"] = True
             if ev["party"] not in self.all_parties.parties:
                 raise ValueError(f"party not found: {ev['party']}")
         self.all_events += events
 
     def event_filter(self, ev: dict) -> bool:
+        if not ev["enabled"] or ev["wait"] != 0:
+            return False
+
         if "condition" in ev:
             if "flag" in ev["condition"]:
                 for c in ev["condition"]["flag"]:
@@ -45,7 +49,7 @@ class EventProcessor:
                 if ev["condition"]["satisfaction"]["op"] == ">":
                     if self.all_parties.parties[ev["party"]]["satisfaction_pct"] <= ev["condition"]["satisfaction"]["value"]:
                         return False
-        return ev["wait"] == 0
+        return True
 
     def get_event(self) -> Optional[dict]:
         filtered = list(filter(self.event_filter, self.all_events))
@@ -95,6 +99,19 @@ class EventProcessor:
             # Guarantee
             if "guarantee" in option_impact:
                 budget.add_guarantee(option_impact["guarantee"])
+
+            # Operation
+            if "operation" in option_impact:
+                # Remove from party
+                if "remove_from_party" == option_impact["operation"]["cmd"]:
+                    self.remove_from_party(ev["party"], option_impact["operation"]["party"])
+
+    def remove_from_party(self, member_code: str, party_name: str) -> None:
+        self.all_parties.parties[member_code]["enabled"] = False
+        for p in self.parties:
+            if p.name == party_name:
+                p.parties.pop(member_code)
+                break
 
     def next_period(self) -> None:
         for ev in self.all_events:

@@ -6,7 +6,7 @@ from eu2020.common.parties import Parties
 
 def test_add_stories_fails_if_party_not_found():
     flags = set()
-    parties = Parties({"A": ..., "B": ...})
+    parties = Parties({"A": ..., "B": ...}, "TEST")
     processor = EventProcessor(flags)
     processor.add_parties(parties)
     processor.add_events([{"party": "A"}])

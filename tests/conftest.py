@@ -26,4 +26,4 @@ def parties():
         },
     }
 
-    return Parties(data)
+    return Parties(data, "TEST")
