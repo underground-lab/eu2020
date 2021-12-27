@@ -95,3 +95,16 @@ def test_satisfaction_impact_all_parties_exists():
             if "impact" in option:
                 for code in option["impact"].get("satisfaction", {}):
                     assert code in PARTY_CODES, f"unknown code: {code}"
+
+
+def test_all_event_options_have_lowercase_single_letter_keys():
+    for event in EVENTS:
+        for option in event["options"]:
+            assert option["key"].islower()
+            assert len(option["key"]) == 1
+
+
+def test_options_of_one_event_have_unique_keys():
+    for event in EVENTS:
+        keys = [option["key"] for option in event["options"]]
+        assert len(keys) == len(set(keys))
