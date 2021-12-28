@@ -83,6 +83,12 @@ class EventProcessor:
         if "flag_set" in option:
             self.flags.add(option["flag_set"])
 
+        # Operation
+        if "operation" in option:
+            # Remove from party
+            if "remove_from_party" == option["operation"]["cmd"]:
+                self.remove_from_party(ev["party"], option["operation"]["party"])
+
         if "impact" in option:
             option_impact = option["impact"]
 
@@ -99,12 +105,6 @@ class EventProcessor:
             # Guarantee
             if "guarantee" in option_impact:
                 budget.add_guarantee(option_impact["guarantee"])
-
-            # Operation
-            if "operation" in option_impact:
-                # Remove from party
-                if "remove_from_party" == option_impact["operation"]["cmd"]:
-                    self.remove_from_party(ev["party"], option_impact["operation"]["party"])
 
     def remove_from_party(self, member_code: str, party_name: str) -> None:
         self.all_parties.parties[member_code]["enabled"] = False

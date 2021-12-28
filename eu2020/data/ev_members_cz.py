@@ -59,9 +59,9 @@ ev_member_country_cz = [
                 "key": "v",
                 "description": "vzít na vědomí",
                 "delay": -1,
+                "operation": {"cmd": "remove_from_party", "party": "EU_MEMBERS"},
                 "impact": {
                     "satisfaction": {"WEF": -5, "SOR": -5, "NEZ": -5},
-                    "operation": {"cmd": "remove_from_party", "party": "EU_MEMBERS"}
                 }
             },
         ]
