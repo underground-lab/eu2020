@@ -1,12 +1,12 @@
 # coding: utf-8
 
-from eu2020.data.ev_others_ru import ev_others_ru
+from eu2020.data.ev_empires_ru import ev_empires_ru
 
-ev_others = [
-    *ev_others_ru,
+ev_empires = [
+    *ev_empires_ru,
 ]
 
-deep_others = {
+empires = {
     "RU": {
         "name": "Rusko",
         "satisfaction_pct": 50,

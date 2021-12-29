@@ -7,11 +7,11 @@ from eu2020.data.ev_admin import ev_admin, eu_administration
 from eu2020.data.ev_deep_state import ev_deep_state, deep_state
 from eu2020.data.ev_higher_power import ev_higher_power
 from eu2020.data.ev_members import ev_member_country, member_countries
-from eu2020.data.ev_others import ev_others, deep_others
+from eu2020.data.ev_empires import ev_empires, empires
 from eu2020.data.ev_story import ev_story
 
-EVENTS = tuple(chain(ev_admin, ev_deep_state, ev_member_country, ev_others, ev_story))
-PARTY_CODES = tuple(chain(eu_administration, deep_state, member_countries, deep_others))
+EVENTS = tuple(chain(ev_admin, ev_deep_state, ev_member_country, ev_empires, ev_story))
+PARTY_CODES = tuple(chain(eu_administration, deep_state, member_countries, empires))
 
 
 def test_ev_admin_all_parties_exists():
@@ -32,10 +32,10 @@ def test_ev_members_country_all_parties_exists():
         assert event["party"] in member_countries
 
 
-def test_ev_others_all_parties_exists():
-    for event in ev_others:
+def test_ev_empires_all_parties_exists():
+    for event in ev_empires:
         assert "party" in event
-        assert event["party"] in deep_others
+        assert event["party"] in empires
 
 
 def test_ev_story_all_parties_exists():

@@ -1,6 +1,6 @@
 # coding: utf-8
 
-ev_others_ru = [
+ev_empires_ru = [
     {
         "party": "RU",
         "description": "Ruský prezident Vladimir Putin ostře pokáral transgender ideologii "

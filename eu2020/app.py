@@ -2,7 +2,7 @@ import eu2020.data.colors as colors
 import eu2020.data.ev_admin as ead
 import eu2020.data.ev_deep_state as eds
 import eu2020.data.ev_members as ems
-import eu2020.data.ev_others as eot
+import eu2020.data.ev_empires as eot
 import eu2020.data.ev_story as stories
 import eu2020.data.texts as texts
 import eu2020.data.data as data
@@ -34,9 +34,9 @@ def main() -> None:
     event_processor.add_parties(deep_state)
     event_processor.add_events(eds.ev_deep_state)
 
-    others = Parties(eot.deep_others, "OTHERS")
-    event_processor.add_parties(others)
-    event_processor.add_events(eot.ev_others)
+    empires = Parties(eot.empires, "EMPIRES")
+    event_processor.add_parties(empires)
+    event_processor.add_events(eot.ev_empires)
 
     event_processor.add_events(stories.ev_story)
 
