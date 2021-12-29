@@ -138,6 +138,36 @@ ev_story_covid19 = [
         ]
     },
     {
+        "party": "EK",
+        "description": "V Itálii, Španělsku a některých dalších státech je nedostatek plicních ventilátorů a lůžek "
+        "pro pacienty. Lidé umírají na chodbách nemocnic.",
+        "condition": {
+            "flag": ["pandemic_5"],
+        },
+        "options": [
+            {
+                "key": "v",
+                "description": "vzít na vědomí",
+                "delay": -1,
+            },
+        ]
+    },
+    {
+        "party": "EK",
+        "description": "Všechny země hlásí nedostatek ochranných pomůcek pro lékaře. Veškeré objednávky směřují "
+        "do Číny a ceny jdou prudce nahoru.",
+        "condition": {
+            "flag": ["pandemic_5"],
+        },
+        "options": [
+            {
+                "key": "v",
+                "description": "vzít na vědomí",
+                "delay": -1,
+            },
+        ]
+    },
+    {
         "party": "WHO",
         "description": "Světová Zdravotnická organizace oznámila program vývoje vakcíny proti SARS COVID 19 do "
                        "kterého se už zapojilo přes 100 firem po celém světě. Dále WHO založila nadační fond COVAX, "
@@ -172,6 +202,34 @@ ev_story_covid19 = [
                 "impact": {
                     "satisfaction": {"WHO": -2},
                 }
+            },
+        ]
+    },
+    {
+        "party": "WHO",
+        "description": "WHO žádá veřejnost aby neskupovala roušky a jiné ochranné pomůcky, které pak schází ve zdravotnictví.",
+        "condition": {
+            "flag": ["pandemic_6"],
+        },
+        "options": [
+            {
+                "key": "v",
+                "description": "vzít na vědomí",
+                "delay": -1,
+            },
+        ]
+    },
+    {
+        "party": "EK",
+        "description": "Lidé a firmy zašali vyrábět látkové roušky.",
+        "condition": {
+            "flag": ["pandemic_6"],
+        },
+        "options": [
+            {
+                "key": "v",
+                "description": "vzít na vědomí",
+                "delay": -1,
             },
         ]
     },
@@ -218,6 +276,7 @@ ev_story_covid19 = [
                 "key": "v",
                 "description": "vzít na vědomí",
                 "delay": -1,
+                "flag_set": "pandemic_astrazeneca",
             },
         ]
     },
@@ -288,6 +347,52 @@ ev_story_covid19 = [
                 "delay": 2,
                 "impact": {
                     "satisfaction": {"NBM": -1},
+                }
+            },
+        ]
+    },
+    {
+        "party": "ELA",
+        "description": "Evropská Léková Agentura registruje nežádoucí účinky u vakcín AstraZeneca. "
+        "Jde o krevní sraženiny které často končí úmrtím.",
+        "condition": {
+            "flag": ["pandemic_astrazeneca"],
+        },
+        "options": [
+            {
+                "key": "z",
+                "description": "zrušit registraci pro vakcínu AstraZeneka",
+                "delay": -1,
+                "impact": {
+                    "satisfaction": {
+                        "NBM": -5, "WHO": -5, "WEF": -5, "SOR": -5, "BIP": -5, "BE": 1, "BG": 1, "CZ": 1, "DK": 1,
+                        "EE": 1, "FI": 1, "FR": 1, "HR": 1, "IE": 1, "IT": 1, "CY": 1, "LT": 1, "ES": 1, "SE": 1,
+                        "HU": 1, "MT": 1, "DE": 1, "NL": 1, "PL": 1, "PT": 1, "AT": 1, "RO": 1, "GR": 1, "SK": 1,
+                        "SI": 1, "LV": 1, "LU": 1,
+                    },
+                }
+            },
+            {
+                "key": "d",
+                "description": "doporučit použití vakcíny AstraZeneca jen pro lidi 60+",
+                "delay": 12,
+                "impact": {
+                    "satisfaction": {
+                        "NBM": -3, "WHO": -1, "WEF": -3, "SOR": -1, "BIP": -5,
+                    },
+                }
+            },
+            {
+                "key": "n",
+                "description": "nerozhodnout teď",
+                "delay": 2,
+                "impact": {
+                    "satisfaction": {
+                        "BE": -1, "BG": -1, "CZ": -1, "DK": -1,
+                        "EE": -1, "FI": -1, "FR": -1, "HR": -1, "IE": -1, "IT": -1, "CY": -1, "LT": -1, "ES": -1, "SE": -1,
+                        "HU": -1, "MT": -1, "DE": -1, "NL": -1, "PL": -1, "PT": -1, "AT": -1, "RO": -1, "GR": -1, "SK": -1,
+                        "SI": -1, "LV": -1, "LU": -1,
+                    },
                 }
             },
         ]
