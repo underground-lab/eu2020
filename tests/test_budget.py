@@ -23,7 +23,7 @@ def parties_non_eu():
         },
     }
 
-    return Parties(data)
+    return Parties(data, "TEST")
 
 
 @pytest.fixture
@@ -79,7 +79,7 @@ def test_get_budget_report():
     budget = Budget()
     budget.add_parties(Parties({
         "XY": {"budget_contribution": 800_000_000, "budget_consumption": 800_000_000}
-    }))
+    }, "TEST"))
     assert budget.get_budget_report() == (
         "Příjmy:                  [magenta]         800,000,000 EUR[/magenta]\n"
         "Výdaje:                  [magenta]         800,000,000 EUR[/magenta]\n"

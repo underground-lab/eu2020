@@ -22,19 +22,19 @@ def main() -> None:
     high_power_events = HigherPowerEvents(ev_higher_power, flags)
     event_processor = EventProcessor(flags)
 
-    eu_members = Parties(ems.member_countries)
+    eu_members = Parties(ems.member_countries, "EU_MEMBERS")
     event_processor.add_parties(eu_members)
     event_processor.add_events(ems.ev_member_country)
 
-    eu_admin = Parties(ead.eu_administration)
+    eu_admin = Parties(ead.eu_administration, "EU_ADMINISTRATION")
     event_processor.add_parties(eu_admin)
     event_processor.add_events(ead.ev_admin)
 
-    deep_state = Parties(eds.deep_state)
+    deep_state = Parties(eds.deep_state, "DEEP_STATE")
     event_processor.add_parties(deep_state)
     event_processor.add_events(eds.ev_deep_state)
 
-    others = Parties(eot.deep_others)
+    others = Parties(eot.deep_others, "OTHERS")
     event_processor.add_parties(others)
     event_processor.add_events(eot.ev_others)
 

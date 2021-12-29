@@ -44,4 +44,40 @@ ev_member_country_lu = [
             },
         ]
     },
+    {
+        "party": "LU",
+        "description": "Spokojenost veřejnosti s členstvím v EU je v Lucembursku velmi nízká. Lucembursko plánuje "
+                       "referendum o vystoupení z EU.",
+        "condition": {
+            "satisfaction": {"op": "<", "value": 30},
+        },
+        "options": [
+            {
+                "key": "v",
+                "description": "vzít na vědomí",
+                "delay": -1,
+                "impact": {
+                    "satisfaction": {"WEF": -5, "SOR": -5, "NEZ": -5},
+                }
+            },
+        ]
+    },
+    {
+        "party": "LU",
+        "description": "Lucembursko se v referendu rozhodlo pro odchod z EU. Lucembursko přestalo být členskou zemí EU.",
+        "condition": {
+            "satisfaction": {"op": "<", "value": 10},
+        },
+        "options": [
+            {
+                "key": "v",
+                "description": "vzít na vědomí",
+                "delay": -1,
+                "operation": {"cmd": "remove_from_party", "party": "EU_MEMBERS"},
+                "impact": {
+                    "satisfaction": {"WEF": -5, "SOR": -5, "NEZ": -5},
+                }
+            },
+        ]
+    },
 ]
