@@ -103,7 +103,10 @@ def print_hp_events(hp_events: HigherPowerEvents) -> None:
 
 
 def setup() -> None:
-    n = console.input(f"{texts.what_is_your_name}\n{texts.cursor}")
+    while True:
+        n = console.input(f"{texts.what_is_your_name}\n{texts.cursor}").strip()
+        if n:
+            break
     print()
     g = utils.input_with_options(texts.what_is_your_gender, data.gender)
     data.name = Name(n, g)
