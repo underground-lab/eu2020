@@ -6,6 +6,7 @@ import eu2020.common.utils as utils
 from eu2020.common.budget import Budget
 from eu2020.common.parties import Parties
 from eu2020 import print_log
+from eu2020.common.utils import auto_set_option_keys
 
 
 class EventProcessor:
@@ -30,6 +31,7 @@ class EventProcessor:
             ev["enabled"] = True
             if ev["party"] not in self.all_parties.parties:
                 raise ValueError(f"party not found: {ev['party']}")
+            auto_set_option_keys(ev)
         self.all_events += events
 
     def event_filter(self, ev: dict) -> bool:

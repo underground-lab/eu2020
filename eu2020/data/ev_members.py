@@ -1,6 +1,5 @@
 # coding: utf-8
 
-from eu2020.common.utils import auto_set_option_keys
 from eu2020.data.ev_members_cz import ev_member_country_cz
 from eu2020.data.ev_members_de import ev_member_country_de
 from eu2020.data.ev_members_es import ev_member_country_es
@@ -24,8 +23,6 @@ ev_member_country = [
     *ev_member_country_pl,
     *ev_member_country_sk,
 ]
-
-auto_set_option_keys(ev_member_country)
 
 member_countries = {
     "BE": {
