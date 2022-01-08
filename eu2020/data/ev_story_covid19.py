@@ -10,7 +10,6 @@ ev_story_covid19 = [
         },
         "options": [
             {
-                "key": "v",
                 "description": "vzít na vědomí",
                 "delay": -1,
                 "flag_set": "pandemic_1",
@@ -26,7 +25,6 @@ ev_story_covid19 = [
         },
         "options": [
             {
-                "key": "v",
                 "description": "vzít na vědomí",
                 "delay": -1,
                 "flag_set": "pandemic_2",
@@ -41,7 +39,6 @@ ev_story_covid19 = [
         },
         "options": [
             {
-                "key": "v",
                 "description": "vzít na vědomí",
                 "delay": -1,
                 "flag_set": "pandemic_3",
@@ -57,7 +54,6 @@ ev_story_covid19 = [
         },
         "options": [
             {
-                "key": "v",
                 "description": "vzít na vědomí",
                 "delay": -1,
                 "flag_set": "pandemic_4",
@@ -72,7 +68,6 @@ ev_story_covid19 = [
         },
         "options": [
             {
-                "key": "v",
                 "description": "vzít na vědomí",
                 "delay": -1,
             },
@@ -86,7 +81,6 @@ ev_story_covid19 = [
         },
         "options": [
             {
-                "key": "v",
                 "description": "vzít na vědomí",
                 "delay": -1,
             },
@@ -100,7 +94,6 @@ ev_story_covid19 = [
         },
         "options": [
             {
-                "key": "v",
                 "description": "vzít na vědomí",
                 "delay": -1,
             },
@@ -116,7 +109,6 @@ ev_story_covid19 = [
         },
         "options": [
             {
-                "key": "v",
                 "description": "vzít na vědomí",
                 "delay": -1,
             },
@@ -130,7 +122,6 @@ ev_story_covid19 = [
         },
         "options": [
             {
-                "key": "v",
                 "description": "vzít na vědomí",
                 "delay": -1,
                 "flag_set": "pandemic_5",
@@ -178,7 +169,6 @@ ev_story_covid19 = [
         },
         "options": [
             {
-                "key": "p",
                 "description": "přijmout",
                 "delay": -1,
                 "flag_set": "pandemic_6",
@@ -188,7 +178,6 @@ ev_story_covid19 = [
                 }
             },
             {
-                "key": "o",
                 "description": "odmítnout",
                 "delay": 6,
                 "impact": {
@@ -196,7 +185,6 @@ ev_story_covid19 = [
                 }
             },
             {
-                "key": "n",
                 "description": "nerozhodnout teď",
                 "delay": 2,
                 "impact": {
@@ -242,7 +230,6 @@ ev_story_covid19 = [
         },
         "options": [
             {
-                "key": "v",
                 "description": "vzít na vědomí",
                 "delay": -1,
                 "flag_set": "pandemic_7",
@@ -258,7 +245,6 @@ ev_story_covid19 = [
         },
         "options": [
             {
-                "key": "v",
                 "description": "vzít na vědomí",
                 "delay": -1,
                 "flag_set": "pandemic_8",
@@ -273,7 +259,6 @@ ev_story_covid19 = [
         },
         "options": [
             {
-                "key": "v",
                 "description": "vzít na vědomí",
                 "delay": -1,
                 "flag_set": "pandemic_astrazeneca",
@@ -288,7 +273,6 @@ ev_story_covid19 = [
         },
         "options": [
             {
-                "key": "v",
                 "description": "vzít na vědomí",
                 "delay": -1,
             },
@@ -302,7 +286,6 @@ ev_story_covid19 = [
         },
         "options": [
             {
-                "key": "v",
                 "description": "vzít na vědomí",
                 "delay": -1,
             },
@@ -316,7 +299,6 @@ ev_story_covid19 = [
         },
         "options": [
             {
-                "key": "p",
                 "description": "přijmout zavedení Green Pasů",
                 "delay": -1,
                 "impact": {
@@ -329,7 +311,6 @@ ev_story_covid19 = [
                 }
             },
             {
-                "key": "o",
                 "description": "odmítnout zavedení Green Pasů",
                 "delay": 12,
                 "impact": {
@@ -342,7 +323,6 @@ ev_story_covid19 = [
                 }
             },
             {
-                "key": "n",
                 "description": "nerozhodnout teď",
                 "delay": 2,
                 "impact": {

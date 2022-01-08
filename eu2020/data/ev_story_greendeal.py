@@ -9,7 +9,6 @@ ev_story_greendeal = [
                        "je snížit emise skleníkových plynů EU do roku 2030 o 55 % ve srovnání s rokem 1990.",
         "options": [
             {
-                "key": "p",
                 "description": "přijmout Green Deal",
                 "delay": -1,
                 "flag_set": "green_deal",
@@ -23,7 +22,6 @@ ev_story_greendeal = [
                 }
             },
             {
-                "key": "o",
                 "description": "odmítnout Green Deal",
                 "delay": 12,
                 "impact": {
@@ -36,7 +34,6 @@ ev_story_greendeal = [
                 }
             },
             {
-                "key": "n",
                 "description": "nerozhodnout teď",
                 "delay": 2,
                 "impact": {
@@ -53,7 +50,6 @@ ev_story_greendeal = [
         },
         "options": [
             {
-                "key": "p",
                 "description": "přijmout zavedení klimatické daně pro domácnosti",
                 "delay": -1,
                 "impact": {
@@ -66,7 +62,6 @@ ev_story_greendeal = [
                 }
             },
             {
-                "key": "o",
                 "description": "odmítnout zavedení klimatické daně pro domácnosti",
                 "delay": 6,
                 "impact": {
@@ -74,7 +69,6 @@ ev_story_greendeal = [
                 }
             },
             {
-                "key": "n",
                 "description": "nerozhodnout teď",
                 "delay": 2,
                 "impact": {
@@ -93,7 +87,6 @@ ev_story_greendeal = [
         },
         "options": [
             {
-                "key": "p",
                 "description": "přijmout návrh na postupné ukončení vytápění plynem",
                 "delay": -1,
                 "impact": {
@@ -106,7 +99,6 @@ ev_story_greendeal = [
                 }
             },
             {
-                "key": "o",
                 "description": "odmítnout návrh na postupné ukončení vytápění plynem",
                 "delay": 12,
                 "impact": {
@@ -114,7 +106,6 @@ ev_story_greendeal = [
                 }
             },
             {
-                "key": "n",
                 "description": "nerozhodnout teď",
                 "delay": 2,
                 "impact": {

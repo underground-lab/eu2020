@@ -6,7 +6,6 @@ ev_member_country_it = [
         "description": "Itálie požaduje záruku za vydané státní dluhopisy ve výši 10 000 000 000 EUR.",
         "options": [
             {
-                "key": "p",
                 "description": "přijmout záruku",
                 "delay": 12,
                 "impact": {
@@ -15,7 +14,6 @@ ev_member_country_it = [
                 }
             },
             {
-                "key": "n",
                 "description": "nepřijmout záruku",
                 "delay": 3,
                 "impact": {
@@ -31,7 +29,6 @@ ev_member_country_it = [
                        "mimořádnou dotaci na sanaci bank ve výši 12 000 000 000 EUR.",
         "options": [
             {
-                "key": "p",
                 "description": "poskytnout mimořádnou dotaci ve výši 12 000 000 000 EUR",
                 "delay": 24,
                 "impact": {
@@ -40,7 +37,6 @@ ev_member_country_it = [
                 }
             },
             {
-                "key": "o",
                 "description": "odmítnout poskytnutí dotace na sanaci italských bank",
                 "delay": 3,
                 "impact": {
@@ -48,7 +44,6 @@ ev_member_country_it = [
                 }
             },
             {
-                "key": "n",
                 "description": "nerozhodnout teď",
                 "delay": 2,
                 "impact": {
@@ -66,7 +61,6 @@ ev_member_country_it = [
         },
         "options": [
             {
-                "key": "v",
                 "description": "vzít na vědomí",
                 "delay": -1,
                 "impact": {
@@ -83,7 +77,6 @@ ev_member_country_it = [
         },
         "options": [
             {
-                "key": "v",
                 "description": "vzít na vědomí",
                 "delay": -1,
                 "operation": {"cmd": "remove_from_party", "party": "EU_MEMBERS"},

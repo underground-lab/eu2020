@@ -25,7 +25,6 @@ ev_story_vrbetice = [
                 }
             },
             {
-                "key": "o",
                 "description": "odmítnout společnou reakci na úrovni EU",
                 "delay": -1,
                 "impact": {
@@ -33,7 +32,6 @@ ev_story_vrbetice = [
                 }
             },
             {
-                "key": "n",
                 "description": "nerozhodnout teď",
                 "delay": 2,
                 "impact": {
@@ -50,7 +48,6 @@ ev_story_vrbetice = [
         },
         "options": [
             {
-                "key": "p",
                 "description": "podniknout diplomatické kroky ke zmírnění napětí",
                 "delay": -1,
                 "impact": {
@@ -58,7 +55,6 @@ ev_story_vrbetice = [
                 }
             },
             {
-                "key": "i",
                 "description": "ignorovat",
                 "delay": -1,
                 "impact": {

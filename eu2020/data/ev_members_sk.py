@@ -10,7 +10,6 @@ ev_member_country_sk = [
         },
         "options": [
             {
-                "key": "v",
                 "description": "vzít na vědomí",
                 "delay": -1,
                 "impact": {
@@ -27,7 +26,6 @@ ev_member_country_sk = [
         },
         "options": [
             {
-                "key": "v",
                 "description": "vzít na vědomí",
                 "delay": -1,
                 "operation": {"cmd": "remove_from_party", "party": "EU_MEMBERS"},

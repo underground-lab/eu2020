@@ -13,7 +13,6 @@ ev_admin_er = [
         },
         "options": [
             {
-                "key": "s",
                 "description": "schválit návrh na snížení DPH z energií",
                 "delay": -1,
                 "impact": {
@@ -26,7 +25,6 @@ ev_admin_er = [
                 }
             },
             {
-                "key": "z",
                 "description": "zamítnout návrh na snížení DPH z energií",
                 "delay": -1,
                 "impact": {
@@ -40,7 +38,6 @@ ev_admin_er = [
                 }
             },
             {
-                "key": "n",
                 "description": "nerozhodnout teď",
                 "delay": 2,
                 "impact": {

@@ -6,7 +6,6 @@ ev_member_country_cz = [
         "description": "České opoziční strany požadují deklaraci proti střetu zájmů českého premiéra.",
         "options": [
             {
-                "key": "p",
                 "description": "přijmout deklaraci",
                 "delay": -1,
                 "impact": {
@@ -14,7 +13,6 @@ ev_member_country_cz = [
                 }
             },
             {
-                "key": "o",
                 "description": "odmítnout deklaraci",
                 "delay": -1,
                 "impact": {
@@ -22,7 +20,6 @@ ev_member_country_cz = [
                 }
             },
             {
-                "key": "n",
                 "description": "nerozhodnout teď",
                 "delay": 2,
                 "impact": {
@@ -39,7 +36,6 @@ ev_member_country_cz = [
         },
         "options": [
             {
-                "key": "v",
                 "description": "vzít na vědomí",
                 "delay": -1,
                 "impact": {
@@ -56,7 +52,6 @@ ev_member_country_cz = [
         },
         "options": [
             {
-                "key": "v",
                 "description": "vzít na vědomí",
                 "delay": -1,
                 "operation": {"cmd": "remove_from_party", "party": "EU_MEMBERS"},

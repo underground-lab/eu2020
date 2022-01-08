@@ -6,7 +6,6 @@ ev_member_country_pl = [
         "description": "Polsko zavádí zóny bez LGBT. Aktivisté požadují přísné potrestání Polska.",
         "options": [
             {
-                "key": "p",
                 "description": "přijmout deklaraci a odsoudit Polsko",
                 "delay": -1,
                 "impact": {
@@ -23,7 +22,6 @@ ev_member_country_pl = [
                 }
             },
             {
-                "key": "n",
                 "description": "nerozhodnout teď",
                 "delay": 2,
                 "impact": {
@@ -47,7 +45,6 @@ ev_member_country_pl = [
                 }
             },
             {
-                "key": "p",
                 "description": "přijmout deklaraci proti Polsku a udělit pokutu 200 000 000 EUR",
                 "delay": -1,
                 "impact": {
@@ -56,7 +53,6 @@ ev_member_country_pl = [
                 }
             },
             {
-                "key": "n",
                 "description": "nerozhodnout teď",
                 "delay": 2,
                 "impact": {
@@ -73,7 +69,6 @@ ev_member_country_pl = [
         },
         "options": [
             {
-                "key": "v",
                 "description": "vzít na vědomí",
                 "delay": -1,
                 "impact": {
@@ -90,7 +85,6 @@ ev_member_country_pl = [
         },
         "options": [
             {
-                "key": "v",
                 "description": "vzít na vědomí",
                 "delay": -1,
                 "operation": {"cmd": "remove_from_party", "party": "EU_MEMBERS"},

@@ -3,6 +3,7 @@ from itertools import chain
 
 import pytest
 
+from eu2020.common.utils import auto_set_option_keys
 from eu2020.data.ev_admin import ev_admin, eu_administration
 from eu2020.data.ev_deep_state import ev_deep_state, deep_state
 from eu2020.data.ev_higher_power import ev_higher_power
@@ -11,6 +12,9 @@ from eu2020.data.ev_empires import ev_empires, empires
 from eu2020.data.ev_story import ev_story
 
 EVENTS = tuple(chain(ev_admin, ev_deep_state, ev_member_country, ev_empires, ev_story))
+for event in EVENTS:
+    auto_set_option_keys(event)
+
 PARTY_CODES = tuple(chain(eu_administration, deep_state, member_countries, empires))
 
 

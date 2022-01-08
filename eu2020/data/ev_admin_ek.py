@@ -8,7 +8,6 @@ ev_admin_ek = [
                        "distributorům a tím má vzniknout konkurenční prostředí s cenami energií.",
         "options": [
             {
-                "key": "p",
                 "description": "přijmout návrh zákona a nařídit členským státům vytvoření konkurenčních distributorů energií",
                 "delay": -1,
                 "flag_set": "local_energy_distributors",
@@ -17,7 +16,6 @@ ev_admin_ek = [
                 }
             },
             {
-                "key": "o",
                 "description": "odmítnout návrh zákona",
                 "delay": 12,
                 "impact": {
@@ -25,7 +23,6 @@ ev_admin_ek = [
                 }
             },
             {
-                "key": "n",
                 "description": "nerozhodnout teď",
                 "delay": 2,
                 "impact": {
@@ -51,7 +48,6 @@ ev_admin_ek = [
                 }
             },
             {
-                "key": "o",
                 "description": "odmítnout podání žaloby na Polsko, Česko, Slovensko a Maďarsko",
                 "delay": -1,
                 "impact": {
@@ -59,7 +55,6 @@ ev_admin_ek = [
                 }
             },
             {
-                "key": "n",
                 "description": "nerozhodnout teď",
                 "delay": 2,
                 "impact": {
@@ -89,7 +84,6 @@ ev_admin_ek = [
                 }
             },
             {
-                "key": "o",
                 "description": "odmítnout dokument",
                 "delay": -1,
                 "impact": {
@@ -97,7 +91,6 @@ ev_admin_ek = [
                 }
             },
             {
-                "key": "n",
                 "description": "nerozhodnout teď",
                 "delay": 6,
                 "impact": {

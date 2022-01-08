@@ -7,7 +7,6 @@ ev_empires_ru = [
                        "a označil ji za 'zločin proti lidskosti', když tvrdí, že děti mohou změnit pohlaví.",
         "options": [
             {
-                "key": "p",
                 "description": "přijmout deklaraci a ostře odsoudit Rusko za porušování práv menšin LGBT",
                 "delay": -1,
                 "impact": {
@@ -15,7 +14,6 @@ ev_empires_ru = [
                 }
             },
             {
-                "key": "i",
                 "description": "ignorovat",
                 "delay": -1,
                 "impact": {
@@ -23,7 +21,6 @@ ev_empires_ru = [
                 }
             },
             {
-                "key": "n",
                 "description": "nerozhodnout teď",
                 "delay": 2,
                 "impact": {
@@ -41,7 +38,6 @@ ev_empires_ru = [
         },
         "options": [
             {
-                "key": "z",
                 "description": "zaplatit Bělorusku 6 mld EUR aby zadržovalo uprchlíky",
                 "delay": -1,
                 "impact": {
@@ -50,7 +46,6 @@ ev_empires_ru = [
                 },
             },
             {
-                "key": "o",
                 "description": "odmítnout zaplatit Bělorusku aby zadržovalo uprchlíky",
                 "delay": -1,
                 "impact": {
@@ -58,7 +53,6 @@ ev_empires_ru = [
                 }
             },
             {
-                "key": "n",
                 "description": "nerozhodnout teď",
                 "delay": 2,
                 "impact": {

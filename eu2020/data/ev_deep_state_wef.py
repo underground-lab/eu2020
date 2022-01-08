@@ -7,7 +7,6 @@ ev_deep_state_wef = [
                        "zemědělských produktů z rozvojových zemí.",
         "options": [
             {
-                "key": "p",
                 "description": "přijmout",
                 "delay": -1,
                 "impact": {
@@ -20,7 +19,6 @@ ev_deep_state_wef = [
                 }
             },
             {
-                "key": "o",
                 "description": "odmítnout",
                 "delay": 12,
                 "impact": {
@@ -28,7 +26,6 @@ ev_deep_state_wef = [
                 }
             },
             {
-                "key": "n",
                 "description": "nerozhodnout teď",
                 "delay": 6,
                 "impact": {
