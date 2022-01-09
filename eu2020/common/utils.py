@@ -33,7 +33,7 @@ def clear() -> None:
 
 def auto_set_option_keys(event) -> None:
     keys_used = []
-    for option in event.get("options", []):
+    for option in reversed(event.get("options", [])):
         if "key" not in option:
             for k in option["description"]:
                 if k != ' ' and k not in keys_used:
