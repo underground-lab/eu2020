@@ -34,7 +34,6 @@ ev_deep_state_nez = [
         },
         "options": [
             {
-                "key": "o",
                 "description": "přikázat Polsku a Litvě odstranění plotu",
                 "delay": -1,
                 "flag_set": "fence_pl",

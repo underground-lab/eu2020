@@ -40,7 +40,6 @@ ev_admin_ek = [
         },
         "options": [
             {
-                "key": "s",
                 "description": "odsouhlasit podání žaloby na Polsko, Česko, Slovensko a Maďarsko",
                 "delay": -1,
                 "impact": {
@@ -71,7 +70,6 @@ ev_admin_ek = [
                        "už není křesťanská a vánoční oslavy nejsou dostatečně inkluzivní.",
         "options": [
             {
-                "key": "s",
                 "description": "odsouhlasit dokument",
                 "delay": -1,
                 "impact": {

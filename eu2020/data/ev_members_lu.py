@@ -16,7 +16,6 @@ ev_member_country_lu = [
                 }
             },
             {
-                "key": "k",
                 "description": "udělit Maďarsku pokutu 200 000 000 EUR",
                 "delay": -1,
                 "impact": {

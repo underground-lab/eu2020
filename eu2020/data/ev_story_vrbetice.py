@@ -7,7 +7,6 @@ ev_story_vrbetice = [
                        "ruští agenti. Česká vláda žádá společnou reakci na úrovni EU.",
         "options": [
             {
-                "key": "d",
                 "description": "přijmout deklaraci a odsoudit Rusko za operace na území svrchovaného státu",
                 "delay": -1,
                 "flag_set": "vrbetice",
@@ -16,7 +15,6 @@ ev_story_vrbetice = [
                 }
             },
             {
-                "key": "s",
                 "description": "odsoudit Rusko a přijmout sankce",
                 "delay": -1,
                 "flag_set": "vrbetice",

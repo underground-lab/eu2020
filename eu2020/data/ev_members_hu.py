@@ -14,7 +14,6 @@ ev_member_country_hu = [
                 }
             },
             {
-                "key": "k",
                 "description": "udělit pokutu 200 000 000 EUR",
                 "delay": -1,
                 "impact": {
@@ -46,7 +45,6 @@ ev_member_country_hu = [
         },
         "options": [
             {
-                "key": "o",
                 "description": "nařídit Maďarsku odstranění plotu",
                 "delay": -1,
                 "flag_set": "fence_hu",
@@ -55,7 +53,6 @@ ev_member_country_hu = [
                 }
             },
             {
-                "key": "s",
                 "description": "odsouhlasit plot jako zlepšení ochrany vnějších hranic EU",
                 "delay": -1,
                 "flag_set": "fence_hu",
