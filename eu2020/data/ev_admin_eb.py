@@ -44,7 +44,6 @@ ev_admin_eb = [
         },
         "options": [
             {
-                "key": "t",
                 "description": "podpořit kvantitativní uvolňování tiskem nových peněz",
                 "delay": 12,
                 "impact": {
@@ -52,7 +51,6 @@ ev_admin_eb = [
                 }
             },
             {
-                "key": "s",
                 "description": "podpořit kvantitativní uvolňování zavedením záporných úrokových sazeb",
                 "delay": 12,
                 "impact": {

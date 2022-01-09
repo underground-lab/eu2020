@@ -19,7 +19,6 @@ ev_admin_esd = [
                 }
             },
             {
-                "key": "e",
                 "description": "nepodpořit Lichtenštejnsko u Evropského soudu",
                 "delay": -1,
                 "impact": {
@@ -55,7 +54,6 @@ ev_admin_esd = [
                 }
             },
             {
-                "key": "o",
                 "description": "nepodpořit pokutu",
                 "delay": -1,
                 "impact": {

@@ -137,7 +137,6 @@ ev_story_covid19 = [
         },
         "options": [
             {
-                "key": "v",
                 "description": "vzít na vědomí",
                 "delay": -1,
             },
@@ -152,7 +151,6 @@ ev_story_covid19 = [
         },
         "options": [
             {
-                "key": "v",
                 "description": "vzít na vědomí",
                 "delay": -1,
             },
@@ -201,7 +199,6 @@ ev_story_covid19 = [
         },
         "options": [
             {
-                "key": "v",
                 "description": "vzít na vědomí",
                 "delay": -1,
             },
@@ -215,7 +212,6 @@ ev_story_covid19 = [
         },
         "options": [
             {
-                "key": "v",
                 "description": "vzít na vědomí",
                 "delay": -1,
             },
@@ -340,7 +336,6 @@ ev_story_covid19 = [
         },
         "options": [
             {
-                "key": "z",
                 "description": "zrušit registraci pro vakcínu AstraZeneka",
                 "delay": -1,
                 "impact": {
@@ -353,7 +348,6 @@ ev_story_covid19 = [
                 }
             },
             {
-                "key": "d",
                 "description": "doporučit použití vakcíny AstraZeneca jen pro lidi 60+",
                 "delay": 12,
                 "impact": {
@@ -363,7 +357,6 @@ ev_story_covid19 = [
                 }
             },
             {
-                "key": "n",
                 "description": "nerozhodnout teď",
                 "delay": 2,
                 "impact": {

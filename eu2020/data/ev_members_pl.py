@@ -13,7 +13,6 @@ ev_member_country_pl = [
                 }
             },
             {
-                "key": "k",
                 "description": "udělit pokutu 200 000 000 EUR",
                 "delay": -1,
                 "impact": {
@@ -36,7 +35,6 @@ ev_member_country_pl = [
                        "v právnické komunitě v celé Evropské unii.",
         "options": [
             {
-                "key": "k",
                 "description": "udělit pokutu 200 000 000 EUR a zahájit kroky k vyloučení Polska z EU",
                 "delay": -1,
                 "impact": {
