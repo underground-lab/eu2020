@@ -31,8 +31,6 @@ ev_member_country_hu = [
             {
                 "description": "nerozhodnout teď",
                 "delay": 2,
-                "impact": {
-                }
             },
         ]
     },
@@ -64,8 +62,6 @@ ev_member_country_hu = [
             {
                 "description": "nerozhodnout teď",
                 "delay": 2,
-                "impact": {
-                }
             },
         ]
     },

@@ -55,8 +55,6 @@ ev_empires_ru = [
             {
                 "description": "nerozhodnout teď",
                 "delay": 2,
-                "impact": {
-                }
             },
         ]
     },

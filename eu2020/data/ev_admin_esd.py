@@ -30,9 +30,6 @@ ev_admin_esd = [
             {
                 "description": "nerozhodnout teď",
                 "delay": 2,
-                "impact": {
-                    "satisfaction": {},
-                }
             },
         ]
     },
@@ -63,8 +60,6 @@ ev_admin_esd = [
             {
                 "description": "nerozhodnout teď",
                 "delay": 2,
-                "impact": {
-                }
             },
         ]
     },

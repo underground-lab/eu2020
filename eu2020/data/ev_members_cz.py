@@ -22,8 +22,6 @@ ev_member_country_cz = [
             {
                 "description": "nerozhodnout teď",
                 "delay": 2,
-                "impact": {
-                }
             },
         ]
     },
