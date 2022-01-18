@@ -1,6 +1,7 @@
 from collections import Counter
 from itertools import chain
 
+from jsonschema import validate
 import pytest
 
 from eu2020.common.utils import auto_set_option_keys
@@ -112,3 +113,75 @@ def test_options_of_one_event_have_unique_keys():
     for event in EVENTS:
         keys = [option["key"] for option in event["options"]]
         assert len(keys) == len(set(keys))
+
+
+EVENT_SCHEMA = {
+    "type": "object",
+    "properties": {
+        "party": {"type": "string"},
+        "description": {"type": "string"},
+        "condition": {
+            "type": "object",
+            "properties": {
+                "flag": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "minItems": 1,
+                    "uniqueItems": True,
+                },
+                "satisfaction": {
+                    "type": "object",
+                    "properties": {
+                        "op": {"type": "string"},
+                        "value": {"type": "integer"},
+                    },
+                    "required": ["op", "value"],
+                },
+            },
+            "minProperties": 1,
+        },
+        "options": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "key": {"type": "string"},
+                    "description": {"type": "string"},
+                    "delay": {"type": "integer"},
+                    "flag_set": {"type": "string"},
+                    "operation": {
+                        "type": "object",
+                        "properties": {
+                            "cmd": {"type": "string"},
+                            "party": {"type": "string"},
+                        },
+                        "required": ["cmd", "party"],
+                    },
+                    "impact": {
+                        "type": "object",
+                        "properties": {
+                            "satisfaction": {
+                                "type": "object",
+                                "properties": {
+                                    code: {"type": "integer"} for code in PARTY_CODES
+                                },
+                                "minProperties": 1,
+                            },
+                            "budget": {"type": "integer"},
+                        },
+                        "minProperties": 1,
+                    },
+                },
+                "required": ["key", "description", "delay"],
+            },
+            "minItems": 1,
+            "uniqueItems": True,
+        },
+    },
+    "required": ["party", "description", "options"],
+}
+
+
+def test_all_events_have_valid_schema():
+    for event in EVENTS:
+        validate(event, schema=EVENT_SCHEMA)

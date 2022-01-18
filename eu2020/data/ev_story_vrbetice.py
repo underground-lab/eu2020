@@ -32,8 +32,6 @@ ev_story_vrbetice = [
             {
                 "description": "nerozhodnout teď",
                 "delay": 2,
-                "impact": {
-                }
             },
         ]
     },
@@ -55,8 +53,6 @@ ev_story_vrbetice = [
             {
                 "description": "ignorovat",
                 "delay": -1,
-                "impact": {
-                }
             },
         ]
     },

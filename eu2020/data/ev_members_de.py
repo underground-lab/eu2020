@@ -30,8 +30,6 @@ ev_member_country_de = [
             {
                 "description": "nerozhodnout teď",
                 "delay": 2,
-                "impact": {
-                }
             },
         ]
     },

@@ -52,8 +52,6 @@ ev_deep_state_nez = [
             {
                 "description": "nerozhodnout teď",
                 "delay": 2,
-                "impact": {
-                }
             },
         ]
     },

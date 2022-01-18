@@ -28,9 +28,6 @@ ev_admin_eb = [
             {
                 "description": "nerozhodnout teď",
                 "delay": 2,
-                "impact": {
-                    "satisfaction": {},
-                }
             },
         ]
     },
@@ -60,16 +57,10 @@ ev_admin_eb = [
             {
                 "description": "odmítnout zavedení kvantitativního uvolňování",
                 "delay": 12,
-                "impact": {
-                    "satisfaction": {},
-                }
             },
             {
                 "description": "nerozhodnout teď",
                 "delay": 2,
-                "impact": {
-                    "satisfaction": {},
-                }
             },
         ]
     },

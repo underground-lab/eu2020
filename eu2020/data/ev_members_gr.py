@@ -96,8 +96,6 @@ ev_member_country_gr = [
             {
                 "description": "nerozhodnout teď",
                 "delay": 2,
-                "impact": {
-                }
             },
         ]
     },

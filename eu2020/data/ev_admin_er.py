@@ -40,9 +40,6 @@ ev_admin_er = [
             {
                 "description": "nerozhodnout teď",
                 "delay": 2,
-                "impact": {
-                    "satisfaction": {},
-                }
             },
         ]
     },
