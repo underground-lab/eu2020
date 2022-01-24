@@ -136,9 +136,11 @@ EVENT_SCHEMA = {
                         "value": {"type": "integer"},
                     },
                     "required": ["op", "value"],
+                    "additionalProperties": False,
                 },
             },
             "minProperties": 1,
+            "additionalProperties": False,
         },
         "options": {
             "type": "array",
@@ -156,6 +158,7 @@ EVENT_SCHEMA = {
                             "party": {"type": "string"},
                         },
                         "required": ["cmd", "party"],
+                        "additionalProperties": False,
                     },
                     "impact": {
                         "type": "object",
@@ -166,19 +169,24 @@ EVENT_SCHEMA = {
                                     code: {"type": "integer"} for code in PARTY_CODES
                                 },
                                 "minProperties": 1,
+                                "additionalProperties": False,
                             },
                             "budget": {"type": "integer"},
+                            "guarantee": {"type": "integer"},
                         },
                         "minProperties": 1,
+                        "additionalProperties": False,
                     },
                 },
                 "required": ["key", "description", "delay"],
+                "additionalProperties": False,
             },
             "minItems": 1,
             "uniqueItems": True,
         },
     },
     "required": ["party", "description", "options"],
+    "additionalProperties": False,
 }
 
 
