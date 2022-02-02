@@ -4,6 +4,10 @@ import eu2020.data.colors as colors
 from eu2020 import console
 
 
+def safe_input(prompt):
+    return console.input(prompt)
+
+
 def print_text_in_box(text: str, ch="*") -> None:
     edge = ch * (len(text) + 4)
     console.print(edge, style=colors.header_style)
@@ -17,13 +21,13 @@ def input_with_options(question: str, options: dict) -> str:
         console.print(f"[{colors.header_2}]{question}[/{colors.header_2}]")
         for o in options:
             console.print(f"[{colors.option}]{o}[/{colors.option}] - {options[o]}")
-        a = console.input(texts.cursor)
+        a = safe_input(texts.cursor)
     clear()
     return a
 
 
 def proceed() -> None:
-    console.input(f"[{colors.proceed}]{texts.proceed}[/{colors.proceed}]")
+    safe_input(f"[{colors.proceed}]{texts.proceed}[/{colors.proceed}]")
     clear()
 
 
