@@ -9,7 +9,7 @@ def safe_input(prompt, suppress=False):
     while True:
         try:
             return console.input(prompt)
-        except EOFError:
+        except (EOFError, KeyboardInterrupt):
             if suppress:
                 continue
             if safe_input(f"\n{texts.confirm_quit} ", suppress=True) == "A":
