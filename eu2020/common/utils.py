@@ -5,7 +5,13 @@ from eu2020 import console
 
 
 def safe_input(prompt):
-    return console.input(prompt)
+    while True:
+        try:
+            return console.input(prompt)
+        except EOFError:
+            if safe_input(f"\n{texts.confirm_quit} ") == "A":
+                console.print(texts.goodbye)
+                raise SystemExit
 
 
 def print_text_in_box(text: str, ch="*") -> None:
