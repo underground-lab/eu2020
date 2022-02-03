@@ -1,15 +1,18 @@
 import os
+
 import eu2020.data.texts as texts
 import eu2020.data.colors as colors
 from eu2020 import console
 
 
-def safe_input(prompt):
+def safe_input(prompt, suppress=False):
     while True:
         try:
             return console.input(prompt)
         except EOFError:
-            if safe_input(f"\n{texts.confirm_quit} ") == "A":
+            if suppress:
+                continue
+            if safe_input(f"\n{texts.confirm_quit} ", suppress=True) == "A":
                 console.print(texts.goodbye)
                 raise SystemExit
 

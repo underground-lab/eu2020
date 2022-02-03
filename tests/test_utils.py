@@ -59,3 +59,20 @@ def test_exit_cancelled(user_input, capsys):
             pass
     assert "Na shledanou." not in capsys.readouterr().out
     assert not capsys.readouterr().err
+
+
+@pytest.mark.parametrize(
+    "user_input",
+    (
+        pytest.param([EOFError(), EOFError(), "A"], id="^D ^D"),
+        pytest.param([EOFError(), EOFError(), EOFError(), "A"], id="^D ^D ^D"),
+    )
+)
+def test_exception_suppressed_inside_confirm_dialog(user_input, capsys):
+    with patch("builtins.input", side_effect=user_input):
+        try:
+            main()
+        except SystemExit:
+            pass
+    assert "Na shledanou." in capsys.readouterr().out
+    assert not capsys.readouterr().err
