@@ -12,7 +12,10 @@ def safe_input(prompt, suppress=False):
         except (EOFError, KeyboardInterrupt):
             if suppress:
                 continue
-            if safe_input(f"\n{texts.confirm_quit} ", suppress=True) == "A":
+            if safe_input(
+                    "\n[{0}]{1}[/{0}] ".format(colors.warning, texts.confirm_quit),
+                    suppress=True
+            ) == "A":
                 console.print(texts.goodbye)
                 raise SystemExit
 
