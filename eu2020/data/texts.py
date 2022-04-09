@@ -46,3 +46,6 @@ Dluh z minulých období:  [$number_color]$debt EUR[/$number_color]
 Bilance:                 [$balance_color]$balance EUR[/$balance_color]
 Poskytnuté garance:      [$number_color]$guarantee EUR[/$number_color]
 """.lstrip()
+
+confirm_quit = "Opravdu skončit? (A = ano)"
+goodbye = "Na shledanou."

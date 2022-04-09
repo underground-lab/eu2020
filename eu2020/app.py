@@ -104,7 +104,7 @@ def print_hp_events(hp_events: HigherPowerEvents) -> None:
 
 def setup() -> None:
     while True:
-        n = console.input(f"{texts.what_is_your_name}\n{texts.cursor}").strip()
+        n = utils.safe_input(f"{texts.what_is_your_name}\n{texts.cursor}").strip()
         if n:
             break
     print()

@@ -1,7 +1,23 @@
 import os
+
 import eu2020.data.texts as texts
 import eu2020.data.colors as colors
 from eu2020 import console
+
+
+def safe_input(prompt, suppress=False):
+    while True:
+        try:
+            return console.input(prompt)
+        except (EOFError, KeyboardInterrupt):
+            if suppress:
+                continue
+            if safe_input(
+                    "\n[{0}]{1}[/{0}] ".format(colors.warning, texts.confirm_quit),
+                    suppress=True
+            ) == "A":
+                console.print(texts.goodbye)
+                raise SystemExit
 
 
 def print_text_in_box(text: str, ch="*") -> None:
@@ -17,13 +33,13 @@ def input_with_options(question: str, options: dict) -> str:
         console.print(f"[{colors.header_2}]{question}[/{colors.header_2}]")
         for o in options:
             console.print(f"[{colors.option}]{o}[/{colors.option}] - {options[o]}")
-        a = console.input(texts.cursor)
+        a = safe_input(texts.cursor)
     clear()
     return a
 
 
 def proceed() -> None:
-    console.input(f"[{colors.proceed}]{texts.proceed}[/{colors.proceed}]")
+    safe_input(f"[{colors.proceed}]{texts.proceed}[/{colors.proceed}]")
     clear()
 
 
