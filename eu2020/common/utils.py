@@ -15,7 +15,7 @@ def safe_input(prompt, suppress=False):
             if safe_input(
                     "\n[{0}]{1}[/{0}] ".format(colors.warning, texts.confirm_quit),
                     suppress=True
-            ) == "A":
+            ) in ("A", "a"):
                 console.print(texts.goodbye)
                 raise SystemExit
 
